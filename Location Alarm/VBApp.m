@@ -431,10 +431,10 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
                                 UITextAttributeTextColor: [UIColor colorWithWhite:0.267 alpha:1.0],
                           UITextAttributeTextShadowColor: [UIColor colorWithWhite:1.0 alpha:0.65],
                          UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-                                     UITextAttributeFont: [UIFont boldSystemFontOfSize:17]
+                                     UITextAttributeFont: [UIFont boldSystemFontOfSize:16]
      }];
    
-    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:2 forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
     
     
     
