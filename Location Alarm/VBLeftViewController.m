@@ -243,7 +243,7 @@
             cell.textLabel.text = alarm.title;
             cell.on = alarm.on;
             
-            UIImage *icon = self.alarmIconCache[[NSNumber numberWithInteger:indexPath.row]];
+            UIImage *icon = self.alarmIconCache[@(indexPath.row)];
             if (!icon) {
                 double progress = 0;
                 if ([VBAlarmTracker sharedTracker].alarmDistances[alarm.objectID]) {
@@ -251,7 +251,7 @@
                     progress = [[VBApp sharedApp].distanceProgressFunction y:distance];
                 }
                 icon = [self progressImageWithProgress:progress];
-                self.alarmIconCache[[NSNumber numberWithInteger:indexPath.row]] = icon;
+                self.alarmIconCache[@(indexPath.row)] = icon;
             }
             
             cell.progressImageView.image = icon;

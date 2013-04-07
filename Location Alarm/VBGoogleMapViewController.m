@@ -372,7 +372,7 @@
 
 - (void)updateAlarm:(VBAlarm *)alarm
 {
-    id<GMSMarker> marker = [self.markers objectForKey:alarm.objectID];
+    id<GMSMarker> marker = self.markers[alarm.objectID];
     marker.title = alarm.title;
     double progress = [self progressForAlarm:alarm];
     marker.icon = [self emptySegmentWithProgress:progress on:alarm.on];

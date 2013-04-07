@@ -182,8 +182,8 @@
 - (NSString *)versionString
 {
     return [NSString stringWithFormat:@"%@ (%@)",
-            [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"],
-            [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+            [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"],
+            [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"]];
 }
 
 - (void)setupAboutText

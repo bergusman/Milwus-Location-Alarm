@@ -46,7 +46,7 @@
     [text appendFormat:@"Contry Code: %@\n", [[NSLocale autoupdatingCurrentLocale] objectForKey:NSLocaleCountryCode]];
     [text appendFormat:@"Measurement System: %@\n", [[NSLocale autoupdatingCurrentLocale] objectForKey:NSLocaleMeasurementSystem]];
     [text appendFormat:@"Uses Metric System: %@\n", [[NSLocale autoupdatingCurrentLocale] objectForKey:NSLocaleUsesMetricSystem]];
-    [text appendFormat:@"First Preferred Language: %@\n", [[NSLocale preferredLanguages] objectAtIndex:0]];
+    [text appendFormat:@"First Preferred Language: %@\n", [NSLocale preferredLanguages][0]];
     
     
     [text appendFormat:@"\n\nBundle Info Dictionary\n----------------------\n"];

@@ -402,7 +402,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     [[VBSettings sharedSettings] addObserver:self forKeyPath:@"system" options:NSKeyValueObservingOptionNew context:self];
     
     
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey];
+    NSString *version = [[NSBundle mainBundle] infoDictionary][(NSString*)kCFBundleVersionKey];
     NSString *currentVersion = [[NSUserDefaults standardUserDefaults] objectForKey:VBCurrentVersion];
     
     if (![version isEqualToString:currentVersion]) {

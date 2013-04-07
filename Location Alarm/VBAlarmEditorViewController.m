@@ -624,9 +624,9 @@
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-    CGRect keyboardFrameEnd = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGRect keyboardFrameEnd = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardFrameEnd = [self.view convertRect:keyboardFrameEnd fromView:nil];
-    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    double duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     self.tapGesture.enabled = NO;
     
