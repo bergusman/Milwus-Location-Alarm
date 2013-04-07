@@ -1,0 +1,116 @@
+﻿/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (coffee) 2013 Vitaliy Berg. All rights reserved.
+ */
+
+"Ok" = "Ok";
+"Done" = "Готово";
+"Cancel" = "Отменить";
+"Save" = "Сохранить";
+"Delete" = "Удалить";
+"Back" = "Назад";
+
+"NoData" = "Нет данных";
+"InArea" = "В точке"; // think about it
+
+"metre" = "м";
+"kilometre" = "км";
+
+"mile" = "ми";
+"yard" = "яр";
+
+"MetricSystem" = "Км";
+"ImperialSystem" = "Мили";
+
+"MapProviderApple" = "Apple Maps";
+"MapProviderGoogle" = "Google Maps";
+"MapProviderYandex" = "Yandex";
+
+"MapTypeStandard" = "Стандарт";
+"MapTypeHybrid" = "Гибрид";
+"MapTypeSatellite" = "Спутник";
+"MapTypeTerrain" = "Топологическая";
+"MapTypePeoples" = "People's";
+"MapTypeSchema" = "Схема";
+
+"About" = "О приложении";
+"Help" = "Помощь";
+
+"Left" = "Покидаете";
+"Reached" = "Входите в";
+
+"Address" = "Позиция:";
+
+"NamePlaceholder" = "Название будильника";
+
+"CommentsPlaceholder" = "Добавьте заметки";
+"CommentsTitle" = "Заметки";
+
+"SelectAlarmType" = "Выберите тип будильника";
+"SelectSound" = "Выберите сигнал";
+
+"SearchAddressPlaceholder" = "Поиск на карте";
+"SearchAddressNoResult" = "Невозможно найти адрес";
+"SearchAddressNoNetwork" = "Для выполнения поиска необходимо подключение к Интернет. Пожалуйста, выполние подключение.";
+
+// Action Sheet
+"DeleteAlarm" = "Удалить";
+"EditAlarm" = "Редактировать";
+"DeleteAlarmPrompt" = "Вы уверены?";
+
+"DialogDonateTitle" = "Поддержите проект";
+
+"SuccessDonateTitle" = "Огромное спасибо";
+"SuccessDonateMessage" = "Большое спасибо за помощь проекту!";
+
+
+"About_RateApp" = "Оценить";
+"About_GoToWebsite" = "Веб сайт";
+"About_DonateTitle1" = "Поддержите:";
+"About_DonateTitle2" = "если понравилось:)";
+
+
+"Note_GPSOff" = "Геолокация не работает";
+"Note_BadSignal" = "Плохой сингал GPS";
+"Note_NeedTitle" = "Пожалуйста, введите название";
+"Note_TapOnMap" = "Для добавления будильника тапните по карте";
+"Note_NetworkOff" = "Отсутствует подключение к Интернет";
+"Note_AlarmOffAfterTriggering" = "После ";
+
+// Geolocation turn off for our application
+"Dialog_GPSOffTitle" = "Геолокация не работает";
+"Dialog_GPSOffMessage" = "Сервис геолокации выключен для этого приложения";
+
+// Cannot show user location because geolocation turn off for our application
+"Dialog_UserLocationOffTitle" = "Геолокация не работает";
+"Dialog_UserLocationOffMessage" = "Сервис геолокации выключен для этого приложения";
+
+
+//Help
+"Help_Search" = "Используйте функцию поиска для быстрого перехода на нужную Вам позицию на карте, старайтесь ввести как можно более конкретный адрес";
+"Help_Add_Marker" = "Нажмите иконку \"Создать\", а потом тапните на нужное место на карте";
+"Help_Configure_Marker" = "Введите название будильника. Задайте радиус действия. Выберите один из типов: IN (на вход), чтобы будильник сработал при входе в область, или OUT (на выход), чтобы будильник сработал когда Вы покидаете область";
+"Help_View_Marker" = "Будильники могут быть включены и выключены. Это можно настроить в окне релдактиварония будильника или в общем списке.\nВНИМАНИЕ: После срабатывания будильник будет отключен автоматически";
+"Help_Delete_Edit_Marker" = "Удаление и редактирование будильника";
+"Help_List_of_Markers" = "Откройте левое меню, чтобы получить доступ к созданным будильникам";
+"Help_System_Config" = "Нажмите эту кнопку, чтобы настроить единицы измерения и тип карты";
+
+// Twitter
+"TwitterSharingText" = "Я использую LocationAlarm, оно есть тут";
+"TwitterSharingFailureTitle" = "Ошибка";
+"TwitterSharingFailureMessage" = "Извините, необходимо настроить вашу учетную запись Twitter";
+
+// Facebook
+"FacebookSharingText" = "Вы еще не используете приложение LocationAlarm? Начните отсюда";
+"FacebookSharingFailureTitle" = "Ошибка";
+"FacebookSharingFailureMessage" = "Извините, необходимо настроить вашу учетную запись Facebook";
+
+// Google Plus
+"GooglePlusSharingText" = "Отличное приложение, перейдите на";
+
+"CloseHelp" = "Закончить тур";
+
+"FacebookUnavailable" = "Необходима версия iOS не меньше 6";

@@ -1,0 +1,113 @@
+﻿/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (c) 2013 Vitaliy Berg. All rights reserved.
+ */
+
+"Ok" = "Ok";
+"Done" = "Готово";
+"Cancel" = "Відмінити";
+"Save" = "Зберегти";
+"Delete" = "Видалити";
+"Back" = "Назад";
+
+"NoData" = "Немає даних";
+"InArea" = "Всередині"; // think about it
+
+"metre" = "м";
+"kilometre" = "км";
+
+"mile" = "миля";
+"yard" = "ярд";
+
+"MetricSystem" = "Км";
+"ImperialSystem" = "Милі";
+
+"MapProviderApple" = "Карти Apple";
+"MapProviderGoogle" = "Карти Google";
+"MapProviderYandex" = "Карти Yandex";
+
+"MapTypeStandard" = "Стандарт";
+"MapTypeHybrid" = "Гібрид";
+"MapTypeSatellite" = "Супутник";
+"MapTypeTerrain" = "Топографічний";
+"MapTypePeoples" = "People's";
+"MapTypeSchema" = "Схема";
+
+"About" = "Про додаток";
+"Help" = "Допомога";
+
+"Left" = "Залишаєте";
+"Reached" = "Входите";
+
+"Address" = "Адреса:";
+
+"NamePlaceholder" = "Назва маркера";
+
+"CommentsPlaceholder" = "Напишіть примітку";
+"CommentsTitle" = "Примітка";
+
+"SelectAlarmType" = "Оберіть тип маркера";
+"SelectSound" = "Мелодія маркера";
+
+"SearchAddressPlaceholder" = "Пошук на карті";
+"SearchAddressNoResult" = "Неможливо знайти адресу";
+"SearchAddressNoNetwork" = "Для виконання пошуку необхідне під\'єднання до мережі Інтернет. Будь ласка, підключіться.";
+
+// Action Sheet
+"DeleteAlarm" = "Видалити";
+"EditAlarm" = "Редагувати";
+"DeleteAlarmPrompt" = "Ви впевнені?";
+
+"DialogDonateTitle" = "Підтримайте проект";
+
+"SuccessDonateTitle" = "Дякуємо";
+"SuccessDonateMessage" = "Величезна дяка Вам за підтримку проекту!";
+
+
+"About_RateApp" = "Оцінити";
+"About_GoToWebsite" = "Веб сайт";
+"About_DonateTitle1" = "Підтримайте:";
+"About_DonateTitle2" = "якщо все подобається :)";
+
+
+"Note_GPSOff" = "Функція геолокації вимкнена";        // Gelocation turn off for entire device
+"Note_BadSignal" = "Поганий GPS сигнал";    // GPS accuracy is bad
+"Note_NeedTitle" = "Будь ласка введіть назву маркера";
+"Note_TapOnMap" = "Тапніть по карті, щоб створити маркер";
+"Note_NetworkOff" = "Відсутнє підключення до мережі Інтернет";
+"Note_AlarmOffAfterTriggering" = "Маркер автоматично вимкнеться відразу після спрацювання";
+
+"Dialog_GPSOffTitle" = "Функція геолокації вимкнена";
+"Dialog_GPSOffMessage" = "Функція геолокації вимкнена";
+
+"Dialog_UserLocationOffTitle" = "Функція геолокації вимкнена";
+"Dialog_UserLocationOffMessage" = "Функція геолокації вимкнена";
+
+//Help
+"Help_Search" = "Використовуйте функцію пошуку для швидкого переходу на потрібну Вам позицію на карті, намагайтеся вводити якомога точнішу адресу, наприклад: місто, вулиця, номер будинка.";
+"Help_Add_Marker" = "Щоб створити маркер, натисніть кнопку \"Створити\", а потім тапніть на потрібне місце на карті, або ж утримуйте палець на обраному місці карти протягом 2 секунд.";
+"Help_Configure_Marker" = "Введіть назву маркера. Задайте радіус його дії. Оберіть один із типів: IN (на вхід), щоб маркер спрацював при входження в зону його дії, або OUT (на вихід), щоб маркер спрацював, коли Ви залишаєте зону його дії. Напишіть примітку";
+"Help_View_Marker" = "Маркер може бути ввімкнений та вимкнений. Настроювання виконується у вікні редагування маркера або в загальному списку. \nУВАГА: маркер автоматчно вимикається відразу після спрацювання.";
+"Help_Delete_Edit_Marker" = "Якщо Ви виділите маркер (натиснете на значок), то з\'явиться можливість його \"Редагування\" та \"Видалення\".";
+"Help_List_of_Markers" = "Натисніть цю кнопку, щоб відкрити список всіх маркерів.";
+"Help_System_Config" = "В контекстному меню можна обирати систему вимірювання та тип карти.";
+
+// Twitter
+"TwitterSharingText" = "Я користуюся додатком LocationAlarm, знайти його можна тут";
+"TwitterSharingFailureTitle" = "Помилка під час відправлення Twitter повідомлення";
+"TwitterSharingFailureMessage" = "Функція не працює без під\'єднання до мережі Інтернет";
+
+// Facebook
+"FacebookSharingText" = "Ви ще не користуєтесь додатком LocationAlarm? Тоді Вам сюди";
+"FacebookSharingFailureTitle" = "Помилка під час публікування";
+"FacebookSharingFailureMessage" = "Функція не працює без під\'єднання до мережі Інтернет";
+
+// Google Plus
+"GooglePlusSharingText" = "Спробуйте цю класну програмку, перейдіть на";
+
+"CloseHelp" = "Завершити тур";
+
+"FacebookUnavailable" = "iOS до версії 6 не підтримує публікування на facebook";

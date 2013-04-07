@@ -1,0 +1,114 @@
+/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (c) 2013 Vitaliy Berg. All rights reserved.
+ Translated to Swedish by Marcus Hartwig on 3/25/13
+ */
+
+"Ok" = "Ok";
+"Done" = "Klar";
+"Cancel" = "Avbryt";
+"Save" = "Spara";
+"Delete" = "Ta Bort";
+"Back" = "Tillbaka";
+
+"NoData" = "No Data";
+"InArea" = "In Area"; // think about it
+
+"metre" = "m";
+"kilometre" = "Km";
+
+"mile" = "mi";
+"yard" = "yd";
+
+"MetricSystem" = "Km";
+"ImperialSystem" = "Miles";
+
+"MapProviderApple" = "Apple Maps";
+"MapProviderGoogle" = "Google Maps";
+"MapProviderYandex" = "Yandex";
+
+"MapTypeStandard" = "Standard";
+"MapTypeHybrid" = "Hybrid";
+"MapTypeSatellite" = "Satellite";
+"MapTypeTerrain" = "Terräng";
+"MapTypePeoples" = "People's";
+"MapTypeSchema" = "Schema";
+
+"About" = "Om";
+"Help" = "Hjälp";
+
+"Left" = "Lämnar";
+"Reached" = "Anländer till";
+
+"Address" = "Plats:";
+
+"NamePlaceholder" = "Beskrivning";
+
+"CommentsPlaceholder" = "Noteringar";
+"CommentsTitle" = "Noteringar";
+
+"SelectAlarmType" = "Välj Larmtyp";
+"SelectSound" = "Larmsignal";
+
+"SearchAddressPlaceholder" = "Sök efter plats";
+"SearchAddressNoResult" = "Hittade inte adress";
+"SearchAddressNoNetwork" = "Aktivera internetanslutningen för att söka.";
+
+// Action Sheet
+"DeleteAlarm" = "Ta Bort";
+"EditAlarm" = "Ändra";
+"DeleteAlarmPrompt" = "Är du säker?";
+
+"DialogDonateTitle" = "Donera";
+
+"SuccessDonateTitle" = "Tack!";
+"SuccessDonateMessage" = "Stort tack för din gåva!";
+
+
+"About_RateApp" = "Betygsätt";
+"About_GoToWebsite" = "Hemsida";
+"About_DonateTitle1" = "Vänligen donera";
+"About_DonateTitle2" = "om du gillar :)";
+
+
+"Note_GPSOff" = "Location Service är avstängd";        // Gelocation turn off for entire device
+"Note_BadSignal" = "Ingen GPS täckning";    // GPS accuracy is bad
+"Note_NeedTitle" = "Vänligen döp markeringen";
+"Note_TapOnMap" = "Klicka på kartan för at skapa ett larm";
+"Note_NetworkOff" = "Ingen datauppkoppling";
+"Note_AlarmOffAfterTriggering" = "Markeringen kommer att stängas av efter att larmet utlöst";
+
+"Dialog_GPSOffTitle" = "Location Service är avstängd";
+"Dialog_GPSOffMessage" = "Location Service är avstängd";
+
+"Dialog_UserLocationOffTitle" = "Location Service är avstängd";
+"Dialog_UserLocationOffMessage" = "Location Service är avstängd";
+
+//Help
+"Help_Search" = "Använd sökfunktionen för att hitta en plats på kartan. Du kan söka på saker som stad, gata eller byggnad.";
+"Help_Add_Marker" = "Tryck på \"Add\" ikonen och sedan på kartan för att placera ett larm.";
+"Help_Configure_Marker" = "Skriv in ett namn på larmet. Ställ sedan in hur stor area larmet har. Välj IN om du vill att larmet ska aktiveras när du ankommer till området, eller OUT om det ska aktiveras när du lämnar området. Du kan även skriva en påminnelse";
+"Help_View_Marker" = "Verifiera larmet. Aktivera och deaktivera det. \nWARNING: Larmet kommer att deaktiveras automatiskt efter att det har utlöst.";
+"Help_Delete_Edit_Marker" = "Ändra eller ta bort larm";
+"Help_List_of_Markers" = "Öppna menyn på vänster för att se alla larm.";
+"Help_System_Config" = "Klicka här för att ställa in kartans enheter och typ.";
+
+// Twitter
+"TwitterSharingText" = "Jag änvänder LocationAlarm, se mer information här";
+"TwitterSharingFailureTitle" = "Twitter-meddelandet misslyckades";
+"TwitterSharingFailureMessage" = "Du kan inte skicka ett twitter-meddelande utan en internetuppkopling.";
+
+// Facebook
+"FacebookSharingText" = "Har du testat LocationAlarm än?. Läs mer här";
+"FacebookSharingFailureTitle" = "Facebook meddelandet misslyckades";
+"FacebookSharingFailureMessage" = "Du kan inte skicka ett facebook-meddelande utan en internetuppkopling.";
+
+// Google Plus
+"GooglePlusSharingText" = "Kolla in vilken häftig app jag använder.";
+
+"CloseHelp" = "Avsluta guide";
+
+"FacebookUnavailable" = "du behöver iOS verion 6 för att posta till facebook.";

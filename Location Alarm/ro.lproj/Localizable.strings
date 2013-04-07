@@ -1,0 +1,113 @@
+﻿/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (c) 2013 Vitaliy Berg. All rights reserved.
+ */
+
+"Ok" = "Ok";
+"Done" = "Realizat";
+"Cancel" = "Anuleaza";
+"Save" = "Salveaza";
+"Delete" = "Sterge";
+"Back" = "Inapoi";
+
+"NoData" = "Nu exista date";
+"InArea" = "In zona";
+
+"metre" = "m";
+"kilometre" = "km";
+
+"mile" = "mi";
+"yard" = "yd";
+
+"MetricSystem" = "Km";
+"ImperialSystem" = "Mile";
+
+"MapProviderApple" = "Harti Apple";
+"MapProviderGoogle" = "Harti Google";
+"MapProviderYandex" = "Yandex";
+
+"MapTypeStandard" = "Standard";
+"MapTypeHybrid" = "Hibrid";
+"MapTypeSatellite" = "Satelit";
+"MapTypeTerrain" = "Teren";
+"MapTypePeoples" = "People's";
+"MapTypeSchema" = "Schema";
+
+"About" = "Despre";
+"Help" = "Ajutor";
+
+"Left" = "Iesire";
+"Reached" = "Intrare";
+
+"Address" = "Adresa:";
+
+"NamePlaceholder" = "Nume marcaj";
+
+"CommentsPlaceholder" = "Adaugati comentarii";
+"CommentsTitle" = "Comentarii";
+
+"SelectAlarmType" = "Selectati tipul de alarma";
+"SelectSound" = "Ton alarma";
+
+"SearchAddressPlaceholder" = "Cautare adresa";
+"SearchAddressNoResult" = "Adresa nu a fost gasita";
+"SearchAddressNoNetwork" = "Functia \"Cautare\" necesita conexiune la Internet. Va rugam activati.";
+
+// Action Sheet
+"DeleteAlarm" = "Sterge";
+"EditAlarm" = "Editeaza";
+"DeleteAlarmPrompt" = "Sunteti sigur?";
+
+"DialogDonateTitle" = "Donatii";
+
+"SuccessDonateTitle" = "Multumim";
+"SuccessDonateMessage" = "Va multumim pentru donatie!";
+
+
+"About_RateApp" = "Votati";
+"About_GoToWebsite" = "Web site";
+"About_DonateTitle1" = "Donatii:";
+"About_DonateTitle2" = "daca v-a placut :)";
+
+
+"Note_GPSOff" = "Serviciul de localizare este oprit";        // Gelocation turn off for entire device
+"Note_BadSignal" = "Semnal GPS Slab";    // GPS accuracy is bad
+"Note_NeedTitle" = "Introduceti un nume pentru marcaj";
+"Note_TapOnMap" = "Apasati pe harta pentru a adauga un marcaj";
+"Note_NetworkOff" = "Nu aveti conexiune la internet";
+"Note_AlarmOffAfterTriggering" = "Marcajul va fi dezactivat dupa declansarea alarmei";
+
+"Dialog_GPSOffTitle" = "Serviciul de localizare este dezactivat";
+"Dialog_GPSOffMessage" = "Serviciul de localizare este dezactivat";
+
+"Dialog_UserLocationOffTitle" = "Serviciul de localizare este dezactivat";
+"Dialog_UserLocationOffMessage" = "Serviciul de localizare este dezactivat";
+
+//Help
+"Help_Search" = "Folositi functia de cautare pentru a seta marcaje la o anumita locatie pe harta.Pentru a obtine cele mai  bune rezultate, introduceti locatia exacta, ex. oras,nume strada, numar cladire.";
+"Help_Add_Marker" = "Pentru a adauga un marcaj,apasati pictograma \"Add\"si apoi apasati pe harta.";
+"Help_Configure_Marker" = "Introduceti un nume pentru marcaj. Fixati raza de actiune a alarmei. Selectati IN daca doriti sa fiti anuntati cand intrati in zona respectiva, sau selectati OUT  daca doriti sa fiti anuntati cand parasiti zona respectiva.";
+"Help_View_Marker" = "Verificati datele pentru marcaj. Activati sau dezactivati marcajul.\nWARNING: Marcajul va fi dezactivat dupa declansarea alarmei.";
+"Help_Delete_Edit_Marker" = "Editeaza sau Sterge marcajul";
+"Help_List_of_Markers" = "Deschideti meniul din stanga pentru a accesa marcajele";
+"Help_System_Config" = "Apasati aici pentru a seta unitatile de masura si tipul de harta.";
+
+// Twitter
+"TwitterSharingText" = "I am using LocationAlarm, check it out here";
+"TwitterSharingFailureTitle" = "Error Tweeting";
+"TwitterSharingFailureMessage" = "You can not tweet without an Internet connection";
+
+// Facebook
+"FacebookSharingText" = "Have you tried LocationAlarm yet, take a look at";
+"FacebookSharingFailureTitle" = "Error Posting";
+"FacebookSharingFailureMessage" = "You can not post on Facebook without an Internet connection";
+
+// Google Plus
+"GooglePlusSharingText" = "Check out this cool app I am using, look at";
+
+"CloseHelp" = "Termina prezentarea";
+
+"FacebookUnavailable" = "Versiunile de iOS anterioare iOS6 nu accepta sharing-ul pe facebook";

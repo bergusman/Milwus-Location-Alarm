@@ -1,0 +1,113 @@
+﻿/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (c) 2013 Vitaliy Berg. All rights reserved.
+ */
+
+"Ok" = "Ok";
+"Done" = "Hecho";
+"Cancel" = "Cancelar";
+"Save" = "Guardar";
+"Delete" = "Borrar";
+"Back" = "Atrás";
+
+"NoData" = "No hay información";
+"InArea" = "En el área"; // think about it
+
+"metre" = "m";
+"kilometre" = "km";
+
+"mile" = "mi";
+"yard" = "yd";
+
+"MetricSystem" = "Km";
+"ImperialSystem" = "Millas";
+
+"MapProviderApple" = "Apple Maps";
+"MapProviderGoogle" = "Google Maps";
+"MapProviderYandex" = "Yandex";
+
+"MapTypeStandard" = "Mapa";
+"MapTypeHybrid" = "Hibrido";
+"MapTypeSatellite" = "Satélite";
+"MapTypeTerrain" = "Relieve";
+"MapTypePeoples" = "People's";
+"MapTypeSchema" = "Esquema";
+
+"About" = "Acerca de la";
+"Help" = "Ayuda";
+
+"Left" = "Saliendo";
+"Reached" = "Entrando";
+
+"Address" = "Localización:";
+
+"NamePlaceholder" = "Nombre del marcador";
+
+"CommentsPlaceholder" = "Escribir notas";
+"CommentsTitle" = "Notas";
+
+"SelectAlarmType" = "Seleccione el tipo";
+"SelectSound" = "Tono de alarma";
+
+"SearchAddressPlaceholder" = "Buscado direccion";
+"SearchAddressNoResult" = "No se puede encontrar la direccion";
+"SearchAddressNoNetwork" = "La busqueda requiere una conexion a internet. Por favor provea la.";
+
+// Action Sheet
+"DeleteAlarm" = "Borrar";
+"EditAlarm" = "Editar";
+"DeleteAlarmPrompt" = "¿Estás seguro?";
+
+"DialogDonateTitle" = "Apoyar el proyecto";
+
+"SuccessDonateTitle" = "Muchas gracias";
+"SuccessDonateMessage" = "¡Muchas gracias por tu donacion!";
+
+
+"About_RateApp" = "Califique";
+"About_GoToWebsite" = "Ir al sitio web";
+"About_DonateTitle1" = "Apoyen:";
+"About_DonateTitle2" = "si te gusta nuestra app :)";
+
+
+"Note_GPSOff" = "Servicio se desactive la localización";        // Gelocation turn off for entire device
+"Note_BadSignal" = "Bad señal GPS";    // GPS accuracy is bad
+"Note_NeedTitle" = "Nombre el marcador";
+"Note_TapOnMap" = "Pulse sobre el mapa para agregar un marcador";
+"Note_NetworkOff" = "No hay conexión a Internet";
+"Note_AlarmOffAfterTriggering" = "El marcador será desactivado después de que la alarma suene";
+
+"Dialog_GPSOffTitle" = "Servicio de ubicación está desactivada";
+"Dialog_GPSOffMessage" = "Servicio de ubicación está desactivada";
+
+"Dialog_UserLocationOffTitle" = "Servicio de ubicación está desactivada";
+"Dialog_UserLocationOffMessage" = "Servicio de ubicación está desactivada";
+
+//Help
+"Help_Search" = "Use buscar para ir a una ubicación específica sobre el mapa y poner un marcador. Para tener los mejores resultados, escriba la dirección en el siguiente formato: ciudad, calle, número.";
+"Help_Add_Marker" = "Para definir un marcador sólo pinche sobre el ícono \"Add\" y luego sobre el mapa. De otra manera, pinche sobre la ubicación hasta que aparezca el marcador.";
+"Help_Configure_Marker" = "Escriba un nombre para el marcador. Establezca el radio que define la zona de alarma. Selecciona IN si quiere ser notificado cuando usted entre en la zona o seleccione OUT para ser notificado cuando salga de la zona.";
+"Help_View_Marker" = "El marcador puede ser activado o desactivado. Esto se puede configurar en el cuadro de edición de marcadores o lista de marcadores. \nADVERTENCIA: El marcador se desactivará automáticamente después de que la alarma sea lanzada.";
+"Help_Delete_Edit_Marker" = "Cuando pincha un marcador, dos opciones estarán disponibles: pinche \"Editar\" para cambiar la configuración del marcador y pinche \"Eliminar\" para borrar el marcador.";
+"Help_List_of_Markers" = "Pinche aquí para tener acceso a sus marcadores.";
+"Help_System_Config" = "Abra el  menu de contexto para configurar la unidades de medición y el tipo de mapa.";
+
+// Twitter
+"TwitterSharingText" = "Estoy usando LocationAlarm, véala aquí";
+"TwitterSharingFailureTitle" = "Error al twitteando";
+"TwitterSharingFailureMessage" = "No puede tuitear sin conexion internet";
+
+// Facebook
+"FacebookSharingText" = "¿Ya ha utilizado LocationAlarm? Pruébela aquí";
+"FacebookSharingFailureTitle" = "Error de envío";
+"FacebookSharingFailureMessage" = "Usted no puede postear sin una conexion internet";
+
+// Google Plus
+"GooglePlusSharingText" = "Vea la super app que estoy usando en";
+
+"CloseHelp" = "Terminar el tour";
+
+"FacebookUnavailable" = "El pasado iOS al 6 no soporta \"compartir en facebook\"";

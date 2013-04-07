@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Alarm</key>
+	<string>Alarm.m4r</string>
+	<key>Bark</key>
+	<string>Bark.m4r</string>
+	<key>Duck</key>
+	<string>Duck.m4r</string>
+	<key>Motorcycle</key>
+	<string>Motorcycle.m4r</string>
+	<key>OldCarHorn</key>
+	<string>Old Car Horn.m4r</string>
+	<key>OldPhone</key>
+	<string>Old Phone Long.m4r</string>
+	<key>PianoRiff</key>
+	<string>Piano Riff.m4r</string>
+	<key>Ring</key>
+	<string>Ring.m4r</string>
+</dict>
+</plist>

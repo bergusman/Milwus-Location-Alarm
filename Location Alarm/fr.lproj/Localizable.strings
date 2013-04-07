@@ -1,0 +1,113 @@
+﻿/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (c) 2013 Vitaliy Berg. All rights reserved.
+ */
+
+"Ok" = "Ok";
+"Done" = "Exécuté";
+"Cancel" = "Annuler";
+"Save" = "Garder";
+"Delete" = "Effacer";
+"Back" = "Arrière";
+
+"NoData" = "Il n\'y a pas d\'information";
+"InArea" = "Dans la zone"; // think about it
+
+"metre" = "m";
+"kilometre" = "km";
+
+"mile" = "mi";
+"yard" = "yd";
+
+"MetricSystem" = "Km";
+"ImperialSystem" = "Milles";
+
+"MapProviderApple" = "Apple Maps";
+"MapProviderGoogle" = "Google Maps";
+"MapProviderYandex" = "Yandex";
+
+"MapTypeStandard" = "Plan";
+"MapTypeHybrid" = "Hybride";
+"MapTypeSatellite" = "Satellite";
+"MapTypeTerrain" = "Relief";
+"MapTypePeoples" = "People\'s";
+"MapTypeSchema" = "Schéma";
+
+"About" = "À propos de la";
+"Help" = "Aide";
+
+"Left" = "En train de sortir";
+"Reached" = "En train d\'entrer";
+
+"Address" = "Localisation:";
+
+"NamePlaceholder" = "Nomme du marqueur";
+
+"CommentsPlaceholder" = "Écrire des notes";
+"CommentsTitle" = "Notes";
+
+"SelectAlarmType" = "Sélectionnez le type";
+"SelectSound" = "Sonnerie d\'alarme";
+
+"SearchAddressPlaceholder" = "Rechercher l\'adresse";
+"SearchAddressNoResult" = "L\'adresse n\'a pas pu être trouveé";
+"SearchAddressNoNetwork" = "La recherche a besoin d\'une connexion à internet. S\'il vous plaît fournissez-la.";
+
+// Action Sheet
+"DeleteAlarm" = "Effacer";
+"EditAlarm" = "Éditer";
+"DeleteAlarmPrompt" = "Etes-vous sûr?";
+
+"DialogDonateTitle" = "Soutenir le projet";
+
+"SuccessDonateTitle" = "Merci beaucoup";
+"SuccessDonateMessage" = "Merci beaucoup pour votre donation!";
+
+
+"About_RateApp" = "Evaluez app";
+"About_GoToWebsite" = "Site internet";
+"About_DonateTitle1" = "Appuyer:";
+"About_DonateTitle2" = "si tu aimes notre app :)";
+
+
+"Note_GPSOff" = "Service de localisation est désactivé";        // Gelocation turn off for entire device
+"Note_BadSignal" = "Bad signal GPS";    // GPS accuracy is bad
+"Note_NeedTitle" = "Nommez le marqueur";
+"Note_TapOnMap" = "Appuyez sur la carte pour ajouter un marqueur";
+"Note_NetworkOff" = "Pas de connexion Internet";
+"Note_AlarmOffAfterTriggering" = "Le marqueur sera désactivé lors du déclenchement de l\'alarme";
+
+"Dialog_GPSOffTitle" = "Service de localisation est désactivé";
+"Dialog_GPSOffMessage" = "Service de localisation est désactivé";
+
+"Dialog_UserLocationOffTitle" = "Service de localisation est désactivé";
+"Dialog_UserLocationOffMessage" = "Service de localisation est désactivé";
+
+//Help
+"Help_Search" = "Utilisé rechercher pour aller à un point spécifique sur la carte et mettre un marqueur. Pour obtenir les meilleurs résultats, rentrez l\'adresse de la facon suivante: ville, rue, numéro.";
+"Help_Add_Marker" = "Pour définir un marqueur, appuyez sur \"Add\" et puis sur la carte. Sinon, appuyez et maintenez la position sur la localisation de la carte.";
+"Help_Configure_Marker" = "Entrez un nom pour le marqueur. Réglez le rayon qui définit la zone d\'alarme. Sélectionnez IN si vous voulez être averti quand vous entrez dans la zone, ou choisissez OUT pour être prévenu lorsque vous quittez la zone.";
+"Help_View_Marker" = "Le marqueur peut être activé ou désactivé. Vous pouvez le configurer dans le dialogue modifier marqueur ou dans la liste de marqueurs. \nAVERTISSEMENT:  le marqueur sera automatiquement désactivé lors du déclenchement de l\'alarme.";
+"Help_Delete_Edit_Marker" = "Lorsque vous appuyez sur un marqueur, deux options seront disponibles: tapez sur \"Modifier\" pour changer les paramètres de position et appuyez sur \"Supprimer\" pour effacer le marqueur.";
+"Help_List_of_Markers" = "Appuyez ici pour avoir accés à vos marqueurs";
+"Help_System_Config" = "Ouvrez le menu de contexte pour configurer les unités de mesure et le type de carte.";
+
+// Twitter
+"TwitterSharingText" = "Je suis en train d\'utiliser LocationAlarm, jetez un coup d\'œil ici!";
+"TwitterSharingFailureTitle" = "Erreur lors de tweeting";
+"TwitterSharingFailureMessage" = "You can not tweet without an Internet connection";
+
+// Facebook
+"FacebookSharingText" = "Avez-vous déjà utilisé LocationAlarm, faites un essai ici!";
+"FacebookSharingFailureTitle" = "Erreur d\'envoi";
+"FacebookSharingFailureMessage" = "You can not post on Facebook without an Internet connection";
+
+// Google Plus
+"GooglePlusSharingText" = "Regarder la super application que j\'utilise sur";
+
+"CloseHelp" = "Finish Tour";
+
+"FacebookUnavailable" = "Le dernier iOS au 6 ne supportent pas \"partager sur facebook\"";

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Application ID</key>
+	<string>624519914</string>
+	<key>Application Website</key>
+	<string>http://www.location-alarm.com</string>
+	<key>Milwus Website</key>
+	<string>http://www.milwus.com</string>
+	<key>Google Maps API Key</key>
+	<string>AIzaSyCwSHQS4D-UYmoabVh9mXF407Q0JNJo8tc</string>
+	<key>Yandex Maps API Key</key>
+	<string>qZ9bVzX6T2mbPqT0gEqrb18jDhxLSeutbvMBu23Hk3xcpHKbt0rnLL3Uao0NiivGTutMM0rXA-cbT4eWy-bCw4r1Cq2fu9wbxjWUGoGkMyM=</string>
+	<key>Use Dev Tools</key>
+	<false/>
+	<key>Geocoding Region Radius</key>
+	<integer>30000</integer>
+	<key>Turn Off Alarm After Firing</key>
+	<true/>
+	<key>Metric Default Radius</key>
+	<integer>150</integer>
+	<key>Imperial Default Radius</key>
+	<integer>150</integer>
+	<key>Metric Radius Function</key>
+	<dict>
+		<key>x</key>
+		<array>
+			<integer>0</integer>
+			<real>0.235</real>
+			<real>0.47</real>
+			<real>0.705</real>
+			<real>0.9399999999999999</real>
+			<integer>1</integer>
+		</array>
+		<key>y</key>
+		<array>
+			<integer>50</integer>
+			<integer>200</integer>
+			<integer>800</integer>
+			<integer>2000</integer>
+			<integer>6000</integer>
+			<integer>7000</integer>
+		</array>
+	</dict>
+	<key>Imperial Radius Function</key>
+	<dict>
+		<key>x</key>
+		<array>
+			<integer>0</integer>
+			<real>0.235</real>
+			<real>0.47</real>
+			<real>0.705</real>
+			<real>0.9399999999999999</real>
+			<string>1</string>
+		</array>
+		<key>y</key>
+		<array>
+			<integer>50</integer>
+			<integer>400</integer>
+			<integer>1408</integer>
+			<integer>3520</integer>
+			<integer>7040</integer>
+			<string>7655.2930</string>
+		</array>
+	</dict>
+	<key>Distance Progress Function</key>
+	<dict>
+		<key>x</key>
+		<array>
+			<integer>0</integer>
+			<integer>100</integer>
+			<integer>1000</integer>
+			<integer>5000</integer>
+			<integer>15000</integer>
+			<string>40000</string>
+			<string>100000</string>
+			<string>20000000</string>
+		</array>
+		<key>y</key>
+		<array>
+			<integer>1</integer>
+			<real>0.9</real>
+			<real>0.8</real>
+			<real>0.7</real>
+			<real>0.5</real>
+			<string>0.3</string>
+			<real>0.2</real>
+			<string>0</string>
+		</array>
+	</dict>
+	<key>Metric Radius Slider Rules</key>
+	<array>
+		<integer>50</integer>
+		<integer>200</integer>
+		<integer>800</integer>
+		<integer>2000</integer>
+		<integer>6000</integer>
+		<integer>12000</integer>
+	</array>
+	<key>Imperial Radius Slider Rules</key>
+	<array>
+		<integer>50</integer>
+		<integer>400</integer>
+		<integer>1408</integer>
+		<integer>3520</integer>
+		<integer>7040</integer>
+		<integer>14080</integer>
+	</array>
+	<key>Google Analytics</key>
+	<dict>
+		<key>Use Google Analytics</key>
+		<true/>
+		<key>Tracking ID</key>
+		<string>UA-39259544-1</string>
+		<key>Dispatch Interval</key>
+		<integer>40</integer>
+	</dict>
+	<key>TestFlight</key>
+	<dict>
+		<key>Use TestFlight</key>
+		<false/>
+		<key>App Token</key>
+		<string>c33d4204-da13-42d6-adb7-ad4d8a473670</string>
+		<key>Enable UDID</key>
+		<true/>
+	</dict>
+	<key>Donating</key>
+	<dict>
+		<key>Dialog Prices</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>5</integer>
+			<integer>10</integer>
+			<integer>20</integer>
+			<integer>50</integer>
+			<integer>100</integer>
+			<integer>200</integer>
+			<integer>500</integer>
+		</array>
+		<key>Dialog Product IDs</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>5</string>
+			<string>10</string>
+			<string>20</string>
+			<string>50</string>
+			<string>100</string>
+			<string>200</string>
+			<string>500</string>
+		</array>
+		<key>About Prices</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>5</integer>
+			<integer>10</integer>
+			<integer>20</integer>
+			<integer>200</integer>
+		</array>
+		<key>About Product IDs</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>5</string>
+			<string>10</string>
+			<string>20</string>
+			<string>200</string>
+		</array>
+	</dict>
+	<key>Google Plus</key>
+	<dict>
+		<key>Client ID</key>
+		<string>734608298324-a5ind15cv3u8ntjju7fphit8saim2dg0.apps.googleusercontent.com</string>
+	</dict>
+</dict>
+</plist>

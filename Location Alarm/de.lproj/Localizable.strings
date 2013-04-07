@@ -1,0 +1,113 @@
+﻿/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (c) 2013 Vitaliy Berg. All rights reserved.
+ */
+
+"Ok" = "Ok";
+"Done" = "Fertig";
+"Cancel" = "Abbrechen";
+"Save" = "Speichern";
+"Delete" = "Löschen";
+"Back" = "Zurück";
+
+"NoData" = "Keine Daten";
+"InArea" = "Im Umkreis"; // think about it
+
+"metre" = "m";
+"kilometre" = "km";
+
+"mile" = "mi";
+"yard" = "yd";
+
+"MetricSystem" = "Km";
+"ImperialSystem" = "Meilen";
+
+"MapProviderApple" = "Apple Maps";
+"MapProviderGoogle" = "Google Maps";
+"MapProviderYandex" = "Yandex";
+
+"MapTypeStandard" = "Standard";
+"MapTypeHybrid" = "Hybrid";
+"MapTypeSatellite" = "Satelit";
+"MapTypeTerrain" = "Gelände";
+"MapTypePeoples" = "Leute";
+"MapTypeSchema" = "Schema";
+
+"About" = "Über";
+"Help" = "Hilfe";
+
+"Left" = "Verlassen";
+"Reached" = "Erreichen";
+
+"Address" = "Addresse:";
+
+"NamePlaceholder" = "Alarm Name";
+
+"CommentsPlaceholder" = "Notiz schreiben";
+"CommentsTitle" = "Notiz";
+
+"SelectAlarmType" = "Alarmtyp auswählen";
+"SelectSound" = "Alarmton";
+
+"SearchAddressPlaceholder" = "Addresse suchen";
+"SearchAddressNoResult" = "Addresse nicht gefunden";
+"SearchAddressNoNetwork" = "Die Suchfunktion benötigt eine Internetverbindung. Bitte schalten Sie die ein.";
+
+// Action Sheet
+"DeleteAlarm" = "Löschen";
+"EditAlarm" = "Bearbeiten";
+"DeleteAlarmPrompt" = "Sind Sie sicher?";
+
+"DialogDonateTitle" = "Bitte spenden";
+
+"SuccessDonateTitle" = "Vielen Dank";
+"SuccessDonateMessage" = "Vielen herzlichen Dank für Ihre Spende!";
+
+
+"About_RateApp" = "App bewerten";
+"About_GoToWebsite" = "Zur Webseite";
+"About_DonateTitle1" = "Bitte spenden:";
+"About_DonateTitle2" = "wenn Ihnen gefällt :)";
+
+
+"Note_GPSOff" = "GPS is ausgeschaltet";        // Gelocation turn off for entire device
+"Note_BadSignal" = "Schlechtes GPS Signal";    // GPS accuracy is bad
+"Note_NeedTitle" = "Bitte geben Sie einen Namen für den Alarm ein";
+"Note_TapOnMap" = "Klicken Sie auf die Karte um einen Alarm hinzuzufügen";
+"Note_NetworkOff" = "Keine Internetverbindung";
+"Note_AlarmOffAfterTriggering" = "Der Alarm wird deaktiviert nachdem er ausgelöst wurde";
+
+"Dialog_GPSOffTitle" = "GPS ist ausgeschaltet";
+"Dialog_GPSOffMessage" = "GPS ist ausgeschaltet";
+
+"Dialog_UserLocationOffTitle" = "GPS ist ausgeschaltet";
+"Dialog_UserLocationOffMessage" = "GPS ist ausgeschaltet";
+
+//Help
+"Help_Search" = "Benutzen Sie dei Suche um zu einer bestimmten Addresse auf der Karte zu gehen und einen Marker hinzuzufügen. Geben Sie die Addresse möglichst exakt ein um ein bestmögliches Ergebniss zu erzielen.";
+"Help_Add_Marker" = "Erst auf das Bild \"Hinzufügen\" und dann auf die Karte tippen um den Marker zu setzen";
+"Help_Configure_Marker" = "Geben Sie den Namen für den Marker ein. Legen Sie den Radius für den Alarmbereich fest. Wählen Sie IN um benachrichtigt zu werden wenn Sie den Bereich erreichen und OUT wenn Sie Ihn verlassen. Fügen Sie Notizen hinzu.";
+"Help_View_Marker" = "Marker Details anzeigen. Aktivieren/Deaktivieren.\nWARNUNG: Der Marker wird automatisch deaktiviert sobald der Alarm ausgelöst wurde.";
+"Help_Delete_Edit_Marker" = "Marker bearbeiten/löschen";
+"Help_List_of_Markers" = "Das Menü links öffnen um zu Ihren Markern zu gelangen";
+"Help_System_Config" = "Hier tippen um die Einheiten und den Kartentyp zu konfigurieren";
+
+// Twitter
+"TwitterSharingText" = "Ich benutze LocationAlarm, schau hier";
+"TwitterSharingFailureTitle" = "Tweeting Problem";
+"TwitterSharingFailureMessage" = "Sie können nicht ohne eine Internetverbindung tweeten";
+
+// Facebook
+"FacebookSharingText" = "Sie haben LocationAlarm noch nicht probiert? Probieren Sie jetzt";
+"FacebookSharingFailureTitle" = "Sende Problem";
+"FacebookSharingFailureMessage" = "Sie können nichts zu Facebook senden ohne eine Internetverbindung";
+
+// Google Plus
+"GooglePlusSharingText" = "Probieren Sie die coole App aus, die ich benutze";
+
+"CloseHelp" = "Tour beenden";
+
+"FacebookUnavailable" = "iOS Versionen älter als v6 unterstützen kein facebook sharing";

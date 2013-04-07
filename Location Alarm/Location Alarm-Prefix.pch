@@ -1,0 +1,26 @@
+//
+// Prefix header for all source files of the 'Location Alarm' target in the 'Location Alarm' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "VBAnalytics.h"
+    #import "VBConfig.h"
+    #import "VBSettings.h"
+    #import "GAI.h"
+
+    #define VB_RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+    #define VB_RGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+    #define VB_WHITE(w, a) [UIColor colorWithWhite:(w)/255.0 alpha:(a)]
+
+#endif
+
+#define SVHTTPREQUEST_DISABLE_LOGGING 1

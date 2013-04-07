@@ -1,0 +1,113 @@
+﻿/*
+ Localizable.strings
+ Location Alarm
+ 
+ Created by Vitaliy Berg on 2/24/13.
+ Copyright (c) 2013 Vitaliy Berg. All rights reserved.
+ */
+
+"Ok" = "Ok";
+"Done" = "Done";
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Delete" = "Delete";
+"Back" = "Back";
+
+"NoData" = "No Data";
+"InArea" = "In Area"; // think about it
+
+"metre" = "m";
+"kilometre" = "km";
+
+"mile" = "mi";
+"yard" = "yd";
+
+"MetricSystem" = "Km";
+"ImperialSystem" = "Miles";
+
+"MapProviderApple" = "Apple Maps";
+"MapProviderGoogle" = "Google Maps";
+"MapProviderYandex" = "Yandex";
+
+"MapTypeStandard" = "Standard";
+"MapTypeHybrid" = "Hybrid";
+"MapTypeSatellite" = "Satellite";
+"MapTypeTerrain" = "Terrain";
+"MapTypePeoples" = "People's";
+"MapTypeSchema" = "Schema";
+
+"About" = "About";
+"Help" = "Help";
+
+"Left" = "Leaving";
+"Reached" = "Entering";
+
+"Address" = "Location:";
+
+"NamePlaceholder" = "Alarm Marker Name";
+
+"CommentsPlaceholder" = "Write Notes";
+"CommentsTitle" = "Notes";
+
+"SelectAlarmType" = "Select alarm marker type";
+"SelectSound" = "Alarm tone";
+
+"SearchAddressPlaceholder" = "Search for Location";
+"SearchAddressNoResult" = "Could not find address";
+"SearchAddressNoNetwork" = "Search function requires an Internet connection. Please enable it.";
+
+// Action Sheet
+"DeleteAlarm" = "Delete";
+"EditAlarm" = "Edit";
+"DeleteAlarmPrompt" = "Are you sure?";
+
+"DialogDonateTitle" = "Please donate";
+
+"SuccessDonateTitle" = "Thanks a lot";
+"SuccessDonateMessage" = "Thank you very much for your kind donation!";
+
+
+"About_RateApp" = "Rate this app";
+"About_GoToWebsite" = "Go to web site";
+"About_DonateTitle1" = "Please donate:";
+"About_DonateTitle2" = "if you like our app:)";
+
+
+"Note_GPSOff" = "Location Service is turned off";        // Gelocation turn off for entire device
+"Note_BadSignal" = "Bad GPS Signal";    // GPS accuracy is bad
+"Note_NeedTitle" = "Please enter marker name";
+"Note_TapOnMap" = "Tap on map to add alarm marker";
+"Note_NetworkOff" = "No Internet connection";
+"Note_AlarmOffAfterTriggering" = "Marker will be deactivated after alarm triggered";
+
+"Dialog_GPSOffTitle" = "Location Service is disabled";
+"Dialog_GPSOffMessage" = "Location Service is disabled";
+
+"Dialog_UserLocationOffTitle" = "Location Service is disabled";
+"Dialog_UserLocationOffMessage" = "Location Service is disabled";
+
+//Help
+"Help_Search" = "Use search to go specific location on a map to set a marker. In order to get the best result enter the precise location i.e. city, street name, building number";
+"Help_Add_Marker" = "Tap the \"Add\" icon and then tap the map to set a marker";
+"Help_Configure_Marker" = "Enter a name for a marker. Set the radius which defines the alarm area. Select IN if you want to be notified when you enter area, or select OUT if you want to be notified when you leave the area. Add notes";
+"Help_View_Marker" = "Review marker details. Activate and deactivate it.\nWARNING: Marker will be deactivated automatically after alarm is triggered";
+"Help_Delete_Edit_Marker" = "Edit or Delete marker";
+"Help_List_of_Markers" = "Open left menu to get access to your markers";
+"Help_System_Config" = "Tap here to configure units of measurement and map type";
+
+// Twitter
+"TwitterSharingText" = "I am using LocationAlarm, check it out here";
+"TwitterSharingFailureTitle" = "Error Tweeting";
+"TwitterSharingFailureMessage" = "Sorry, please setup your Twitter account";
+
+// Facebook
+"FacebookSharingText" = "Have you tried LocationAlarm yet, take a look at";
+"FacebookSharingFailureTitle" = "Error Posting";
+"FacebookSharingFailureMessage" = "Sorry, please setup your Facebook account";
+
+// Google Plus
+"GooglePlusSharingText" = "Check out this cool app I am using, look at";
+
+"CloseHelp" = "Finish Tour";
+
+"FacebookUnavailable" = "iOS previous to 6 does not support Facebook sharing";
