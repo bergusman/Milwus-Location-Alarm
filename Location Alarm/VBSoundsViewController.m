@@ -153,7 +153,7 @@
 - (void)backAction
 {
     if (self.onBack) {
-        self.onBack(self);
+        self.onBack();
     } else {
         [self.navigationController popViewControllerAnimated:YES];
     }

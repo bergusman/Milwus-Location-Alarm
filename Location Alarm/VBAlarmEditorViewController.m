@@ -550,10 +550,10 @@
 
 - (IBAction)soundsAction
 {
-    VBSoundsViewController *sounds = [[[VBSoundsViewController alloc] init] autorelease];
+    __block VBSoundsViewController *sounds = [[[VBSoundsViewController alloc] init] autorelease];
     sounds.sound = self.sound;
-    sounds.onBack = ^(VBSoundsViewController *controller){
-        self.sound = controller.sound;
+    sounds.onBack = ^(){
+        self.sound = sounds.sound;
         self.soundName.text = [[VBApp sharedApp].soundsManager soundName:self.sound];
         [self.navigationController popViewControllerAnimated:YES];
     };

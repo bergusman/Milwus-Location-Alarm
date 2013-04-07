@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VBOnBack.h"
 
 @interface VBSoundsViewController : UIViewController
 
-@property (nonatomic, copy) void (^onBack)(VBSoundsViewController *controller);
+@property (nonatomic, copy) void (^onBack)();
 
 @property (nonatomic, copy) NSString *sound;
 
