@@ -1,4 +1,4 @@
-Milwus-Location-Alarm
+Milwus Location Alarm
 =====================
 
-Simple location alarm
+Simple location alarm.
