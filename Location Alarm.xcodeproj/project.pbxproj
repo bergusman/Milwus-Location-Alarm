@@ -63,7 +63,6 @@
 		AD2A7F1E16DB814D00D25FDA /* feature.on.h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2A7F1816DB814D00D25FDA /* feature.on.h@2x.png */; };
 		AD2A7F1F16DB814D00D25FDA /* feature.on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2A7F1916DB814D00D25FDA /* feature.on@2x.png */; };
 		AD2A7F2016DB814D00D25FDA /* feature.progress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2A7F1A16DB814D00D25FDA /* feature.progress@2x.png */; };
-		AD2A7F2416DB822C00D25FDA /* UILabel+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A7F2316DB822C00D25FDA /* UILabel+VBStyle.m */; };
 		AD2A7F2616DB84F900D25FDA /* ptrn.light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2A7F2516DB84F900D25FDA /* ptrn.light@2x.png */; };
 		AD2A7F2916DB881A00D25FDA /* VBMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A7F2816DB881A00D25FDA /* VBMKPointAnnotation.m */; };
 		AD2A7F3916DB8CB400D25FDA /* VBAlarmDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2A7F3816DB8CB400D25FDA /* VBAlarmDetailsViewController.xib */; };
@@ -88,7 +87,6 @@
 		AD437FD316F8EA8B0011AF7B /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E416DA591A00104B41 /* IIWrapController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		AD437FD416F8EA8B0011AF7B /* VBLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727EA16DA59EE00104B41 /* VBLeftViewController.m */; };
 		AD437FD516F8EA8B0011AF7B /* UISearchBar+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727FC16DA65E900104B41 /* UISearchBar+VBStyle.m */; };
-		AD437FD616F8EA8B0011AF7B /* UIBarButtonItem+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7280B16DA688900104B41 /* UIBarButtonItem+VBStyle.m */; };
 		AD437FD716F8EA8B0011AF7B /* UIButton+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7280D16DA688900104B41 /* UIButton+VBStyle.m */; };
 		AD437FD816F8EA8B0011AF7B /* UISegmentedControl+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7280F16DA688900104B41 /* UISegmentedControl+VBStyle.m */; };
 		AD437FD916F8EA8B0011AF7B /* UITableViewCell+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7281116DA688900104B41 /* UITableViewCell+VBStyle.m */; };
@@ -107,7 +105,6 @@
 		AD437FE616F8EA8B0011AF7B /* VBAlarmDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F6B8C16DAA004007BC665 /* VBAlarmDetailsViewController.m */; };
 		AD437FE716F8EA8B0011AF7B /* VBAlarmEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F6B9116DAA016007BC665 /* VBAlarmEditorViewController.m */; };
 		AD437FE816F8EA8B0011AF7B /* VBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAD136416DAA72300AD5CCD /* VBSwitch.m */; };
-		AD437FE916F8EA8B0011AF7B /* UILabel+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A7F2316DB822C00D25FDA /* UILabel+VBStyle.m */; };
 		AD437FEA16F8EA8B0011AF7B /* VBMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A7F2816DB881A00D25FDA /* VBMKPointAnnotation.m */; };
 		AD437FEB16F8EA8B0011AF7B /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBD516DBCB7400C706FB /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		AD437FEC16F8EA8B0011AF7B /* IIViewDeckController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBDB16DBCCB700C706FB /* IIViewDeckController2.m */; };
@@ -589,7 +586,6 @@
 		ADF7280516DA66E300104B41 /* search.cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7280316DA66E300104B41 /* search.cancel@2x.png */; };
 		ADF7280716DA675200104B41 /* search.field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7280616DA675200104B41 /* search.field@2x.png */; };
 		ADF7280916DA678E00104B41 /* search.glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7280816DA678E00104B41 /* search.glass@2x.png */; };
-		ADF7281416DA688A00104B41 /* UIBarButtonItem+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7280B16DA688900104B41 /* UIBarButtonItem+VBStyle.m */; };
 		ADF7281516DA688A00104B41 /* UIButton+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7280D16DA688900104B41 /* UIButton+VBStyle.m */; };
 		ADF7281616DA688A00104B41 /* UISegmentedControl+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7280F16DA688900104B41 /* UISegmentedControl+VBStyle.m */; };
 		ADF7281716DA688A00104B41 /* UITableViewCell+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7281116DA688900104B41 /* UITableViewCell+VBStyle.m */; };
@@ -688,8 +684,6 @@
 		AD2A7F1816DB814D00D25FDA /* feature.on.h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "feature.on.h@2x.png"; path = "Location Alarm/Images/feature.on.h@2x.png"; sourceTree = "<group>"; };
 		AD2A7F1916DB814D00D25FDA /* feature.on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "feature.on@2x.png"; path = "Location Alarm/Images/feature.on@2x.png"; sourceTree = "<group>"; };
 		AD2A7F1A16DB814D00D25FDA /* feature.progress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "feature.progress@2x.png"; path = "Location Alarm/Images/feature.progress@2x.png"; sourceTree = "<group>"; };
-		AD2A7F2216DB822C00D25FDA /* UILabel+VBStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VBStyle.h"; sourceTree = "<group>"; };
-		AD2A7F2316DB822C00D25FDA /* UILabel+VBStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VBStyle.m"; sourceTree = "<group>"; };
 		AD2A7F2516DB84F900D25FDA /* ptrn.light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ptrn.light@2x.png"; path = "Location Alarm/Images/ptrn.light@2x.png"; sourceTree = "<group>"; };
 		AD2A7F2716DB881A00D25FDA /* VBMKPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBMKPointAnnotation.h; sourceTree = "<group>"; };
 		AD2A7F2816DB881A00D25FDA /* VBMKPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBMKPointAnnotation.m; sourceTree = "<group>"; };
@@ -1059,8 +1053,6 @@
 		ADF7280316DA66E300104B41 /* search.cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search.cancel@2x.png"; path = "Location Alarm/Images/search.cancel@2x.png"; sourceTree = "<group>"; };
 		ADF7280616DA675200104B41 /* search.field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search.field@2x.png"; path = "Location Alarm/Images/search.field@2x.png"; sourceTree = "<group>"; };
 		ADF7280816DA678E00104B41 /* search.glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search.glass@2x.png"; path = "Location Alarm/Images/search.glass@2x.png"; sourceTree = "<group>"; };
-		ADF7280A16DA688900104B41 /* UIBarButtonItem+VBStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+VBStyle.h"; sourceTree = "<group>"; };
-		ADF7280B16DA688900104B41 /* UIBarButtonItem+VBStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+VBStyle.m"; sourceTree = "<group>"; };
 		ADF7280C16DA688900104B41 /* UIButton+VBStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+VBStyle.h"; sourceTree = "<group>"; };
 		ADF7280D16DA688900104B41 /* UIButton+VBStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VBStyle.m"; sourceTree = "<group>"; };
 		ADF7280E16DA688900104B41 /* UISegmentedControl+VBStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+VBStyle.h"; sourceTree = "<group>"; };
@@ -2191,8 +2183,6 @@
 			children = (
 				ADF727FB16DA65E900104B41 /* UISearchBar+VBStyle.h */,
 				ADF727FC16DA65E900104B41 /* UISearchBar+VBStyle.m */,
-				ADF7280A16DA688900104B41 /* UIBarButtonItem+VBStyle.h */,
-				ADF7280B16DA688900104B41 /* UIBarButtonItem+VBStyle.m */,
 				ADF7280C16DA688900104B41 /* UIButton+VBStyle.h */,
 				ADF7280D16DA688900104B41 /* UIButton+VBStyle.m */,
 				ADF7280E16DA688900104B41 /* UISegmentedControl+VBStyle.h */,
@@ -2201,8 +2191,6 @@
 				ADF7281116DA688900104B41 /* UITableViewCell+VBStyle.m */,
 				ADF7283416DA6DE100104B41 /* UINavigationBar+VBStyle.h */,
 				ADF7283516DA6DE200104B41 /* UINavigationBar+VBStyle.m */,
-				AD2A7F2216DB822C00D25FDA /* UILabel+VBStyle.h */,
-				AD2A7F2316DB822C00D25FDA /* UILabel+VBStyle.m */,
 				AD8F7D0B16DE049D00B7D768 /* UIView+VBStyle.h */,
 				AD8F7D0C16DE049D00B7D768 /* UIView+VBStyle.m */,
 			);
@@ -2743,7 +2731,6 @@
 				AD437FD316F8EA8B0011AF7B /* IIWrapController.m in Sources */,
 				AD437FD416F8EA8B0011AF7B /* VBLeftViewController.m in Sources */,
 				AD437FD516F8EA8B0011AF7B /* UISearchBar+VBStyle.m in Sources */,
-				AD437FD616F8EA8B0011AF7B /* UIBarButtonItem+VBStyle.m in Sources */,
 				AD437FD716F8EA8B0011AF7B /* UIButton+VBStyle.m in Sources */,
 				AD437FD816F8EA8B0011AF7B /* UISegmentedControl+VBStyle.m in Sources */,
 				AD437FD916F8EA8B0011AF7B /* UITableViewCell+VBStyle.m in Sources */,
@@ -2762,7 +2749,6 @@
 				AD437FE616F8EA8B0011AF7B /* VBAlarmDetailsViewController.m in Sources */,
 				AD437FE716F8EA8B0011AF7B /* VBAlarmEditorViewController.m in Sources */,
 				AD437FE816F8EA8B0011AF7B /* VBSwitch.m in Sources */,
-				AD437FE916F8EA8B0011AF7B /* UILabel+VBStyle.m in Sources */,
 				AD437FEA16F8EA8B0011AF7B /* VBMKPointAnnotation.m in Sources */,
 				AD437FEB16F8EA8B0011AF7B /* TTTAttributedLabel.m in Sources */,
 				AD437FEC16F8EA8B0011AF7B /* IIViewDeckController2.m in Sources */,
@@ -2854,7 +2840,6 @@
 				ADF727E716DA591A00104B41 /* IIWrapController.m in Sources */,
 				ADF727EC16DA59EE00104B41 /* VBLeftViewController.m in Sources */,
 				ADF727FD16DA65E900104B41 /* UISearchBar+VBStyle.m in Sources */,
-				ADF7281416DA688A00104B41 /* UIBarButtonItem+VBStyle.m in Sources */,
 				ADF7281516DA688A00104B41 /* UIButton+VBStyle.m in Sources */,
 				ADF7281616DA688A00104B41 /* UISegmentedControl+VBStyle.m in Sources */,
 				ADF7281716DA688A00104B41 /* UITableViewCell+VBStyle.m in Sources */,
@@ -2873,7 +2858,6 @@
 				AD4F6B8E16DAA004007BC665 /* VBAlarmDetailsViewController.m in Sources */,
 				AD4F6B9316DAA016007BC665 /* VBAlarmEditorViewController.m in Sources */,
 				ADAD136516DAA72300AD5CCD /* VBSwitch.m in Sources */,
-				AD2A7F2416DB822C00D25FDA /* UILabel+VBStyle.m in Sources */,
 				AD2A7F2916DB881A00D25FDA /* VBMKPointAnnotation.m in Sources */,
 				AD3FFBD616DBCB7400C706FB /* TTTAttributedLabel.m in Sources */,
 				AD3FFBDC16DBCCB700C706FB /* IIViewDeckController2.m in Sources */,

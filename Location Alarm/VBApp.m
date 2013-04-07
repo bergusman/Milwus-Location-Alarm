@@ -423,6 +423,20 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     
     //[self performSelector:@selector(bingo) withObject:nil afterDelay:8];
     
+    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.h.png"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                UITextAttributeTextColor: [UIColor colorWithWhite:0.267 alpha:1.0],
+                          UITextAttributeTextShadowColor: [UIColor colorWithWhite:1.0 alpha:0.65],
+                         UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
+                                     UITextAttributeFont: [UIFont boldSystemFontOfSize:17]
+     }];
+   
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:2 forBarMetrics:UIBarMetricsDefault];
+    
+    
     
     return YES;
 }

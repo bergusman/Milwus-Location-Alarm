@@ -8,8 +8,6 @@
 
 #import "VBHelpViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "UIBarButtonItem+VBStyle.h"
-#import "UILabel+VBStyle.h"
 
 
 #define USE_LOGO 0
@@ -95,18 +93,13 @@
 #if USE_LOGO
     self.navigationItem.titleView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav.title.png"]] autorelease];
 #else
-    UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
-    [titleLabel vbSetupNavTitle];
-    titleLabel.text = NSLocalizedString(@"Help", @"");
-    [titleLabel sizeToFit];
-    self.navigationItem.titleView = titleLabel;
+    self.navigationItem.title = NSLocalizedString(@"HelpTitle", @"");
 #endif
     
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(backAction)] autorelease];
-    [self.navigationItem.leftBarButtonItem vbSetupStyle];
     
     [self.closeButton setTitle:NSLocalizedString(@"CloseHelp", @"") forState:UIControlStateNormal];
     

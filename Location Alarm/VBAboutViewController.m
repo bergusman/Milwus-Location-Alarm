@@ -7,12 +7,10 @@
 //
 
 #import "VBAboutViewController.h"
-#import "UIBarButtonItem+VBStyle.h"
 #import "Appirater.h"
 #import <QuartzCore/QuartzCore.h>
 #import <StoreKit/StoreKit.h>
 #import "VBDonateManager.h"
-#import "UILabel+VBStyle.h"
 #import <Twitter/Twitter.h>
 #import "GPPShare.h"
 #import "VBNoteCenter.h"
@@ -86,17 +84,12 @@
 {
     [super viewDidLoad];
     
-    UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
-    [titleLabel vbSetupNavTitle];
-    titleLabel.text = NSLocalizedString(@"About", @"");
-    [titleLabel sizeToFit];
-    self.navigationItem.titleView = titleLabel;
     
+    self.navigationItem.title = NSLocalizedString(@"About", @"");
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(backAction)] autorelease];
-    [self.navigationItem.leftBarButtonItem vbSetupStyle];
     
     self.milwusButton.pointInsideInsets = UIEdgeInsetsMake(4, 0, 4, 0);
     [self.milwusButton setImage:[UIImage imageNamed:@"milwus.png"] forState:UIControlStateNormal];

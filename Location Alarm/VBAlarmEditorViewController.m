@@ -8,7 +8,6 @@
 
 #import "VBAlarmEditorViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "UIBarButtonItem+VBStyle.h"
 #import "VBSoundsViewController.h"
 #import "UITextField+VBCarriageColor.h"
 #import "UITextView+VBCarriageColor.h"
@@ -179,25 +178,19 @@
     UIImageView *titleView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav.title.png"]] autorelease];
     titleView.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = titleView;
-
-    self.cancelBarButton = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"")
-                                                             style:UIBarButtonItemStyleBordered
-                                                            target:self
-                                                            action:@selector(cancelAction)] autorelease];
     
-    self.saveBarButton = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"")
-                                                           style:UIBarButtonItemStyleBordered
-                                                          target:self
-                                                          action:@selector(saveAction)] autorelease];
+    self.cancelBarButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                          target:self
+                                                                          action:@selector(cancelAction)] autorelease];
     
-    self.doneBarButton = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", @"")
-                                                           style:UIBarButtonItemStyleBordered
-                                                          target:self
-                                                          action:@selector(doneAction)] autorelease];
+    self.saveBarButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                          target:self
+                                                                          action:@selector(saveAction)] autorelease];
     
-    [self.cancelBarButton vbSetupStyle];
-    [self.saveBarButton vbSetupStyle];
-    [self.doneBarButton vbSetupStyle];
+    self.doneBarButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                          target:self
+                                                                          action:@selector(doneAction)] autorelease];
+    
     
     self.emptyBarButton = [[[UIBarButtonItem alloc] initWithCustomView:[[[UIView alloc] init] autorelease]] autorelease];
     

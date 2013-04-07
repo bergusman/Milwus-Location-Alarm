@@ -7,8 +7,6 @@
 //
 
 #import "VBDevInfoViewController.h"
-#import "UIBarButtonItem+VBStyle.h"
-#import "UILabel+VBStyle.h"
 
 @interface VBDevInfoViewController ()
 
@@ -35,18 +33,11 @@
 {
     [super viewDidLoad];
     
-    UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
-    [titleLabel vbSetupNavTitle];
-    titleLabel.text = @"Info";
-    [titleLabel sizeToFit];
-    self.navigationItem.titleView = titleLabel;
-    
+    self.navigationItem.title = @"Info";
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(backAction)] autorelease];
-    [self.navigationItem.leftBarButtonItem vbSetupStyle];
-
     
     NSMutableString *text = [NSMutableString string];
     [text appendString:@"Locale\n------\n"];

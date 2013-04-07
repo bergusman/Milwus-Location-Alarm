@@ -12,7 +12,6 @@
 #import "IIViewDeckController.h"
 #import "VBSettings.h"
 #import "VBAlarmManager.h"
-#import "UIBarButtonItem+VBStyle.h"
 #import "UIButton+VBStyle.h"
 #import "UISegmentedControl+VBStyle.h"
 #import "VBAlarmDetailsViewController.h"
@@ -176,8 +175,6 @@
                                                                              target:self
                                                                              action:@selector(leftAction)] autorelease];
     
-    [self.navigationItem.leftBarButtonItem vbSetupStyle];
-    
     self.addAlarmBarButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.add.png"]
                                                                style:UIBarButtonItemStyleBordered
                                                               target:self
@@ -188,8 +185,6 @@
                                                                       target:self
                                                                       action:@selector(addAction)] autorelease];
     
-    [self.addAlarmBarButton vbSetupStyle];
-    [self.addAlarmSelectedBarButton vbSetupStyle];
     
     [self.addAlarmSelectedBarButton setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.h.png"]
                                               forState:UIControlStateNormal

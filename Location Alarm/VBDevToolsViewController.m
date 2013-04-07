@@ -7,8 +7,6 @@
 //
 
 #import "VBDevToolsViewController.h"
-#import "UIBarButtonItem+VBStyle.h"
-#import "UILabel+VBStyle.h"
 #import "VBDonateManager.h"
 #import "Appirater.h"
 
@@ -68,17 +66,11 @@
     
     self.clearsSelectionOnViewWillAppear = NO;
     
-    UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
-    [titleLabel vbSetupNavTitle];
-    titleLabel.text = @"Dev Tools";
-    [titleLabel sizeToFit];
-    self.navigationItem.titleView = titleLabel;
-    
+    self.navigationItem.title = @"Dev Tools";
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(backAction)] autorelease];
-    [self.navigationItem.leftBarButtonItem vbSetupStyle];
     
     UIView *bv = [[[UIView alloc] init] autorelease];
     bv.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.light.png"]];

@@ -8,9 +8,7 @@
 
 #import "VBAlarmDetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "UIBarButtonItem+VBStyle.h"
 #import "VBAlarmEditorViewController.h"
-#import "UILabel+VBStyle.h"
 #import "VBSwitch.h"
 #import "VBAlarmManager.h"
 #import "TTTAttributedLabel.h"
@@ -140,18 +138,11 @@
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(backAction)] autorelease];
-    [self.navigationItem.leftBarButtonItem vbSetupStyle];
     
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.action.png"]
                                                                                style:UIBarButtonItemStyleBordered
                                                                               target:self
                                                                               action:@selector(actionsAction)] autorelease];
-    [self.navigationItem.rightBarButtonItem vbSetupStyle];
-    
-    UILabel *titleLabel = [[[UILabel alloc] init] autorelease];
-    [titleLabel vbSetupNavTitle];
-    [titleLabel sizeToFit];
-    self.navigationItem.titleView = titleLabel;
     
     self.inOutSwitch.onImage = [UIImage imageNamed:@"switch.in.png"];
     self.inOutSwitch.offImage = [UIImage imageNamed:@"switch.out.png"];
@@ -208,8 +199,7 @@
 {
     [super viewWillAppear:animated];
     
-    ((UILabel *)self.navigationItem.titleView).text = self.alarm.title;
-    [self.navigationItem.titleView sizeToFit];
+    self.navigationItem.title = self.alarm.title;
     
     self.inOutSwitch.on = (self.alarm.type == VBAlarmTypeIn);
     self.onOffButton.selected = self.alarm.on;
