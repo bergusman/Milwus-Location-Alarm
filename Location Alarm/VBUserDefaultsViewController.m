@@ -10,17 +10,12 @@
 
 @interface VBUserDefaultsViewController ()
 
-@property (retain, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
 @implementation VBUserDefaultsViewController
 
-- (void)dealloc
-{
-    [_textView release];
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,10 +30,10 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"User Defaults";
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
     self.textView.text = [NSString stringWithFormat:@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]];
 }

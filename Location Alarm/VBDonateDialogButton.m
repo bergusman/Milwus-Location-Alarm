@@ -75,9 +75,9 @@
         UIFont *lightFont = [UIFont fontWithName:@"Helvetica-Light" size:15];
         UIFont *boldFont = [UIFont fontWithName:@"Helvetica-Bold" size:15];
         
-        NSShadow *shadow = [[[NSShadow alloc] init] autorelease];
+        NSShadow *shadow = [[NSShadow alloc] init];
         
-        NSMutableAttributedString *attributedTitle = [[[NSMutableAttributedString alloc] initWithString:title] autorelease];
+        NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title];
         [attributedTitle addAttribute:NSForegroundColorAttributeName value:VB_RGB(60, 60, 60) range:NSMakeRange(0, [title length])];
         [attributedTitle addAttribute:NSFontAttributeName value:boldFont range:NSMakeRange(0, [title length])];
         [attributedTitle addAttribute:NSShadowAttributeName value:shadow range:NSMakeRange(0, [title length])];

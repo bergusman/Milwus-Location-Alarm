@@ -19,13 +19,13 @@ typedef enum {
 
 @interface VBAlarm : NSManagedObject
 
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *notes;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *notes;
 @property (nonatomic) CLLocationDegrees latitude;
 @property (nonatomic) CLLocationDegrees longitude;
 @property (nonatomic) CLLocationDistance radius;
 @property (nonatomic) VBAlarmType type;
-@property (nonatomic, retain) NSString *sound;
+@property (nonatomic, strong) NSString *sound;
 @property (nonatomic) BOOL on;
 
 - (CLLocation *)location;

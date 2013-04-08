@@ -15,7 +15,7 @@
 
 @interface VBAlarmEditorViewController : UIViewController
 
-@property (nonatomic, assign) id<VBAlarmEditorViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<VBAlarmEditorViewControllerDelegate> delegate;
 @property (nonatomic, assign) BOOL pushWithKeyboard;
 
 - (id)initWithAlarm:(VBAlarm *)alarm;

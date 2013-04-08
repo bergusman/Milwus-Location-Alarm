@@ -19,7 +19,7 @@ NSString *const VBLocationManagerOldLocationUserInfoKey = @"VBLocationManagerOld
 
 @interface VBLocationManager () <CLLocationManagerDelegate>
 
-@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -35,7 +35,7 @@ NSString *const VBLocationManagerOldLocationUserInfoKey = @"VBLocationManagerOld
     self = [super init];
     if (!self) return nil;
     
-    self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+    self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     
     return self;
@@ -131,11 +131,5 @@ static VBLocationManager *_sharedManager;
     });
     return _sharedManager;
 }
-
-- (id)retain { return self; }
-- (NSUInteger)retainCount { return NSUIntegerMax; }
-- (oneway void)release { }
-- (id)autorelease { return self; }
-
 
 @end

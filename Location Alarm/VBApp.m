@@ -9,7 +9,6 @@
 #import "VBApp.h"
 #import <CoreData/CoreData.h>
 #import "IIViewDeckController2.h"
-//#import "IIViewDeckController.h"
 #import "IISideController.h"
 #import "IIWrapController.h"
 #import "VBMapViewController.h"
@@ -28,7 +27,6 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "VBDonateManager.h"
 #import <GoogleMaps/GoogleMaps.h>
-//#import "YandexMapKit.h"
 #import "VBHelpViewController.h"
 #import "GPPSignIn.h"
 #import "GPPURLHandler.h"
@@ -40,6 +38,7 @@
 
 NSString *const VBDeckWillOpenLeftSideNotification = @"VBDeckWillOpenLeftSideNotification";
 NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideNotification";
+
 
 #define GPS_OFF_NOTE_VIEW_TAG 0x69500f
 #define BAD_SIGNAL_NOTE_VIEW_TAG 0x695bad
@@ -55,27 +54,24 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     GPPDeepLinkDelegate
 >
 
-@property (nonatomic, retain) VBSegmentFunction *currentRadiusFunction;
-@property (nonatomic, retain) VBSegmentFunction *metricRadiusFunction;
-@property (nonatomic, retain) VBSegmentFunction *imperialRadiusFunction;
+@property (nonatomic, strong) VBSegmentFunction *currentRadiusFunction;
+@property (nonatomic, strong) VBSegmentFunction *metricRadiusFunction;
+@property (nonatomic, strong) VBSegmentFunction *imperialRadiusFunction;
 
-@property (nonatomic, retain) VBSegmentFunction *distanceProgressFunction;
+@property (nonatomic, strong) VBSegmentFunction *distanceProgressFunction;
 
-@property (nonatomic, retain) id<VBDistanceFormatter> metricFormatter;
-@property (nonatomic, retain) id<VBDistanceFormatter> imperialFormatter;
+@property (nonatomic, strong) id<VBDistanceFormatter> metricFormatter;
+@property (nonatomic, strong) id<VBDistanceFormatter> imperialFormatter;
 
-@property (nonatomic, retain) VBSoundsManager *soundsManager;
+@property (nonatomic, strong) VBSoundsManager *soundsManager;
 
-@property (nonatomic, retain) UIImageView *splash;
+@property (nonatomic, strong) UIImageView *splash;
 @property (nonatomic, assign) BOOL splashShowed;
-@property (nonatomic, retain) VBNoteCenter *noteCenter;
-@property (nonatomic, retain) VBMapViewController *mapViewController;
+@property (nonatomic, strong) VBNoteCenter *noteCenter;
+@property (nonatomic, strong) VBMapViewController *mapViewController;
 
-@property (nonatomic, retain) NSMutableArray *noteQueue;
-@property (nonatomic, retain) NSDate *lastBadSignalNote;
-
-@property (nonatomic, retain) NSTimer *vibrationTimer;
-@property (nonatomic, assign) NSInteger vibrationCount;
+@property (nonatomic, strong) NSMutableArray *noteQueue;
+@property (nonatomic, strong) NSDate *lastBadSignalNote;
 
 @end
 
@@ -87,30 +83,17 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     NSPersistentStoreCoordinator *_persistentStoreCoordinator;
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [_splash release];
-    [_noteCenter release];
-    [_mapViewController release];
-    [_noteQueue release];
-    
-    [_managedObjectModel release];
-    [_managedObjectContext release];
-    [_persistentStoreCoordinator release];
-    
-    [super dealloc];
-}
 
 - (id)init
 {
     self = [super init];
     if (self) {
         _sharedApp = self;
-        _noteQueue = [[NSMutableArray array] retain];
+        _noteQueue = [NSMutableArray array];
     }
     return self;
 }
+
 
 #pragma mark - Core Data Stack
 
@@ -132,7 +115,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 {
     if (_managedObjectModel) return _managedObjectModel;
     
-    _managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];
+    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     
     return _managedObjectModel;
 }
@@ -144,9 +127,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
 	
 	NSError *error = nil;
-    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-	
 	if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                                    configuration:nil
                                                              URL:storeURL
@@ -183,7 +164,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 
 - (void)showSplash
 {
-    self.splash = [[[UIImageView alloc] init] autorelease];
+    self.splash = [[UIImageView alloc] init];
     self.splash.image = [UIImage imageNamed:@"Default"];
     
     if ([UIScreen mainScreen].bounds.size.height == 568) {
@@ -254,19 +235,6 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 }
 
 
-#pragma mark - Test Methods
-
-- (void)testAlarmDictionaryRepresentation
-{
-    VBAlarm *alarm = [[VBAlarmManager sharedManager].alarms lastObject];
-    NSDictionary *dict = [alarm dictionaryRepresentation];
-    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"BingoBongo"];
-    
-    NSDictionary *dict2 = [[NSUserDefaults standardUserDefaults] objectForKey:@"BingoBongo"];
-    NSLog(@"%@", dict2);
-}
-
-
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -296,25 +264,25 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     
     [VBAlarmTracker sharedTracker];
     
-    self.soundsManager = [[[VBSoundsManager alloc] initWithNames:@"SoundNames.plist"
-                                                          shorts:@"SoundShorts.plist"
-                                                           longs:@"SoundLongs.plist"
-                                                    defaultSound:@"Alarm"] autorelease];
+    self.soundsManager = [[VBSoundsManager alloc] initWithNames:@"SoundNames.plist"
+                                                         shorts:@"SoundShorts.plist"
+                                                          longs:@"SoundLongs.plist"
+                                                   defaultSound:@"Alarm"];
     
-    self.distanceProgressFunction = [[[VBSegmentFunction alloc] init] autorelease];
+    self.distanceProgressFunction = [[VBSegmentFunction alloc] init];
     [self.distanceProgressFunction setXes:[VBConfig sharedConfig].distanceProgressFunction[@"x"]
                                                    yes:[VBConfig sharedConfig].distanceProgressFunction[@"y"]];
     
-    self.metricRadiusFunction = [[[VBSegmentFunction alloc] init] autorelease];
+    self.metricRadiusFunction = [[VBSegmentFunction alloc] init];
     [self.metricRadiusFunction setXes:[VBConfig sharedConfig].metricRadiusFunction[@"x"]
                                                yes:[VBConfig sharedConfig].metricRadiusFunction[@"y"]];
     
-    self.imperialRadiusFunction = [[[VBSegmentFunction alloc] init] autorelease];
+    self.imperialRadiusFunction = [[VBSegmentFunction alloc] init];
     [self.imperialRadiusFunction setXes:[VBConfig sharedConfig].imperialRadiusFunction[@"x"]
                                                  yes:[VBConfig sharedConfig].imperialRadiusFunction[@"y"]];
     
-    self.metricFormatter = [[[VBMetricDistanceFormatter alloc] init] autorelease];
-    self.imperialFormatter = [[[VBImperialDistanceFormatter alloc] init] autorelease];
+    self.metricFormatter = [[VBMetricDistanceFormatter alloc] init];
+    self.imperialFormatter = [[VBImperialDistanceFormatter alloc] init];
     
     if ([VBSettings sharedSettings].system == VBMeasurementSystemMetric) {
         self.currentRadiusFunction = self.metricRadiusFunction;
@@ -331,19 +299,19 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     [GPPDeepLink setDelegate:self];
     [GPPDeepLink readDeepLinkAfterInstall];
     
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.mapViewController = [[[VBMapViewController alloc] init] autorelease];
-    VBLeftViewController *leftVC = [[[VBLeftViewController alloc] init] autorelease];
+    self.mapViewController = [[VBMapViewController alloc] init];
+    VBLeftViewController *leftVC = [[VBLeftViewController alloc] init];
     
-    UINavigationController *nc = [[[UINavigationController alloc] initWithRootViewController:self.mapViewController] autorelease];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:self.mapViewController];
     nc.delegate = self;
     [nc.navigationBar vbSetypStyle];
     
-    IISideController *sideVC = [[[IISideController alloc] initWithViewController:leftVC] autorelease];
+    IISideController *sideVC = [[IISideController alloc] initWithViewController:leftVC];
     sideVC.constrainedSize = 260;
     
-    IIViewDeckController *deckVC = [[[IIViewDeckController alloc] init] autorelease];
+    IIViewDeckController *deckVC = [[IIViewDeckController alloc] init];
     deckVC.delegate = self;
     deckVC.centerController = nc;
     deckVC.leftController = sideVC;
@@ -357,7 +325,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     
     [self showSplash];
 
-    self.noteCenter = [[[VBNoteCenter alloc] initWithNavigationController:nc] autorelease];
+    self.noteCenter = [[VBNoteCenter alloc] initWithNavigationController:nc];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(statusDidChange:)
@@ -399,14 +367,14 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     [[VBDonateManager sharedManager] addObserver:self forKeyPath:@"activeTransactionCount" options:NSKeyValueObservingOptionNew context:NULL];
     
     
-    [[VBSettings sharedSettings] addObserver:self forKeyPath:@"system" options:NSKeyValueObservingOptionNew context:self];
+    [[VBSettings sharedSettings] addObserver:self forKeyPath:@"system" options:NSKeyValueObservingOptionNew context:(__bridge void *)(self)];
     
     
     NSString *version = [[NSBundle mainBundle] infoDictionary][(NSString*)kCFBundleVersionKey];
     NSString *currentVersion = [[NSUserDefaults standardUserDefaults] objectForKey:VBCurrentVersion];
     
     if (![version isEqualToString:currentVersion]) {
-        VBHelpViewController *help = [[[VBHelpViewController alloc] init] autorelease];
+        VBHelpViewController *help = [[VBHelpViewController alloc] init];
         help.showsCloseButton = YES;
         help.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         help.onBack = ^{
@@ -418,36 +386,9 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     [[NSUserDefaults standardUserDefaults] setObject:version forKey:VBCurrentVersion];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    // Test Invocation
-    //[self testAlarmDictionaryRepresentation];
-    
-    //[self performSelector:@selector(bingo) withObject:nil afterDelay:8];
-    
-    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.h.png"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                UITextAttributeTextColor: [UIColor colorWithWhite:0.267 alpha:1.0],
-                          UITextAttributeTextShadowColor: [UIColor colorWithWhite:1.0 alpha:0.65],
-                         UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-                                     UITextAttributeFont: [UIFont boldSystemFontOfSize:16]
-     }];
-   
-    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
-    
-    
+    [self customizeAppearance];
     
     return YES;
-}
-
-- (void)bingo
-{
-    NSLog(@"BINGO");
-    UILocalNotification *noty = [[[UILocalNotification alloc] init] autorelease];
-    noty.soundName = @"Alarm Long.m4r";
-    noty.alertBody = @"Bingo Bongo\nГлавное, там абсолютно безопасно, очень дешево и невероятно приятно. Страна не развращена туристами. Сейчас таких стран на карте осталось совсем немного, не пропустите";
-    [[UIApplication sharedApplication] presentLocalNotificationNow:noty];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -477,6 +418,32 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 }
 
 
+#pragma mark - Appearance
+
+- (void)customizeAppearance
+{
+    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.png"]
+                                            forState:UIControlStateNormal
+                                          barMetrics:UIBarMetricsDefault];
+    
+    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.h.png"]
+                                            forState:UIControlStateHighlighted
+                                          barMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                UITextAttributeTextColor: [UIColor colorWithWhite:0.267 alpha:1.0],
+                          UITextAttributeTextShadowColor: [UIColor colorWithWhite:1.0 alpha:0.65],
+                         UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
+                                     UITextAttributeFont: [UIFont boldSystemFontOfSize:16]
+     }];
+    
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
+    
+    
+    
+}
+
+
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -490,7 +457,6 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
             }
         }
     }
-    NSLog(@"%@ %@", keyPath, change);
 }
 
 
@@ -516,7 +482,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
         [self.noteCenter.navigationController.viewDeckController closeLeftViewAnimated:NO];
         [self.noteCenter.navigationController popToRootViewControllerAnimated:NO];
         
-        VBAlarmDetailsViewController *vc = [[[VBAlarmDetailsViewController alloc] initWithAlarm:alarm] autorelease];
+        VBAlarmDetailsViewController *vc = [[VBAlarmDetailsViewController alloc] initWithAlarm:alarm];
         
         UINavigationController *nc = self.noteCenter.navigationController;
         
@@ -527,10 +493,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
         [nc pushViewController:vc animated:NO];
         
     } else {
-        
     }
-    
-    
 }
 
 
@@ -554,7 +517,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
         //[[MPMusicPlayerController applicationMusicPlayer] setVolume:1];
     }
     
-    UILocalNotification *localNotification = [[[UILocalNotification alloc] init] autorelease];
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
     localNotification.soundName = [self.soundsManager soundLong:alarm.sound];
     localNotification.userInfo = [alarm dictionaryRepresentation];
     if (alarm.type == VBAlarmTypeIn) {
@@ -569,7 +532,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
         NSString *action = (alarm.type == VBAlarmTypeIn ? NSLocalizedString(@"Reached", @"") : NSLocalizedString(@"Left", @""));
         NSString *text = [NSString stringWithFormat:@"%@ %@", action, alarm.title];
-        NSMutableAttributedString *attributedText = [[[NSMutableAttributedString alloc] initWithString:text] autorelease];
+        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         
         [attributedText addAttribute:(NSString *)kCTFontAttributeName
                                value:(id)[self regularNoteFont]
@@ -581,8 +544,6 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
         
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     } else {
-        
-        //[self startVibrationTimer];
     }
     
     [Appirater userDidSignificantEvent:YES];
@@ -626,7 +587,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 {
     static CTFontRef font = nil;
     if (!font) {
-        font = CTFontCreateWithName((CFStringRef)[UIFont systemFontOfSize:10].fontName, 10, NULL);
+        font = CTFontCreateWithName((__bridge CFStringRef)[UIFont systemFontOfSize:10].fontName, 10, NULL);
     }
     return font;
 }
@@ -686,12 +647,11 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 
 - (void)showBadSignalNote
 {
-    /*
+    return;
     [self.noteCenter showNoteWithText:NSLocalizedString(@"Note_BadSignal", @"")
                                 image:[UIImage imageNamed:@"note.icon.error.png"]
                              closable:YES];
     self.noteCenter.noteView.tag = BAD_SIGNAL_NOTE_VIEW_TAG;
-     */
 }
 
 - (void)hideBadSignalNote
@@ -711,11 +671,11 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     
     [VBAnalytics completeDonateWithPrice:[price stringValue]];
     
-    [[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SuccessDonateTitle", @"")
-                                 message:NSLocalizedString(@"SuccessDonateMessage", @"")
-                                delegate:nil
-                       cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-                       otherButtonTitles:nil] autorelease] show];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SuccessDonateTitle", @"")
+                                message:NSLocalizedString(@"SuccessDonateMessage", @"")
+                               delegate:nil
+                      cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                      otherButtonTitles:nil] show];
 }
 
 
@@ -724,38 +684,6 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 - (void)didReceiveDeepLink:(GPPDeepLink *)deepLink
 {
     
-}
-
-
-#pragma mark - Vibration
-
-- (void)startVibrationTimer
-{
-    self.vibrationCount = 0;
-    self.vibrationTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(vibrationTimerAction) userInfo:nil repeats:YES];
-}
-
-- (void)stopVibrationTimer
-{
-    [self.vibrationTimer invalidate];
-    self.vibrationTimer = nil;
-}
-
-- (void)vibrationTimerAction
-{
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    self.vibrationCount++;
-    if (self.vibrationCount > 14) {
-        [self stopVibrationTimer];
-    }
-}
-
-- (void)vibrate
-{
-    NSLog(@"Vibro");
-    //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-    //[self performSelector:@selector(vibrate) withObject:nil afterDelay:1];
 }
 
 

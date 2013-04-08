@@ -10,9 +10,9 @@
 
 @interface VBSoundsManager ()
 
-@property (nonatomic, retain) NSDictionary *soundNames;
-@property (nonatomic, retain) NSDictionary *soundShorts;
-@property (nonatomic, retain) NSDictionary *soundLongs;
+@property (nonatomic, strong) NSDictionary *soundNames;
+@property (nonatomic, strong) NSDictionary *soundShorts;
+@property (nonatomic, strong) NSDictionary *soundLongs;
 
 @property (nonatomic, copy) NSString *defaultSound;
 

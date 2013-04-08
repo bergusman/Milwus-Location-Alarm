@@ -14,9 +14,9 @@
 
 @interface VBAlarmCell : UITableViewCell
 
-@property (nonatomic, assign) id<VBAlarmCellDelegate> delegate;
+@property (nonatomic, weak) id<VBAlarmCellDelegate> delegate;
 
-@property (nonatomic, retain, readonly) UIImageView *progressImageView;
+@property (nonatomic, strong, readonly) UIImageView *progressImageView;
 
 @property (nonatomic, assign) BOOL on;
 

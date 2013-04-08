@@ -23,49 +23,30 @@
     GPPShareDelegate
 >
 
-@property (retain, nonatomic) IBOutlet UIButton *milwusButton;
-@property (retain, nonatomic) IBOutlet UILabel *versionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *milwusButton;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
-@property (retain, nonatomic) IBOutlet UIView *ratePanel;
-@property (retain, nonatomic) IBOutlet UIButton *rateButton;
-@property (retain, nonatomic) IBOutlet UIButton *websiteButton;
+@property (weak, nonatomic) IBOutlet UIView *ratePanel;
+@property (weak, nonatomic) IBOutlet UIButton *rateButton;
+@property (weak, nonatomic) IBOutlet UIButton *websiteButton;
 
-@property (retain, nonatomic) IBOutlet UIView *aboutPanel;
-@property (retain, nonatomic) IBOutlet UIWebView *aboutWebView;
+@property (weak, nonatomic) IBOutlet UIView *aboutPanel;
+@property (weak, nonatomic) IBOutlet UIWebView *aboutWebView;
 
-@property (retain, nonatomic) IBOutlet UILabel *donateLabel1;
-@property (retain, nonatomic) IBOutlet UILabel *donateLabel2;
-@property (retain, nonatomic) IBOutletCollection(UIButton) NSArray *donateButtons;
+@property (weak, nonatomic) IBOutlet UILabel *donateLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *donateLabel2;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *donateButtons;
 
-@property (retain, nonatomic) IBOutlet UIView *sharePanel;
-@property (retain, nonatomic) IBOutlet UIButton *facebookButton;
-@property (retain, nonatomic) IBOutlet UIButton *twitterButton;
-@property (retain, nonatomic) IBOutlet UIButton *googleButton;
+@property (weak, nonatomic) IBOutlet UIView *sharePanel;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
+@property (weak, nonatomic) IBOutlet UIButton *googleButton;
 
 @end
 
 
 @implementation VBAboutViewController
 
-- (void)dealloc
-{
-    [_onBack release];
-    [_milwusButton release];
-    [_versionLabel release];
-    [_ratePanel release];
-    [_rateButton release];
-    [_websiteButton release];
-    [_aboutPanel release];
-    [_aboutWebView release];
-    [_donateLabel1 release];
-    [_donateLabel2 release];
-    [_donateButtons release];
-    [_sharePanel release];
-    [_facebookButton release];
-    [_twitterButton release];
-    [_googleButton release];
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -84,12 +65,11 @@
 {
     [super viewDidLoad];
     
-    
-    self.navigationItem.title = NSLocalizedString(@"About", @"");
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.title = NSLocalizedString(@"AboutTitle", @"");
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
     self.milwusButton.pointInsideInsets = UIEdgeInsetsMake(4, 0, 4, 0);
     [self.milwusButton setImage:[UIImage imageNamed:@"milwus.png"] forState:UIControlStateNormal];
@@ -123,7 +103,6 @@
     [self.websiteButton setTitle:NSLocalizedString(@"About_GoToWebsite", @"") forState:UIControlStateNormal];
     
     self.aboutPanel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.light.png"]];
-
     
     [self.facebookButton setImage:[UIImage imageNamed:@"share.button.facebook.png"] forState:UIControlStateNormal];
     [self.twitterButton setImage:[UIImage imageNamed:@"share.button.twitter.png"] forState:UIControlStateNormal];
@@ -145,20 +124,7 @@
 
 - (void)viewDidUnload
 {
-    [self setMilwusButton:nil];
-    [self setVersionLabel:nil];
-    [self setRatePanel:nil];
-    [self setRateButton:nil];
-    [self setWebsiteButton:nil];
-    [self setDonateLabel1:nil];
-    [self setDonateLabel2:nil];
     [self setDonateButtons:nil];
-    [self setAboutPanel:nil];
-    [self setAboutWebView:nil];
-    [self setSharePanel:nil];
-    [self setFacebookButton:nil];
-    [self setTwitterButton:nil];
-    [self setGoogleButton:nil];
     [super viewDidUnload];
 }
 
@@ -203,14 +169,14 @@
 - (void)setupDonationButtons
 {
     NSArray *pigs = @[
-                      @"donate.dialog.pig.gray.png",
-                      @"donate.dialog.pig.green.png",
-                      @"donate.dialog.pig.red.png",
-                      @"donate.dialog.pig.blue.png",
-                      @"donate.dialog.pig.yellow.png",
-                      ];
+        @"donate.dialog.pig.gray.png",
+        @"donate.dialog.pig.green.png",
+        @"donate.dialog.pig.red.png",
+        @"donate.dialog.pig.blue.png",
+        @"donate.dialog.pig.yellow.png",
+    ];
     
-    NSNumberFormatter *currencyFormatter = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
     [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     [currencyFormatter setCurrencyCode:@"USD"];
     [currencyFormatter setMaximumFractionDigits:0];
@@ -241,9 +207,9 @@
             UIFont *lightFont = [UIFont fontWithName:@"Helvetica" size:15];
             UIFont *boldFont = [UIFont fontWithName:@"Helvetica-Bold" size:15];
             
-            NSShadow *shadow = [[[NSShadow alloc] init] autorelease];
+            NSShadow *shadow = [[NSShadow alloc] init];
             
-            NSMutableAttributedString *attributedTitle = [[[NSMutableAttributedString alloc] initWithString:title] autorelease];
+            NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title];
             [attributedTitle addAttribute:NSForegroundColorAttributeName value:VB_RGB(60, 60, 60) range:NSMakeRange(0, [title length])];
             [attributedTitle addAttribute:NSFontAttributeName value:boldFont range:NSMakeRange(0, [title length])];
             [attributedTitle addAttribute:NSShadowAttributeName value:shadow range:NSMakeRange(0, [title length])];
@@ -343,7 +309,7 @@
 - (void)shareOnTwitterOldWay
 {
     if ([TWTweetComposeViewController canSendTweet]) {
-        TWTweetComposeViewController *tweetSheet = [[[TWTweetComposeViewController alloc] init] autorelease];
+        TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
         [tweetSheet setInitialText:NSLocalizedString(@"TwitterSharingText", @"")];
         [tweetSheet addURL:[NSURL URLWithString:[self applicationStringURL]]];
         [tweetSheet setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
@@ -378,11 +344,11 @@
 
 - (void)showTwitterFailureAlert
 {
-    [[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"TwitterSharingFailureTitle", @"")
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"TwitterSharingFailureTitle", @"")
                                  message:NSLocalizedString(@"TwitterSharingFailureMessage", @"")
                                 delegate:nil
                        cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-                       otherButtonTitles:nil] autorelease] show];
+                       otherButtonTitles:nil] show];
 }
 
 
@@ -418,11 +384,11 @@
 
 - (void)showFacebookFailureAlert
 {
-    [[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FacebookSharingFailureTitle", @"")
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FacebookSharingFailureTitle", @"")
                                  message:NSLocalizedString(@"FacebookSharingFailureMessage", @"")
                                 delegate:nil
                        cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-                       otherButtonTitles:nil] autorelease] show];
+                       otherButtonTitles:nil] show];
 }
 
 

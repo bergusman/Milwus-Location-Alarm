@@ -11,20 +11,14 @@
 
 @interface VBSegmentFunction ()
 
-@property (nonatomic, retain) NSArray *xes;
-@property (nonatomic, retain) NSArray *yes;
+@property (nonatomic, strong) NSArray *xes;
+@property (nonatomic, strong) NSArray *yes;
 
 @end
 
 
 @implementation VBSegmentFunction
 
-- (void)dealloc
-{
-    [_xes release];
-    [_yes release];
-    [super dealloc];
-}
 
 - (void)setXes:(NSArray *)xes yes:(NSArray *)yes
 {

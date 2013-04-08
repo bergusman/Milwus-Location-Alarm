@@ -21,13 +21,6 @@
 
 @implementation VBDevToolsViewController
 
-- (void)dealloc
-{
-    [_onBack release];
-    [_toolNames release];
-    [_toolControllers release];
-    [super dealloc];
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -67,12 +60,12 @@
     self.clearsSelectionOnViewWillAppear = NO;
     
     self.navigationItem.title = @"Dev Tools";
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
-    UIView *bv = [[[UIView alloc] init] autorelease];
+    UIView *bv = [[UIView alloc] init];
     bv.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.light.png"]];
     self.tableView.backgroundView = bv;
 }
@@ -107,7 +100,7 @@
     static NSString *cellID = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
     cell.textLabel.text = self.toolNames[indexPath.row];
@@ -141,7 +134,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     } else {
         Class controllerClass = NSClassFromString(self.toolControllers[indexPath.row]);
-        id controller = [[[controllerClass alloc] init] autorelease];
+        id controller = [[controllerClass alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

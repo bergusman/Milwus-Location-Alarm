@@ -14,12 +14,6 @@
     UIButton *_button;
 }
 
-- (void)dealloc
-{
-    [_textLabel release];
-    [_button release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -34,7 +28,7 @@
         _textLabel.font = [UIFont boldSystemFontOfSize:14];
         [self addSubview:_textLabel];
         
-        _button = [[UIButton buttonWithType:UIButtonTypeDetailDisclosure] retain];
+        _button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [self addSubview:_button];
     }
     return self;

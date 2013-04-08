@@ -148,7 +148,7 @@
 					<object class="IBUIImageView" id="678262076">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{158, 43}, {160, 44}}</string>
+						<string key="NSFrame">{{158, 54}, {160, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="86214568"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -693,7 +693,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{221, 2}, {80, 40}}</string>
 								<reference key="NSSuperview" ref="555196044"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1364,7 +1363,7 @@
 			<string key="alarm@2x.png">{500, 600}</string>
 			<string key="donate.pig.blue@2x.png">{52, 52}</string>
 			<string key="milwus@2x.png">{264, 68}</string>
-			<string key="nav.title@2x.png">{320, 88}</string>
+			<string key="nav.title@2x.png">{320, 60}</string>
 			<string key="share.button.facebook@2x.png">{160, 80}</string>
 			<string key="share.button.googleplus@2x.png">{160, 80}</string>
 			<string key="share.button.twitter@2x.png">{160, 80}</string>

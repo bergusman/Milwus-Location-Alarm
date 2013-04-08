@@ -27,10 +27,10 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Crashes";
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.light.png"]];
 }
@@ -54,7 +54,7 @@
 
 - (IBAction)action2:(UIButton *)sender
 {
-    [@[@4] autorelease];
+    //[@[@4] autorelease];
 }
 
 @end

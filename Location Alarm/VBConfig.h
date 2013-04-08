@@ -25,12 +25,12 @@
 @property (nonatomic, assign, readonly) double metricDefaultRadius;
 @property (nonatomic, assign, readonly) double imperialDefaultRadius;
 
-@property (nonatomic, retain, readonly) NSDictionary *metricRadiusFunction;
-@property (nonatomic, retain, readonly) NSDictionary *imperialRadiusFunction;
-@property (nonatomic, retain, readonly) NSDictionary *distanceProgressFunction;
+@property (nonatomic, strong, readonly) NSDictionary *metricRadiusFunction;
+@property (nonatomic, strong, readonly) NSDictionary *imperialRadiusFunction;
+@property (nonatomic, strong, readonly) NSDictionary *distanceProgressFunction;
 
-@property (nonatomic, retain, readonly) NSArray *metricRadiusRules;
-@property (nonatomic, retain, readonly) NSArray *imperialRadiusRules;
+@property (nonatomic, strong, readonly) NSArray *metricRadiusRules;
+@property (nonatomic, strong, readonly) NSArray *imperialRadiusRules;
 
 @property (nonatomic, assign, readonly) BOOL useAnalytics;
 @property (nonatomic, copy, readonly) NSString *analyticsTrackingID;
@@ -42,10 +42,10 @@
 
 @property (nonatomic, assign, readonly) BOOL useDevTools;
 
-@property (nonatomic, retain, readonly) NSArray *dialogDonatePrices;
-@property (nonatomic, retain, readonly) NSArray *dialogDonateIDs;
-@property (nonatomic, retain, readonly) NSArray *aboutDonatePrices;
-@property (nonatomic, retain, readonly) NSArray *aboutDonateIDs;
+@property (nonatomic, strong, readonly) NSArray *dialogDonatePrices;
+@property (nonatomic, strong, readonly) NSArray *dialogDonateIDs;
+@property (nonatomic, strong, readonly) NSArray *aboutDonatePrices;
+@property (nonatomic, strong, readonly) NSArray *aboutDonateIDs;
 
 @property (nonatomic, copy, readonly) NSString *googlePlusClientID;
 

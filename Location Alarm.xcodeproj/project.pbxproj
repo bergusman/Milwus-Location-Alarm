@@ -67,9 +67,90 @@
 		AD2A7F2916DB881A00D25FDA /* VBMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A7F2816DB881A00D25FDA /* VBMKPointAnnotation.m */; };
 		AD2A7F3916DB8CB400D25FDA /* VBAlarmDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2A7F3816DB8CB400D25FDA /* VBAlarmDetailsViewController.xib */; };
 		AD30E04016F04A88002E0822 /* nav.title.dev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD30E03F16F04A88002E0822 /* nav.title.dev@2x.png */; };
+		AD3B58581711C37600386D78 /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5D16FB437100150896 /* GTLBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58591711C37600386D78 /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5D16FB437100150896 /* GTLBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B585A1711C37900386D78 /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5F16FB437100150896 /* GTLBatchQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B585B1711C37900386D78 /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5F16FB437100150896 /* GTLBatchQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B585C1711C38800386D78 /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6116FB437100150896 /* GTLBatchResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B585D1711C38800386D78 /* GTLDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6316FB437100150896 /* GTLDateTime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B585E1711C38800386D78 /* GTLErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6616FB437100150896 /* GTLErrorObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B585F1711C38800386D78 /* GTLFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6816FB437100150896 /* GTLFramework.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58601711C38800386D78 /* GTLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6A16FB437100150896 /* GTLJSONParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58611711C38800386D78 /* GTLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6C16FB437100150896 /* GTLObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58621711C38900386D78 /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6116FB437100150896 /* GTLBatchResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58631711C38900386D78 /* GTLDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6316FB437100150896 /* GTLDateTime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58641711C38900386D78 /* GTLErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6616FB437100150896 /* GTLErrorObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58651711C38900386D78 /* GTLFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6816FB437100150896 /* GTLFramework.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58661711C38900386D78 /* GTLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6A16FB437100150896 /* GTLJSONParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58671711C38900386D78 /* GTLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6C16FB437100150896 /* GTLObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58681711C3BD00386D78 /* GTLPlusAcl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7016FB437100150896 /* GTLPlusAcl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58691711C3BD00386D78 /* GTLPlusAclentryResource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7216FB437100150896 /* GTLPlusAclentryResource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B586A1711C3BD00386D78 /* GTLPlusActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7416FB437100150896 /* GTLPlusActivity.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B586B1711C3BD00386D78 /* GTLPlusActivityFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7616FB437100150896 /* GTLPlusActivityFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B586C1711C3BD00386D78 /* GTLPlusComment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7816FB437100150896 /* GTLPlusComment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B586D1711C3BD00386D78 /* GTLPlusCommentFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7A16FB437100150896 /* GTLPlusCommentFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B586E1711C3BD00386D78 /* GTLPlusConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7C16FB437100150896 /* GTLPlusConstants.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B586F1711C3BD00386D78 /* GTLPlusItemScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7E16FB437100150896 /* GTLPlusItemScope.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58701711C3BD00386D78 /* GTLPlusMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8016FB437100150896 /* GTLPlusMoment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58711711C3BD00386D78 /* GTLPlusMomentsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8216FB437100150896 /* GTLPlusMomentsFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58721711C3BD00386D78 /* GTLPlusPeopleFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8416FB437100150896 /* GTLPlusPeopleFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58731711C3BD00386D78 /* GTLPlusPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8616FB437100150896 /* GTLPlusPerson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58741711C3BD00386D78 /* GTLQueryPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8816FB437100150896 /* GTLQueryPlus.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58751711C3BD00386D78 /* GTLServicePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8A16FB437100150896 /* GTLServicePlus.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58761711C3BE00386D78 /* GTLPlusAcl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7016FB437100150896 /* GTLPlusAcl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58771711C3BE00386D78 /* GTLPlusAclentryResource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7216FB437100150896 /* GTLPlusAclentryResource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58781711C3BE00386D78 /* GTLPlusActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7416FB437100150896 /* GTLPlusActivity.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58791711C3BE00386D78 /* GTLPlusActivityFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7616FB437100150896 /* GTLPlusActivityFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B587A1711C3BE00386D78 /* GTLPlusComment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7816FB437100150896 /* GTLPlusComment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B587B1711C3BE00386D78 /* GTLPlusCommentFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7A16FB437100150896 /* GTLPlusCommentFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B587C1711C3BE00386D78 /* GTLPlusConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7C16FB437100150896 /* GTLPlusConstants.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B587D1711C3BE00386D78 /* GTLPlusItemScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7E16FB437100150896 /* GTLPlusItemScope.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B587E1711C3BE00386D78 /* GTLPlusMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8016FB437100150896 /* GTLPlusMoment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B587F1711C3BE00386D78 /* GTLPlusMomentsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8216FB437100150896 /* GTLPlusMomentsFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58801711C3BE00386D78 /* GTLPlusPeopleFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8416FB437100150896 /* GTLPlusPeopleFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58811711C3BE00386D78 /* GTLPlusPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8616FB437100150896 /* GTLPlusPerson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58821711C3BE00386D78 /* GTLQueryPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8816FB437100150896 /* GTLQueryPlus.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58831711C3BE00386D78 /* GTLServicePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8A16FB437100150896 /* GTLServicePlus.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58841711C41A00386D78 /* GTLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8C16FB437100150896 /* GTLQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58851711C41A00386D78 /* GTLRuntimeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8E16FB437100150896 /* GTLRuntimeCommon.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58861711C41A00386D78 /* GTLService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9016FB437100150896 /* GTLService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58871711C41A00386D78 /* GTLUploadParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9316FB437100150896 /* GTLUploadParameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58881711C41A00386D78 /* GTLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9516FB437100150896 /* GTLUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58891711C41A00386D78 /* GTLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8C16FB437100150896 /* GTLQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B588A1711C41A00386D78 /* GTLRuntimeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8E16FB437100150896 /* GTLRuntimeCommon.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B588B1711C41A00386D78 /* GTLService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9016FB437100150896 /* GTLService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B588C1711C41A00386D78 /* GTLUploadParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9316FB437100150896 /* GTLUploadParameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B588D1711C41A00386D78 /* GTLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9516FB437100150896 /* GTLUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B588E1711C44D00386D78 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9916FB437100150896 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B588F1711C44D00386D78 /* GTMHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9B16FB437100150896 /* GTMHTTPFetcherLogging.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58901711C44D00386D78 /* GTMHTTPFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9D16FB437100150896 /* GTMHTTPFetcherService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58911711C44D00386D78 /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9F16FB437100150896 /* GTMHTTPFetchHistory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58921711C44D00386D78 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA116FB437100150896 /* GTMLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58931711C44D00386D78 /* GTMMethodCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA316FB437100150896 /* GTMMethodCheck.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58941711C44D00386D78 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA516FB437100150896 /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58951711C44D00386D78 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA716FB437100150896 /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58961711C44D00386D78 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA916FB437100150896 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58971711C44D00386D78 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAB16FB437100150896 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58981711C44D00386D78 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAD16FB437100150896 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58991711C44D00386D78 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB016FB437100150896 /* GTMObjC2Runtime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B589A1711C44D00386D78 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB216FB437100150896 /* OpenInChromeController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B589B1711C44E00386D78 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9916FB437100150896 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B589C1711C44E00386D78 /* GTMHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9B16FB437100150896 /* GTMHTTPFetcherLogging.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B589D1711C44E00386D78 /* GTMHTTPFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9D16FB437100150896 /* GTMHTTPFetcherService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B589E1711C44E00386D78 /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9F16FB437100150896 /* GTMHTTPFetchHistory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B589F1711C44E00386D78 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA116FB437100150896 /* GTMLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A01711C44E00386D78 /* GTMMethodCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA316FB437100150896 /* GTMMethodCheck.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A11711C44E00386D78 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA516FB437100150896 /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A21711C44E00386D78 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA716FB437100150896 /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A31711C44E00386D78 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA916FB437100150896 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A41711C44E00386D78 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAB16FB437100150896 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A51711C44E00386D78 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAD16FB437100150896 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A61711C44E00386D78 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB016FB437100150896 /* GTMObjC2Runtime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58A71711C44E00386D78 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB216FB437100150896 /* OpenInChromeController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD3B58D717128D9900386D78 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB83FD170738060045E9EB /* libc++.dylib */; };
 		AD3FFBCD16DB990500C706FB /* comments.line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3FFBCC16DB990500C706FB /* comments.line@2x.png */; };
 		AD3FFBD216DBC5B200C706FB /* comments.bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3FFBD116DBC5B200C706FB /* comments.bg@2x.png */; };
-		AD3FFBD616DBCB7400C706FB /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBD516DBCB7400C706FB /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		AD3FFBD616DBCB7400C706FB /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBD516DBCB7400C706FB /* TTTAttributedLabel.m */; };
 		AD3FFBD816DBCC0900C706FB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3FFBD716DBCC0900C706FB /* CoreText.framework */; };
 		AD3FFBDC16DBCCB700C706FB /* IIViewDeckController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBDB16DBCCB700C706FB /* IIViewDeckController2.m */; };
 		AD4376A116FB54030042D92A /* VBUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43769F16FB54030042D92A /* VBUserDefaultsViewController.m */; };
@@ -83,8 +164,8 @@
 		AD437FCF16F8EA8B0011AF7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7278416DA377800104B41 /* main.m */; };
 		AD437FD016F8EA8B0011AF7B /* VBApp.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7278816DA377800104B41 /* VBApp.m */; };
 		AD437FD116F8EA8B0011AF7B /* VBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727B116DA48CD00104B41 /* VBMapViewController.m */; };
-		AD437FD216F8EA8B0011AF7B /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E016DA591A00104B41 /* IISideController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		AD437FD316F8EA8B0011AF7B /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E416DA591A00104B41 /* IIWrapController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		AD437FD216F8EA8B0011AF7B /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E016DA591A00104B41 /* IISideController.m */; };
+		AD437FD316F8EA8B0011AF7B /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E416DA591A00104B41 /* IIWrapController.m */; };
 		AD437FD416F8EA8B0011AF7B /* VBLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727EA16DA59EE00104B41 /* VBLeftViewController.m */; };
 		AD437FD516F8EA8B0011AF7B /* UISearchBar+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727FC16DA65E900104B41 /* UISearchBar+VBStyle.m */; };
 		AD437FD716F8EA8B0011AF7B /* UIButton+VBStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7280D16DA688900104B41 /* UIButton+VBStyle.m */; };
@@ -106,7 +187,7 @@
 		AD437FE716F8EA8B0011AF7B /* VBAlarmEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F6B9116DAA016007BC665 /* VBAlarmEditorViewController.m */; };
 		AD437FE816F8EA8B0011AF7B /* VBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAD136416DAA72300AD5CCD /* VBSwitch.m */; };
 		AD437FEA16F8EA8B0011AF7B /* VBMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A7F2816DB881A00D25FDA /* VBMKPointAnnotation.m */; };
-		AD437FEB16F8EA8B0011AF7B /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBD516DBCB7400C706FB /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		AD437FEB16F8EA8B0011AF7B /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBD516DBCB7400C706FB /* TTTAttributedLabel.m */; };
 		AD437FEC16F8EA8B0011AF7B /* IIViewDeckController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFBDB16DBCCB700C706FB /* IIViewDeckController2.m */; };
 		AD437FED16F8EA8B0011AF7B /* UIView+VBFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFA1D1716DCB2F90093CC3D /* UIView+VBFirstResponder.m */; };
 		AD437FEE16F8EA8B0011AF7B /* VBTestPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A4A9D16DD3542006F1328 /* VBTestPinAnnotationView.m */; };
@@ -121,15 +202,15 @@
 		AD437FF816F8EA8B0011AF7B /* VBImperialDistanceFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1EBAF716E24CA800E91E56 /* VBImperialDistanceFormatter.m */; };
 		AD437FF916F8EA8B0011AF7B /* VBNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4FF81516E45EEB00877217 /* VBNoteView.m */; };
 		AD437FFA16F8EA8B0011AF7B /* VBNoteCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4FF81816E4612000877217 /* VBNoteCenter.m */; };
-		AD437FFB16F8EA8B0011AF7B /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE58F4716E72A0400CF03A8 /* Appirater.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		AD437FFB16F8EA8B0011AF7B /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE58F4716E72A0400CF03A8 /* Appirater.m */; };
 		AD437FFC16F8EA8B0011AF7B /* VBDevToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27BF9016F0455D00D293F2 /* VBDevToolsViewController.m */; };
 		AD437FFD16F8EA8B0011AF7B /* VBCrashesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27BF9716F0483E00D293F2 /* VBCrashesViewController.m */; };
 		AD437FFE16F8EA8B0011AF7B /* VBGPSSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA771D816F07CC80052736D /* VBGPSSignalViewController.m */; };
 		AD437FFF16F8EA8B0011AF7B /* VBAlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA771E816F0A82F0052736D /* VBAlarmCell.m */; };
 		AD43800016F8EA8B0011AF7B /* UIView+VBView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA771EE16F0B72F0052736D /* UIView+VBView.m */; };
 		AD43800116F8EA8B0011AF7B /* VBNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E958916F1DB42008375C1 /* VBNotesViewController.m */; };
-		AD43800216F8EA8B0011AF7B /* SVGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E958F16F1EDD1008375C1 /* SVGeocoder.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		AD43800316F8EA8B0011AF7B /* SVPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E959116F1EDD1008375C1 /* SVPlacemark.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		AD43800216F8EA8B0011AF7B /* SVGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E958F16F1EDD1008375C1 /* SVGeocoder.m */; };
+		AD43800316F8EA8B0011AF7B /* SVPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E959116F1EDD1008375C1 /* SVPlacemark.m */; };
 		AD43800416F8EA8B0011AF7B /* VBDevInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9A424A16F213A20099BA29 /* VBDevInfoViewController.m */; };
 		AD43800516F8EA8B0011AF7B /* VBDonateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25524716F22A2A00AC057F /* VBDonateManager.m */; };
 		AD43800616F8EA8B0011AF7B /* VBAppleMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD089CD416F4942F00588EF4 /* VBAppleMapViewController.m */; };
@@ -341,88 +422,8 @@
 		AD55B67F16F2533400A167C9 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD55B67E16F2533400A167C9 /* GoogleMaps.bundle */; };
 		AD5B0CB516FB437100150896 /* libGooglePlusUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B0C5916FB437100150896 /* libGooglePlusUniversal.a */; };
 		AD5B0CB616FB437100150896 /* libGooglePlusUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B0C5916FB437100150896 /* libGooglePlusUniversal.a */; };
-		AD5B0CB716FB437100150896 /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5D16FB437100150896 /* GTLBase64.m */; };
-		AD5B0CB816FB437100150896 /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5D16FB437100150896 /* GTLBase64.m */; };
-		AD5B0CB916FB437100150896 /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5F16FB437100150896 /* GTLBatchQuery.m */; };
-		AD5B0CBA16FB437100150896 /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C5F16FB437100150896 /* GTLBatchQuery.m */; };
-		AD5B0CBB16FB437100150896 /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6116FB437100150896 /* GTLBatchResult.m */; };
-		AD5B0CBC16FB437100150896 /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6116FB437100150896 /* GTLBatchResult.m */; };
-		AD5B0CBD16FB437100150896 /* GTLDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6316FB437100150896 /* GTLDateTime.m */; };
-		AD5B0CBE16FB437100150896 /* GTLDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6316FB437100150896 /* GTLDateTime.m */; };
-		AD5B0CBF16FB437100150896 /* GTLErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6616FB437100150896 /* GTLErrorObject.m */; };
-		AD5B0CC016FB437100150896 /* GTLErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6616FB437100150896 /* GTLErrorObject.m */; };
-		AD5B0CC116FB437100150896 /* GTLFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6816FB437100150896 /* GTLFramework.m */; };
-		AD5B0CC216FB437100150896 /* GTLFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6816FB437100150896 /* GTLFramework.m */; };
-		AD5B0CC316FB437100150896 /* GTLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6A16FB437100150896 /* GTLJSONParser.m */; };
-		AD5B0CC416FB437100150896 /* GTLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6A16FB437100150896 /* GTLJSONParser.m */; };
-		AD5B0CC516FB437100150896 /* GTLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6C16FB437100150896 /* GTLObject.m */; };
-		AD5B0CC616FB437100150896 /* GTLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C6C16FB437100150896 /* GTLObject.m */; };
-		AD5B0CC716FB437100150896 /* GTLPlusAcl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7016FB437100150896 /* GTLPlusAcl.m */; };
-		AD5B0CC816FB437100150896 /* GTLPlusAcl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7016FB437100150896 /* GTLPlusAcl.m */; };
-		AD5B0CC916FB437100150896 /* GTLPlusAclentryResource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7216FB437100150896 /* GTLPlusAclentryResource.m */; };
-		AD5B0CCA16FB437100150896 /* GTLPlusAclentryResource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7216FB437100150896 /* GTLPlusAclentryResource.m */; };
-		AD5B0CCB16FB437100150896 /* GTLPlusActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7416FB437100150896 /* GTLPlusActivity.m */; };
-		AD5B0CCC16FB437100150896 /* GTLPlusActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7416FB437100150896 /* GTLPlusActivity.m */; };
-		AD5B0CCD16FB437100150896 /* GTLPlusActivityFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7616FB437100150896 /* GTLPlusActivityFeed.m */; };
-		AD5B0CCE16FB437100150896 /* GTLPlusActivityFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7616FB437100150896 /* GTLPlusActivityFeed.m */; };
-		AD5B0CCF16FB437100150896 /* GTLPlusComment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7816FB437100150896 /* GTLPlusComment.m */; };
-		AD5B0CD016FB437100150896 /* GTLPlusComment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7816FB437100150896 /* GTLPlusComment.m */; };
-		AD5B0CD116FB437100150896 /* GTLPlusCommentFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7A16FB437100150896 /* GTLPlusCommentFeed.m */; };
-		AD5B0CD216FB437100150896 /* GTLPlusCommentFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7A16FB437100150896 /* GTLPlusCommentFeed.m */; };
-		AD5B0CD316FB437100150896 /* GTLPlusConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7C16FB437100150896 /* GTLPlusConstants.m */; };
-		AD5B0CD416FB437100150896 /* GTLPlusConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7C16FB437100150896 /* GTLPlusConstants.m */; };
-		AD5B0CD516FB437100150896 /* GTLPlusItemScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7E16FB437100150896 /* GTLPlusItemScope.m */; };
-		AD5B0CD616FB437100150896 /* GTLPlusItemScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C7E16FB437100150896 /* GTLPlusItemScope.m */; };
-		AD5B0CD716FB437100150896 /* GTLPlusMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8016FB437100150896 /* GTLPlusMoment.m */; };
-		AD5B0CD816FB437100150896 /* GTLPlusMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8016FB437100150896 /* GTLPlusMoment.m */; };
-		AD5B0CD916FB437100150896 /* GTLPlusMomentsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8216FB437100150896 /* GTLPlusMomentsFeed.m */; };
-		AD5B0CDA16FB437100150896 /* GTLPlusMomentsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8216FB437100150896 /* GTLPlusMomentsFeed.m */; };
-		AD5B0CDB16FB437100150896 /* GTLPlusPeopleFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8416FB437100150896 /* GTLPlusPeopleFeed.m */; };
-		AD5B0CDC16FB437100150896 /* GTLPlusPeopleFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8416FB437100150896 /* GTLPlusPeopleFeed.m */; };
-		AD5B0CDD16FB437100150896 /* GTLPlusPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8616FB437100150896 /* GTLPlusPerson.m */; };
-		AD5B0CDE16FB437100150896 /* GTLPlusPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8616FB437100150896 /* GTLPlusPerson.m */; };
-		AD5B0CDF16FB437100150896 /* GTLQueryPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8816FB437100150896 /* GTLQueryPlus.m */; };
-		AD5B0CE016FB437100150896 /* GTLQueryPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8816FB437100150896 /* GTLQueryPlus.m */; };
-		AD5B0CE116FB437100150896 /* GTLServicePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8A16FB437100150896 /* GTLServicePlus.m */; };
-		AD5B0CE216FB437100150896 /* GTLServicePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8A16FB437100150896 /* GTLServicePlus.m */; };
-		AD5B0CE316FB437100150896 /* GTLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8C16FB437100150896 /* GTLQuery.m */; };
-		AD5B0CE416FB437100150896 /* GTLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8C16FB437100150896 /* GTLQuery.m */; };
-		AD5B0CE516FB437100150896 /* GTLRuntimeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8E16FB437100150896 /* GTLRuntimeCommon.m */; };
-		AD5B0CE616FB437100150896 /* GTLRuntimeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C8E16FB437100150896 /* GTLRuntimeCommon.m */; };
-		AD5B0CE716FB437100150896 /* GTLService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9016FB437100150896 /* GTLService.m */; };
-		AD5B0CE816FB437100150896 /* GTLService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9016FB437100150896 /* GTLService.m */; };
-		AD5B0CE916FB437100150896 /* GTLUploadParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9316FB437100150896 /* GTLUploadParameters.m */; };
-		AD5B0CEA16FB437100150896 /* GTLUploadParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9316FB437100150896 /* GTLUploadParameters.m */; };
-		AD5B0CEB16FB437100150896 /* GTLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9516FB437100150896 /* GTLUtilities.m */; };
-		AD5B0CEC16FB437100150896 /* GTLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9516FB437100150896 /* GTLUtilities.m */; };
-		AD5B0CED16FB437100150896 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9916FB437100150896 /* GTMHTTPFetcher.m */; };
-		AD5B0CEE16FB437100150896 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9916FB437100150896 /* GTMHTTPFetcher.m */; };
-		AD5B0CEF16FB437100150896 /* GTMHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9B16FB437100150896 /* GTMHTTPFetcherLogging.m */; };
-		AD5B0CF016FB437100150896 /* GTMHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9B16FB437100150896 /* GTMHTTPFetcherLogging.m */; };
-		AD5B0CF116FB437100150896 /* GTMHTTPFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9D16FB437100150896 /* GTMHTTPFetcherService.m */; };
-		AD5B0CF216FB437100150896 /* GTMHTTPFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9D16FB437100150896 /* GTMHTTPFetcherService.m */; };
-		AD5B0CF316FB437100150896 /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9F16FB437100150896 /* GTMHTTPFetchHistory.m */; };
-		AD5B0CF416FB437100150896 /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0C9F16FB437100150896 /* GTMHTTPFetchHistory.m */; };
-		AD5B0CF516FB437100150896 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA116FB437100150896 /* GTMLogger.m */; };
-		AD5B0CF616FB437100150896 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA116FB437100150896 /* GTMLogger.m */; };
-		AD5B0CF716FB437100150896 /* GTMMethodCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA316FB437100150896 /* GTMMethodCheck.m */; };
-		AD5B0CF816FB437100150896 /* GTMMethodCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA316FB437100150896 /* GTMMethodCheck.m */; };
-		AD5B0CF916FB437100150896 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA516FB437100150896 /* GTMNSDictionary+URLArguments.m */; };
-		AD5B0CFA16FB437100150896 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA516FB437100150896 /* GTMNSDictionary+URLArguments.m */; };
-		AD5B0CFB16FB437100150896 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA716FB437100150896 /* GTMNSString+URLArguments.m */; };
-		AD5B0CFC16FB437100150896 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA716FB437100150896 /* GTMNSString+URLArguments.m */; };
-		AD5B0CFD16FB437100150896 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA916FB437100150896 /* GTMOAuth2Authentication.m */; };
-		AD5B0CFE16FB437100150896 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CA916FB437100150896 /* GTMOAuth2Authentication.m */; };
-		AD5B0CFF16FB437100150896 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAB16FB437100150896 /* GTMOAuth2SignIn.m */; };
-		AD5B0D0016FB437100150896 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAB16FB437100150896 /* GTMOAuth2SignIn.m */; };
-		AD5B0D0116FB437100150896 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAD16FB437100150896 /* GTMOAuth2ViewControllerTouch.m */; };
-		AD5B0D0216FB437100150896 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CAD16FB437100150896 /* GTMOAuth2ViewControllerTouch.m */; };
 		AD5B0D0316FB437100150896 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5B0CAE16FB437100150896 /* GTMOAuth2ViewTouch.xib */; };
 		AD5B0D0416FB437100150896 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5B0CAE16FB437100150896 /* GTMOAuth2ViewTouch.xib */; };
-		AD5B0D0516FB437100150896 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB016FB437100150896 /* GTMObjC2Runtime.m */; };
-		AD5B0D0616FB437100150896 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB016FB437100150896 /* GTMObjC2Runtime.m */; };
-		AD5B0D0716FB437100150896 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB216FB437100150896 /* OpenInChromeController.m */; };
-		AD5B0D0816FB437100150896 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B0CB216FB437100150896 /* OpenInChromeController.m */; };
 		AD64CE2416DC92A800ED9BE5 /* feature.position.button.h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD64CE2216DC92A800ED9BE5 /* feature.position.button.h@2x.png */; };
 		AD64CE2516DC92A800ED9BE5 /* feature.position.button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD64CE2316DC92A800ED9BE5 /* feature.position.button@2x.png */; };
 		AD64CE2716DC9B8700ED9BE5 /* feature.bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD64CE2616DC9B8700ED9BE5 /* feature.bg-568h@2x.png */; };
@@ -436,8 +437,8 @@
 		AD78B3EF16DF82A100CF7B54 /* VBSegmentFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = AD78B3EE16DF82A100CF7B54 /* VBSegmentFunction.m */; };
 		AD7E958B16F1DB42008375C1 /* VBNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E958916F1DB42008375C1 /* VBNotesViewController.m */; };
 		AD7E958C16F1DB42008375C1 /* VBNotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7E958A16F1DB42008375C1 /* VBNotesViewController.xib */; };
-		AD7E959216F1EDD1008375C1 /* SVGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E958F16F1EDD1008375C1 /* SVGeocoder.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		AD7E959316F1EDD1008375C1 /* SVPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E959116F1EDD1008375C1 /* SVPlacemark.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		AD7E959216F1EDD1008375C1 /* SVGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E958F16F1EDD1008375C1 /* SVGeocoder.m */; };
+		AD7E959316F1EDD1008375C1 /* SVPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E959116F1EDD1008375C1 /* SVPlacemark.m */; };
 		AD8675B016E87C24001032D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8675AF16E87C24001032D7 /* AudioToolbox.framework */; };
 		AD8675B416E8B9DE001032D7 /* donate.button.h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8675B316E8B9DE001032D7 /* donate.button.h@2x.png */; };
 		AD8675B616E8C23A001032D7 /* rate.start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8675B516E8C23A001032D7 /* rate.start@2x.png */; };
@@ -529,7 +530,7 @@
 		ADDF008016FBA0FC00B6B84D /* ConfigVB.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADDF007F16FBA0FC00B6B84D /* ConfigVB.plist */; };
 		ADDF008116FBA10E00B6B84D /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDF008416FBA10E00B6B84D /* About.html */; };
 		ADDF008216FBA10E00B6B84D /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDF008416FBA10E00B6B84D /* About.html */; };
-		ADE58F4916E72A0400CF03A8 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE58F4716E72A0400CF03A8 /* Appirater.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		ADE58F4916E72A0400CF03A8 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE58F4716E72A0400CF03A8 /* Appirater.m */; };
 		ADE58F4B16E72A2200CF03A8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE58F4A16E72A2200CF03A8 /* StoreKit.framework */; };
 		ADE58F5016E77D5300CF03A8 /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADE58F4E16E77D5300CF03A8 /* AppiraterLocalizable.strings */; };
 		ADE58F5C16E7A2A200CF03A8 /* note.icon.error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE58F5B16E7A2A200CF03A8 /* note.icon.error@2x.png */; };
@@ -573,8 +574,8 @@
 		ADF727B316DA48CD00104B41 /* VBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727B116DA48CD00104B41 /* VBMapViewController.m */; };
 		ADF727B416DA48CD00104B41 /* VBMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF727B216DA48CD00104B41 /* VBMapViewController.xib */; };
 		ADF727C916DA56DA00104B41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF727CB16DA56DA00104B41 /* Localizable.strings */; };
-		ADF727E516DA591A00104B41 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E016DA591A00104B41 /* IISideController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		ADF727E716DA591A00104B41 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E416DA591A00104B41 /* IIWrapController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		ADF727E516DA591A00104B41 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E016DA591A00104B41 /* IISideController.m */; };
+		ADF727E716DA591A00104B41 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727E416DA591A00104B41 /* IIWrapController.m */; };
 		ADF727EC16DA59EE00104B41 /* VBLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF727EA16DA59EE00104B41 /* VBLeftViewController.m */; };
 		ADF727ED16DA59EE00104B41 /* VBLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF727EB16DA59EE00104B41 /* VBLeftViewController.xib */; };
 		ADF727F716DA62C300104B41 /* ptrn.dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF727F616DA62C300104B41 /* ptrn.dark@2x.png */; };
@@ -1137,6 +1138,7 @@
 				AD5B0CB616FB437100150896 /* libGooglePlusUniversal.a in Frameworks */,
 				ADFB8401170738F40045E9EB /* GoogleMaps.framework in Frameworks */,
 				ADF24F2317094E8600AA0C98 /* MediaPlayer.framework in Frameworks */,
+				AD3B58D717128D9900386D78 /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2782,50 +2784,50 @@
 				AD43801116F8EA8B0011AF7B /* VBDevTrashViewController.m in Sources */,
 				ADD8DFCE16F90981009139AB /* VBDonateDialogView.m in Sources */,
 				ADD8DFD216F90993009139AB /* VBDonateDialogButton.m in Sources */,
-				AD5B0CB816FB437100150896 /* GTLBase64.m in Sources */,
-				AD5B0CBA16FB437100150896 /* GTLBatchQuery.m in Sources */,
-				AD5B0CBC16FB437100150896 /* GTLBatchResult.m in Sources */,
-				AD5B0CBE16FB437100150896 /* GTLDateTime.m in Sources */,
-				AD5B0CC016FB437100150896 /* GTLErrorObject.m in Sources */,
-				AD5B0CC216FB437100150896 /* GTLFramework.m in Sources */,
-				AD5B0CC416FB437100150896 /* GTLJSONParser.m in Sources */,
-				AD5B0CC616FB437100150896 /* GTLObject.m in Sources */,
-				AD5B0CC816FB437100150896 /* GTLPlusAcl.m in Sources */,
-				AD5B0CCA16FB437100150896 /* GTLPlusAclentryResource.m in Sources */,
-				AD5B0CCC16FB437100150896 /* GTLPlusActivity.m in Sources */,
-				AD5B0CCE16FB437100150896 /* GTLPlusActivityFeed.m in Sources */,
-				AD5B0CD016FB437100150896 /* GTLPlusComment.m in Sources */,
-				AD5B0CD216FB437100150896 /* GTLPlusCommentFeed.m in Sources */,
-				AD5B0CD416FB437100150896 /* GTLPlusConstants.m in Sources */,
-				AD5B0CD616FB437100150896 /* GTLPlusItemScope.m in Sources */,
-				AD5B0CD816FB437100150896 /* GTLPlusMoment.m in Sources */,
-				AD5B0CDA16FB437100150896 /* GTLPlusMomentsFeed.m in Sources */,
-				AD5B0CDC16FB437100150896 /* GTLPlusPeopleFeed.m in Sources */,
-				AD5B0CDE16FB437100150896 /* GTLPlusPerson.m in Sources */,
-				AD5B0CE016FB437100150896 /* GTLQueryPlus.m in Sources */,
-				AD5B0CE216FB437100150896 /* GTLServicePlus.m in Sources */,
-				AD5B0CE416FB437100150896 /* GTLQuery.m in Sources */,
-				AD5B0CE616FB437100150896 /* GTLRuntimeCommon.m in Sources */,
-				AD5B0CE816FB437100150896 /* GTLService.m in Sources */,
-				AD5B0CEA16FB437100150896 /* GTLUploadParameters.m in Sources */,
-				AD5B0CEC16FB437100150896 /* GTLUtilities.m in Sources */,
-				AD5B0CEE16FB437100150896 /* GTMHTTPFetcher.m in Sources */,
-				AD5B0CF016FB437100150896 /* GTMHTTPFetcherLogging.m in Sources */,
-				AD5B0CF216FB437100150896 /* GTMHTTPFetcherService.m in Sources */,
-				AD5B0CF416FB437100150896 /* GTMHTTPFetchHistory.m in Sources */,
-				AD5B0CF616FB437100150896 /* GTMLogger.m in Sources */,
-				AD5B0CF816FB437100150896 /* GTMMethodCheck.m in Sources */,
-				AD5B0CFA16FB437100150896 /* GTMNSDictionary+URLArguments.m in Sources */,
-				AD5B0CFC16FB437100150896 /* GTMNSString+URLArguments.m in Sources */,
-				AD5B0CFE16FB437100150896 /* GTMOAuth2Authentication.m in Sources */,
-				AD5B0D0016FB437100150896 /* GTMOAuth2SignIn.m in Sources */,
-				AD5B0D0216FB437100150896 /* GTMOAuth2ViewControllerTouch.m in Sources */,
-				AD5B0D0616FB437100150896 /* GTMObjC2Runtime.m in Sources */,
-				AD5B0D0816FB437100150896 /* OpenInChromeController.m in Sources */,
 				AD4376A216FB54030042D92A /* VBUserDefaultsViewController.m in Sources */,
 				AD0B69F416FBE2C700923C79 /* VBAnalytics.m in Sources */,
 				ADB6866516FD567900571F81 /* VBSoundsManager.m in Sources */,
 				ADFB840617073A990045E9EB /* VBMarkerInfoView.m in Sources */,
+				AD3B58591711C37600386D78 /* GTLBase64.m in Sources */,
+				AD3B585B1711C37900386D78 /* GTLBatchQuery.m in Sources */,
+				AD3B585C1711C38800386D78 /* GTLBatchResult.m in Sources */,
+				AD3B585D1711C38800386D78 /* GTLDateTime.m in Sources */,
+				AD3B585E1711C38800386D78 /* GTLErrorObject.m in Sources */,
+				AD3B585F1711C38800386D78 /* GTLFramework.m in Sources */,
+				AD3B58601711C38800386D78 /* GTLJSONParser.m in Sources */,
+				AD3B58611711C38800386D78 /* GTLObject.m in Sources */,
+				AD3B58681711C3BD00386D78 /* GTLPlusAcl.m in Sources */,
+				AD3B58691711C3BD00386D78 /* GTLPlusAclentryResource.m in Sources */,
+				AD3B586A1711C3BD00386D78 /* GTLPlusActivity.m in Sources */,
+				AD3B586B1711C3BD00386D78 /* GTLPlusActivityFeed.m in Sources */,
+				AD3B586C1711C3BD00386D78 /* GTLPlusComment.m in Sources */,
+				AD3B586D1711C3BD00386D78 /* GTLPlusCommentFeed.m in Sources */,
+				AD3B586E1711C3BD00386D78 /* GTLPlusConstants.m in Sources */,
+				AD3B586F1711C3BD00386D78 /* GTLPlusItemScope.m in Sources */,
+				AD3B58701711C3BD00386D78 /* GTLPlusMoment.m in Sources */,
+				AD3B58711711C3BD00386D78 /* GTLPlusMomentsFeed.m in Sources */,
+				AD3B58721711C3BD00386D78 /* GTLPlusPeopleFeed.m in Sources */,
+				AD3B58731711C3BD00386D78 /* GTLPlusPerson.m in Sources */,
+				AD3B58741711C3BD00386D78 /* GTLQueryPlus.m in Sources */,
+				AD3B58751711C3BD00386D78 /* GTLServicePlus.m in Sources */,
+				AD3B58841711C41A00386D78 /* GTLQuery.m in Sources */,
+				AD3B58851711C41A00386D78 /* GTLRuntimeCommon.m in Sources */,
+				AD3B58861711C41A00386D78 /* GTLService.m in Sources */,
+				AD3B58871711C41A00386D78 /* GTLUploadParameters.m in Sources */,
+				AD3B58881711C41A00386D78 /* GTLUtilities.m in Sources */,
+				AD3B588E1711C44D00386D78 /* GTMHTTPFetcher.m in Sources */,
+				AD3B588F1711C44D00386D78 /* GTMHTTPFetcherLogging.m in Sources */,
+				AD3B58901711C44D00386D78 /* GTMHTTPFetcherService.m in Sources */,
+				AD3B58911711C44D00386D78 /* GTMHTTPFetchHistory.m in Sources */,
+				AD3B58921711C44D00386D78 /* GTMLogger.m in Sources */,
+				AD3B58931711C44D00386D78 /* GTMMethodCheck.m in Sources */,
+				AD3B58941711C44D00386D78 /* GTMNSDictionary+URLArguments.m in Sources */,
+				AD3B58951711C44D00386D78 /* GTMNSString+URLArguments.m in Sources */,
+				AD3B58961711C44D00386D78 /* GTMOAuth2Authentication.m in Sources */,
+				AD3B58971711C44D00386D78 /* GTMOAuth2SignIn.m in Sources */,
+				AD3B58981711C44D00386D78 /* GTMOAuth2ViewControllerTouch.m in Sources */,
+				AD3B58991711C44D00386D78 /* GTMObjC2Runtime.m in Sources */,
+				AD3B589A1711C44D00386D78 /* OpenInChromeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2891,50 +2893,50 @@
 				AD437FC616F8DBC80011AF7B /* VBDevTrashViewController.m in Sources */,
 				ADD8DFCD16F90981009139AB /* VBDonateDialogView.m in Sources */,
 				ADD8DFD116F90993009139AB /* VBDonateDialogButton.m in Sources */,
-				AD5B0CB716FB437100150896 /* GTLBase64.m in Sources */,
-				AD5B0CB916FB437100150896 /* GTLBatchQuery.m in Sources */,
-				AD5B0CBB16FB437100150896 /* GTLBatchResult.m in Sources */,
-				AD5B0CBD16FB437100150896 /* GTLDateTime.m in Sources */,
-				AD5B0CBF16FB437100150896 /* GTLErrorObject.m in Sources */,
-				AD5B0CC116FB437100150896 /* GTLFramework.m in Sources */,
-				AD5B0CC316FB437100150896 /* GTLJSONParser.m in Sources */,
-				AD5B0CC516FB437100150896 /* GTLObject.m in Sources */,
-				AD5B0CC716FB437100150896 /* GTLPlusAcl.m in Sources */,
-				AD5B0CC916FB437100150896 /* GTLPlusAclentryResource.m in Sources */,
-				AD5B0CCB16FB437100150896 /* GTLPlusActivity.m in Sources */,
-				AD5B0CCD16FB437100150896 /* GTLPlusActivityFeed.m in Sources */,
-				AD5B0CCF16FB437100150896 /* GTLPlusComment.m in Sources */,
-				AD5B0CD116FB437100150896 /* GTLPlusCommentFeed.m in Sources */,
-				AD5B0CD316FB437100150896 /* GTLPlusConstants.m in Sources */,
-				AD5B0CD516FB437100150896 /* GTLPlusItemScope.m in Sources */,
-				AD5B0CD716FB437100150896 /* GTLPlusMoment.m in Sources */,
-				AD5B0CD916FB437100150896 /* GTLPlusMomentsFeed.m in Sources */,
-				AD5B0CDB16FB437100150896 /* GTLPlusPeopleFeed.m in Sources */,
-				AD5B0CDD16FB437100150896 /* GTLPlusPerson.m in Sources */,
-				AD5B0CDF16FB437100150896 /* GTLQueryPlus.m in Sources */,
-				AD5B0CE116FB437100150896 /* GTLServicePlus.m in Sources */,
-				AD5B0CE316FB437100150896 /* GTLQuery.m in Sources */,
-				AD5B0CE516FB437100150896 /* GTLRuntimeCommon.m in Sources */,
-				AD5B0CE716FB437100150896 /* GTLService.m in Sources */,
-				AD5B0CE916FB437100150896 /* GTLUploadParameters.m in Sources */,
-				AD5B0CEB16FB437100150896 /* GTLUtilities.m in Sources */,
-				AD5B0CED16FB437100150896 /* GTMHTTPFetcher.m in Sources */,
-				AD5B0CEF16FB437100150896 /* GTMHTTPFetcherLogging.m in Sources */,
-				AD5B0CF116FB437100150896 /* GTMHTTPFetcherService.m in Sources */,
-				AD5B0CF316FB437100150896 /* GTMHTTPFetchHistory.m in Sources */,
-				AD5B0CF516FB437100150896 /* GTMLogger.m in Sources */,
-				AD5B0CF716FB437100150896 /* GTMMethodCheck.m in Sources */,
-				AD5B0CF916FB437100150896 /* GTMNSDictionary+URLArguments.m in Sources */,
-				AD5B0CFB16FB437100150896 /* GTMNSString+URLArguments.m in Sources */,
-				AD5B0CFD16FB437100150896 /* GTMOAuth2Authentication.m in Sources */,
-				AD5B0CFF16FB437100150896 /* GTMOAuth2SignIn.m in Sources */,
-				AD5B0D0116FB437100150896 /* GTMOAuth2ViewControllerTouch.m in Sources */,
-				AD5B0D0516FB437100150896 /* GTMObjC2Runtime.m in Sources */,
-				AD5B0D0716FB437100150896 /* OpenInChromeController.m in Sources */,
 				AD4376A116FB54030042D92A /* VBUserDefaultsViewController.m in Sources */,
 				AD0B69F316FBE2C700923C79 /* VBAnalytics.m in Sources */,
 				ADB6866416FD567900571F81 /* VBSoundsManager.m in Sources */,
 				ADFB840517073A990045E9EB /* VBMarkerInfoView.m in Sources */,
+				AD3B58581711C37600386D78 /* GTLBase64.m in Sources */,
+				AD3B585A1711C37900386D78 /* GTLBatchQuery.m in Sources */,
+				AD3B58621711C38900386D78 /* GTLBatchResult.m in Sources */,
+				AD3B58631711C38900386D78 /* GTLDateTime.m in Sources */,
+				AD3B58641711C38900386D78 /* GTLErrorObject.m in Sources */,
+				AD3B58651711C38900386D78 /* GTLFramework.m in Sources */,
+				AD3B58661711C38900386D78 /* GTLJSONParser.m in Sources */,
+				AD3B58671711C38900386D78 /* GTLObject.m in Sources */,
+				AD3B58761711C3BE00386D78 /* GTLPlusAcl.m in Sources */,
+				AD3B58771711C3BE00386D78 /* GTLPlusAclentryResource.m in Sources */,
+				AD3B58781711C3BE00386D78 /* GTLPlusActivity.m in Sources */,
+				AD3B58791711C3BE00386D78 /* GTLPlusActivityFeed.m in Sources */,
+				AD3B587A1711C3BE00386D78 /* GTLPlusComment.m in Sources */,
+				AD3B587B1711C3BE00386D78 /* GTLPlusCommentFeed.m in Sources */,
+				AD3B587C1711C3BE00386D78 /* GTLPlusConstants.m in Sources */,
+				AD3B587D1711C3BE00386D78 /* GTLPlusItemScope.m in Sources */,
+				AD3B587E1711C3BE00386D78 /* GTLPlusMoment.m in Sources */,
+				AD3B587F1711C3BE00386D78 /* GTLPlusMomentsFeed.m in Sources */,
+				AD3B58801711C3BE00386D78 /* GTLPlusPeopleFeed.m in Sources */,
+				AD3B58811711C3BE00386D78 /* GTLPlusPerson.m in Sources */,
+				AD3B58821711C3BE00386D78 /* GTLQueryPlus.m in Sources */,
+				AD3B58831711C3BE00386D78 /* GTLServicePlus.m in Sources */,
+				AD3B58891711C41A00386D78 /* GTLQuery.m in Sources */,
+				AD3B588A1711C41A00386D78 /* GTLRuntimeCommon.m in Sources */,
+				AD3B588B1711C41A00386D78 /* GTLService.m in Sources */,
+				AD3B588C1711C41A00386D78 /* GTLUploadParameters.m in Sources */,
+				AD3B588D1711C41A00386D78 /* GTLUtilities.m in Sources */,
+				AD3B589B1711C44E00386D78 /* GTMHTTPFetcher.m in Sources */,
+				AD3B589C1711C44E00386D78 /* GTMHTTPFetcherLogging.m in Sources */,
+				AD3B589D1711C44E00386D78 /* GTMHTTPFetcherService.m in Sources */,
+				AD3B589E1711C44E00386D78 /* GTMHTTPFetchHistory.m in Sources */,
+				AD3B589F1711C44E00386D78 /* GTMLogger.m in Sources */,
+				AD3B58A01711C44E00386D78 /* GTMMethodCheck.m in Sources */,
+				AD3B58A11711C44E00386D78 /* GTMNSDictionary+URLArguments.m in Sources */,
+				AD3B58A21711C44E00386D78 /* GTMNSString+URLArguments.m in Sources */,
+				AD3B58A31711C44E00386D78 /* GTMOAuth2Authentication.m in Sources */,
+				AD3B58A41711C44E00386D78 /* GTMOAuth2SignIn.m in Sources */,
+				AD3B58A51711C44E00386D78 /* GTMOAuth2ViewControllerTouch.m in Sources */,
+				AD3B58A61711C44E00386D78 /* GTMObjC2Runtime.m in Sources */,
+				AD3B58A71711C44E00386D78 /* OpenInChromeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3023,6 +3025,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3051,6 +3054,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3125,6 +3129,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Marcus Hartwig (4QW49T78QQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marcus Hartwig (4QW49T78QQ)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3156,8 +3161,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Omegapoint Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Omegapoint Inc.";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marcus Hartwig (4QW49T78QQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marcus Hartwig (4QW49T78QQ)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3177,8 +3183,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D4C1A414-ECA4-4B5A-8E77-17F8FE7498CE";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D4C1A414-ECA4-4B5A-8E77-17F8FE7498CE";
+				PROVISIONING_PROFILE = "3B6CECBA-3089-40CB-AFED-CB48C1087A3D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3B6CECBA-3089-40CB-AFED-CB48C1087A3D";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};

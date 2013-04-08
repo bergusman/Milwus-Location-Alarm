@@ -10,16 +10,12 @@
 
 @interface VBDevInfoViewController ()
 
-@property (retain, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
 @implementation VBDevInfoViewController
 
-- (void)dealloc {
-    [_textView release];
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,10 +30,10 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Info";
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
     NSMutableString *text = [NSMutableString string];
     [text appendString:@"Locale\n------\n"];

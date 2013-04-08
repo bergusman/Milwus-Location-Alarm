@@ -10,9 +10,9 @@
 
 @interface VBSoundsManager : NSObject
 
-@property (nonatomic, retain, readonly) NSDictionary *soundNames;
-@property (nonatomic, retain, readonly) NSDictionary *soundShorts;
-@property (nonatomic, retain, readonly) NSDictionary *soundLongs;
+@property (nonatomic, strong, readonly) NSDictionary *soundNames;
+@property (nonatomic, strong, readonly) NSDictionary *soundShorts;
+@property (nonatomic, strong, readonly) NSDictionary *soundLongs;
 
 - (id)initWithNames:(NSString *)namesFile
              shorts:(NSString *)shortsFile

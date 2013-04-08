@@ -18,16 +18,16 @@ extern NSString *const VBDeckWillCloseLeftSideNotification;
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, retain, readonly) VBSegmentFunction *currentRadiusFunction;
-@property (nonatomic, retain, readonly) VBSegmentFunction *metricRadiusFunction;
-@property (nonatomic, retain, readonly) VBSegmentFunction *imperialRadiusFunction;
+@property (nonatomic, strong, readonly) VBSegmentFunction *currentRadiusFunction;
+@property (nonatomic, strong, readonly) VBSegmentFunction *metricRadiusFunction;
+@property (nonatomic, strong, readonly) VBSegmentFunction *imperialRadiusFunction;
 
-@property (nonatomic, retain, readonly) VBSegmentFunction *distanceProgressFunction;
+@property (nonatomic, strong, readonly) VBSegmentFunction *distanceProgressFunction;
 
-@property (nonatomic, retain, readonly) id<VBDistanceFormatter> metricFormatter;
-@property (nonatomic, retain, readonly) id<VBDistanceFormatter> imperialFormatter;
+@property (nonatomic, strong, readonly) id<VBDistanceFormatter> metricFormatter;
+@property (nonatomic, strong, readonly) id<VBDistanceFormatter> imperialFormatter;
 
-@property (nonatomic, retain, readonly) VBSoundsManager *soundsManager;
+@property (nonatomic, strong, readonly) VBSoundsManager *soundsManager;
 
 + (VBApp *)sharedApp;
 

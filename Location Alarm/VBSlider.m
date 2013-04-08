@@ -25,15 +25,6 @@
     BOOL _dragging;
 }
 
-- (void)dealloc
-{
-    [_minTrackEnd release];
-    [_maxTrackEnd release];
-    [_minTrack release];
-    [_maxTrack release];
-    [_thumb release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {

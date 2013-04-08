@@ -14,12 +14,12 @@
 
 @interface VBSoundsViewController ()
 
-@property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, copy) NSArray *sounds;
 @property (nonatomic, assign) NSUInteger soundIndex;
 
-@property (nonatomic, retain) AVAudioPlayer *player;
+@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end
 
@@ -28,12 +28,7 @@
 
 - (void)dealloc
 {
-    [_onBack release];
-    [_tableView release];
-    [_sounds release];
     [_player stop];
-    [_player release];
-    [super dealloc];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -66,12 +61,12 @@
     [super viewDidLoad];
     
     self.navigationItem.title = NSLocalizedString(@"SoundTitle", @"");
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
-    UIView *bv = [[[UIView alloc] init] autorelease];
+    UIView *bv = [[UIView alloc] init];
     bv.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.light.png"]];
     self.tableView.backgroundView = bv;
     
@@ -79,12 +74,6 @@
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.soundIndex inSection:0];
     [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
-}
-
-- (void)viewDidUnload
-{
-    [self setTableView:nil];
-    [super viewDidUnload];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -118,7 +107,7 @@
     NSString *toneName = [[VBApp sharedApp].soundsManager soundShort:self.sound];
     NSURL *toneURL = [[NSBundle mainBundle] URLForResource:toneName withExtension:nil];
     NSAssert(toneURL, @"Miss %@ sound", toneName);
-    self.player = [[[AVAudioPlayer alloc] initWithContentsOfURL:toneURL error:nil] autorelease];
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:toneURL error:nil];
     [self.player play];
 }
 
@@ -172,7 +161,7 @@
     static NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
     cell.textLabel.text = [[VBApp sharedApp].soundsManager soundName:self.sounds[indexPath.row]];

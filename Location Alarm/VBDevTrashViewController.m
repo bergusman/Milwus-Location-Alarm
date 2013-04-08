@@ -13,19 +13,13 @@
 
 @interface VBDevTrashViewController ()
 
-@property (retain, nonatomic) IBOutlet UIButton *button1;
-@property (retain, nonatomic) IBOutlet UIButton *button2;
+@property (strong, nonatomic) IBOutlet UIButton *button1;
+@property (strong, nonatomic) IBOutlet UIButton *button2;
 
 @end
 
 @implementation VBDevTrashViewController
 
-- (void)dealloc
-{
-    [_button1 release];
-    [_button2 release];
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,10 +34,10 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Trash";
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
    
     UIImage *image = [[UIImage imageNamed:@"donate.dialog.button.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0];
     UIImage *image2 = [[UIImage imageNamed:@"donate.dialog.button.h.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0];
@@ -94,14 +88,14 @@
     
     
     
-    VBDonateDialogView *donateDialog = [[[VBDonateDialogView alloc] init] autorelease];
+    VBDonateDialogView *donateDialog = [[VBDonateDialogView alloc] init];
     donateDialog.prices = @[@(1), @(2), @(5), @(10), @(20), @(50), @(100), @(200), @(500)];
     [donateDialog show];
 }
 
 
 - (IBAction)action1:(id)sender {
-    UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"Bingo" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Bingo" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     [alertView show];
     
     NSLog(@"%@", alertView.layer.animationKeys);
@@ -174,7 +168,7 @@
         [l removeFromSuperlayer];
     }
     
-    CAGradientLayer *gragient1 = [[[CAGradientLayer alloc] init] autorelease];
+    CAGradientLayer *gragient1 = [[CAGradientLayer alloc] init];
     gragient1.colors = @[(id)VB_RGB(178, 183, 194).CGColor, (id)VB_RGB(226, 227, 228).CGColor];
     gragient1.locations = @[@0.81, @1];
     gragient1.bounds = CGRectMake(0, 0, 284, 164);
@@ -185,7 +179,7 @@
     gragient1.opacity = 0.9;
     gragient1.opaque = NO;
     
-    CAGradientLayer *gragient2 = [[[CAGradientLayer alloc] init] autorelease];
+    CAGradientLayer *gragient2 = [[CAGradientLayer alloc] init];
     gragient2.colors = @[(id)VB_RGB(228, 228, 228).CGColor, (id)VB_RGB(200, 200, 200).CGColor];
     gragient2.locations = @[@0.0, @1];
     gragient2.bounds = CGRectMake(0, 0, 280, 160);
@@ -194,11 +188,11 @@
     gragient2.startPoint = CGPointMake(0, 0);
     gragient2.endPoint = CGPointMake(0, 1);
     
-    CATextLayer *text = [[[CATextLayer alloc] init] autorelease];
+    CATextLayer *text = [[CATextLayer alloc] init];
     text.position = CGPointMake(142, 82);
     text.bounds = CGRectMake(0, 0, 100, 30);
     
-    NSMutableAttributedString *mas = [[[NSMutableAttributedString alloc] initWithString:@"Bingo Bongo"] autorelease];
+    NSMutableAttributedString *mas = [[NSMutableAttributedString alloc] initWithString:@"Bingo Bongo"];
     [mas addAttribute:(id)kCTForegroundColorAttributeName  value:(id)[UIColor redColor].CGColor range:NSMakeRange(0, 4)];
     
     text.string = mas;

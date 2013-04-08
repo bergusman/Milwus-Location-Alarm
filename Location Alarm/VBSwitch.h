@@ -10,8 +10,8 @@
 
 @interface VBSwitch : UIControl
 
-@property (nonatomic, retain) UIImage *onImage;
-@property (nonatomic, retain) UIImage *offImage;
+@property (nonatomic, strong) UIImage *onImage;
+@property (nonatomic, strong) UIImage *offImage;
 
 @property (nonatomic, assign) BOOL on;
 

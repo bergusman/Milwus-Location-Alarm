@@ -17,20 +17,20 @@
 @interface VBHelpViewController ()
 <UIScrollViewDelegate>
 
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, retain) NSArray *images;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) NSArray *images;
 
-@property (retain, nonatomic) IBOutlet UIView *textPanel;
-@property (retain, nonatomic) IBOutlet UIImageView *textPanelBackground;
-@property (retain, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UIView *textPanel;
+@property (weak, nonatomic) IBOutlet UIImageView *textPanelBackground;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
-@property (retain, nonatomic) IBOutlet UIView *closePanel;
-@property (retain, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UIView *closePanel;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
-@property (nonatomic, retain) NSArray *points;
+@property (nonatomic, strong) NSArray *points;
 
-@property (nonatomic, retain) NSArray *imageNames;
-@property (nonatomic, retain) NSArray *textKeys;
+@property (nonatomic, strong) NSArray *imageNames;
+@property (nonatomic, strong) NSArray *textKeys;
 
 @property (nonatomic, assign) NSUInteger index;
 
@@ -38,22 +38,6 @@
 
 
 @implementation VBHelpViewController
-
-- (void)dealloc
-{
-    [_onBack release];
-    [_scrollView release];
-    [_images release];
-    [_textPanel release];
-    [_textPanelBackground release];
-    [_textLabel release];
-    [_closePanel release];
-    [_closeButton release];
-    [_points release];
-    [_imageNames release];
-    [_textKeys release];
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -96,10 +80,10 @@
     self.navigationItem.title = NSLocalizedString(@"HelpTitle", @"");
 #endif
     
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
     [self.closeButton setTitle:NSLocalizedString(@"CloseHelp", @"") forState:UIControlStateNormal];
     
@@ -123,17 +107,6 @@
     [self showImageAtIndex:self.index];
     
     [self showTextAtIndex:self.index];
-}
-
-- (void)viewDidUnload
-{
-    [self setScrollView:nil];
-    [self setTextPanel:nil];
-    [self setTextLabel:nil];
-    [self setTextPanelBackground:nil];
-    [self setCloseButton:nil];
-    [self setClosePanel:nil];
-    [super viewDidUnload];
 }
 
 - (void)didReceiveMemoryWarning
@@ -194,7 +167,7 @@
 
 - (UIImageView *)createImageWithImageName:(NSString *)imageName
 {
-    UIImageView *imageView = [[[UIImageView alloc] init] autorelease];
+    UIImageView *imageView = [[UIImageView alloc] init];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.image = [UIImage imageNamed:imageName];
     return imageView;
@@ -239,7 +212,7 @@
 
 - (UIImageView *)createPoint
 {
-    UIImageView *pointView = [[[UIImageView alloc] init] autorelease];
+    UIImageView *pointView = [[UIImageView alloc] init];
     pointView.image = [UIImage imageNamed:@"help.point.gray.png"];
     pointView.highlightedImage = [UIImage imageNamed:@"help.point.blue.png"];
     pointView.frame = CGRectMake(0, 0, 10, 10);

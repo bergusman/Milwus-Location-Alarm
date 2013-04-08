@@ -23,17 +23,6 @@
     NSArray *_donateButtons;
 }
 
-- (void)dealloc
-{
-    [_prices release];
-    [_window release];
-    [_dimView release];
-    [_backgroundView release];
-    [_donateLabel release];
-    [_closeButton release];
-    [_donateButtons release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -51,7 +40,7 @@
         _donateLabel.text = NSLocalizedString(@"DialogDonateTitle", @"");
         [self addSubview:_donateLabel];
         
-        _closeButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+        _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_closeButton setTitle:@"x" forState:UIControlStateNormal];
         [_closeButton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
         [_closeButton setImage:[UIImage imageNamed:@"donate.dialog.close.png"] forState:UIControlStateNormal];
@@ -79,7 +68,6 @@
 
 - (void)setPrices:(NSArray *)prices
 {
-    [_prices autorelease];
     _prices = [prices copy];
     [self addDonateButtons];
 }
@@ -90,7 +78,7 @@
 - (void)deleteDonateButtons
 {
     [_donateButtons makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    [_donateButtons release]; _donateButtons = nil;
+     _donateButtons = nil;
 }
 
 - (void)addDonateButtons
@@ -186,7 +174,6 @@
     [self.layer addAnimation:bounceAnimation forKey:@"bounce"];
     
     _shown = YES;
-    [self retain];
 }
 
 - (void)hide
@@ -202,12 +189,12 @@
 - (void)completeHidding
 {
     [_dimView removeFromSuperview];
-    [_dimView release]; _dimView = nil;
+     _dimView = nil;
     
-    [_window release]; _window = nil;
+     _window = nil;
     
     _shown = NO;
-    [self autorelease];
+    //[self autorelease];
 }
 
 

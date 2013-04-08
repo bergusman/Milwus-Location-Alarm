@@ -17,10 +17,10 @@
 
 @interface VBGoogleMapViewController () <GMSMapViewDelegate>
 
-@property (nonatomic, retain) GMSMapView *mapView;
+@property (nonatomic, strong) GMSMapView *mapView;
 
-@property (nonatomic, retain) id<GMSMarker> placemarker;
-@property (nonatomic, retain) NSMutableDictionary *markers;
+@property (nonatomic, strong) id<GMSMarker> placemarker;
+@property (nonatomic, strong) NSMutableDictionary *markers;
 
 @end
 
@@ -30,13 +30,6 @@
 @synthesize delegate=_delegate;
 @synthesize mapType=_mapType;
 
-- (void)dealloc
-{
-    [_mapView release];
-    [_placemarker release];
-    [_markers release];
-    [super dealloc];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -320,7 +313,7 @@
 {
     double progress = [self progressForAlarm:alarm];
     
-    GMSMarkerOptions *options = [[[GMSMarkerOptions alloc] init] autorelease];
+    GMSMarkerOptions *options = [[GMSMarkerOptions alloc] init];
     options.title = alarm.title;
     options.snippet = alarm.notes;
     options.position = [alarm coordinate];
@@ -446,7 +439,7 @@
     if (marker == self.placemarker) {
         return nil;
     } else {
-        VBMarkerInfoView *infoView = [[[VBMarkerInfoView alloc] init] autorelease];
+        VBMarkerInfoView *infoView = [[VBMarkerInfoView alloc] init];
         infoView.text = marker.title;
         [infoView sizeToFit];
         return infoView;

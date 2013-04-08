@@ -11,7 +11,7 @@
 
 @interface VBNoteView : UIView
 
-@property (nonatomic, retain, readonly) UIImageView *imageView;
-@property (nonatomic, retain, readonly) TTTAttributedLabel *textLabel;
+@property (nonatomic, strong, readonly) UIImageView *imageView;
+@property (nonatomic, strong, readonly) TTTAttributedLabel *textLabel;
 
 @end

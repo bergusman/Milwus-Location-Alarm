@@ -10,6 +10,6 @@
 
 @interface VBMKPointAnnotation : MKPointAnnotation
 
-@property (nonatomic, retain) id userData;
+@property (nonatomic, strong) id userData;
 
 @end

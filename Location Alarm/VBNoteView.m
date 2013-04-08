@@ -17,12 +17,6 @@
 @synthesize imageView = _imageView;
 @synthesize textLabel = _textLabel;
 
-- (void)dealloc
-{
-    [_imageView release];
-    [_textLabel release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {

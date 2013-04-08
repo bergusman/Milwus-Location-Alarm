@@ -40,11 +40,11 @@
     VBAlarmCellDelegate
 >
 
-@property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, copy) NSArray *placemarks;
 
-@property (nonatomic, retain) NSMutableDictionary *alarmIconCache;
+@property (nonatomic, strong) NSMutableDictionary *alarmIconCache;
 
 @end
 
@@ -55,11 +55,7 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    [_tableView release];
-    [_placemarks release];
-    [_alarmIconCache release];
     
-    [super dealloc];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -188,9 +184,9 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    CLRegion *region = [[[CLRegion alloc] initCircularRegionWithCenter:[VBLocationManager sharedManager].location.coordinate
+    CLRegion *region = [[CLRegion alloc] initCircularRegionWithCenter:[VBLocationManager sharedManager].location.coordinate
                                                                 radius:[VBConfig sharedConfig].geocodingRadius
-                                                            identifier:nil] autorelease];
+                                                            identifier:nil];
     
     [SVGeocoder geocode:searchString region:region completion:^(NSArray *placemarks, NSHTTPURLResponse *urlResponse, NSError *error) {
         self.placemarks = placemarks;
@@ -234,7 +230,7 @@
             static NSString *cellID = @"AlarmCellID";
             VBAlarmCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
             if (!cell) {
-                cell = [[[VBAlarmCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID] autorelease];
+                cell = [[VBAlarmCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
                 [cell vbSetupLeftCell];
                 [cell vbSetupAlarmCell];
                 cell.delegate = self;
@@ -261,8 +257,8 @@
             static NSString *cellID = @"miscCellID";
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
             if (!cell) {
-                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                               reuseIdentifier:cellID] autorelease];
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                               reuseIdentifier:cellID];
                 [cell vbSetupLeftCell];
                 [cell vbSetupMiscCell];
             }
@@ -284,7 +280,7 @@
         static NSString *cellID = @"cellID";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
         if (!cell) {
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID] autorelease];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
             [cell vbSetupSearchResultCell];
         }
         
@@ -337,25 +333,25 @@
         
         if (indexPath.section == 0) {
             VBAlarm *alarm = [VBAlarmManager sharedManager].sortedAlarms[indexPath.row];
-            vc = [[[VBAlarmDetailsViewController alloc] initWithAlarm:alarm] autorelease];
+            vc = [[VBAlarmDetailsViewController alloc] initWithAlarm:alarm];
         } else if (indexPath.section == 1) {
             if (indexPath.row == 0) {
-                vc = [[[VBAboutViewController alloc] init] autorelease];
+                vc = [[VBAboutViewController alloc] init];
             } else if (indexPath.row == 1) {
-                vc = [[[VBHelpViewController alloc] init] autorelease];
+                vc = [[VBHelpViewController alloc] init];
             } else if (indexPath.row == 2) {
-                vc = [[[VBDevToolsViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
+                vc = [[VBDevToolsViewController alloc] initWithStyle:UITableViewStyleGrouped];
             }
         }
         
+        __weak UINavigationController *nc = (UINavigationController *)self.viewDeckController.centerController;
+        
         vc.onBack = ^{
-            UINavigationController *nc = (UINavigationController *)self.viewDeckController.centerController;
             [self.viewDeckController openLeftViewAnimated:YES completion:^(IIViewDeckController *controller) {
                 [nc popViewControllerAnimated:NO];
             }];
         };
         
-        UINavigationController *nc = (UINavigationController *)self.viewDeckController.centerController;
         [nc pushViewController:vc animated:NO];
         
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -397,7 +393,7 @@
 {
     if (tableView == self.tableView) {
         if (section == 1) {
-            UIView *header = [[[UIView alloc] init] autorelease];
+            UIView *header = [[UIView alloc] init];
             header.frame = CGRectMake(0, 0, 10, 17);
             header.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark.table.separator.png"]];
             return header;

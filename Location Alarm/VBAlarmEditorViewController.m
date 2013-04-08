@@ -34,36 +34,36 @@
     UIGestureRecognizerDelegate
 >
 
-@property (nonatomic, retain) VBAlarm *alarm;
+@property (nonatomic, strong) VBAlarm *alarm;
 
-@property (nonatomic, retain) NSString *address;
+@property (nonatomic, strong) NSString *address;
 
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-@property (retain, nonatomic) IBOutlet TTTAttributedLabel *addressLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *addressLabel;
 
-@property (retain, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
-@property (retain, nonatomic) IBOutlet UIView *namePanel;
-@property (retain, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UIView *namePanel;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
-@property (retain, nonatomic) IBOutlet UILabel *alarmTypeLabel;
-@property (retain, nonatomic) IBOutlet VBSwitch *inOutSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *alarmTypeLabel;
+@property (weak, nonatomic) IBOutlet VBSwitch *inOutSwitch;
 
-@property (retain, nonatomic) IBOutlet UIButton *soundsButton;
-@property (nonatomic, retain) UIImageView *soundsButtonArrow;
-@property (retain, nonatomic) IBOutlet UILabel *soundName;
+@property (strong, nonatomic) IBOutlet UIButton *soundsButton;
+@property (nonatomic, strong) UIImageView *soundsButtonArrow;
+@property (weak, nonatomic) IBOutlet UILabel *soundName;
 
-@property (retain, nonatomic) IBOutlet VBSlider *radiusSlider;
-@property (retain, nonatomic) IBOutlet TTTAttributedLabel *radiusLabel;
+@property (weak, nonatomic) IBOutlet VBSlider *radiusSlider;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *radiusLabel;
 
-@property (retain, nonatomic) IBOutlet UIView *commentsPanel;
-@property (retain, nonatomic) IBOutlet UITextView *commentsTextView;
-@property (retain, nonatomic) IBOutlet UILabel *commentsPlacehodler;
+@property (weak, nonatomic) IBOutlet UIView *commentsPanel;
+@property (weak, nonatomic) IBOutlet UITextView *commentsTextView;
+@property (weak, nonatomic) IBOutlet UILabel *commentsPlacehodler;
 
-@property (nonatomic, retain) id radiusLabelBoldFont;
+@property (nonatomic, strong) id radiusLabelBoldFont;
 
-@property (retain, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
+@property (weak, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 
 @property (nonatomic, assign) BOOL notUseNoteHiddingAnimation;
 
@@ -71,10 +71,10 @@
 
 @property (nonatomic, copy) NSString *sound;
 
-@property (nonatomic, retain) UIBarButtonItem *cancelBarButton;
-@property (nonatomic, retain) UIBarButtonItem *saveBarButton;
-@property (nonatomic, retain) UIBarButtonItem *doneBarButton;
-@property (nonatomic, retain) UIBarButtonItem *emptyBarButton;
+@property (nonatomic, strong) UIBarButtonItem *cancelBarButton;
+@property (nonatomic, strong) UIBarButtonItem *saveBarButton;
+@property (nonatomic, strong) UIBarButtonItem *doneBarButton;
+@property (nonatomic, strong) UIBarButtonItem *emptyBarButton;
 
 @end
 
@@ -85,33 +85,6 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_soundsButton removeObserver:self forKeyPath:@"highlighted"];
-    
-    [_alarm release];
-    [_address release];
-    [_scrollView release];
-    [_addressLabel release];
-    [_contentView release];
-    [_namePanel release];
-    [_nameTextField release];
-    [_alarmTypeLabel release];
-    [_inOutSwitch release];
-    [_soundsButton release];
-    [_soundsButtonArrow release];
-    [_soundName release];
-    [_radiusSlider release];
-    [_radiusLabel release];
-    [_commentsPanel release];
-    [_commentsTextView release];
-    [_commentsPlacehodler release];
-    [_radiusLabelBoldFont release];
-    [_tapGesture release];
-    [_sound release];
-    [_cancelBarButton release];
-    [_saveBarButton release];
-    [_doneBarButton release];
-    [_emptyBarButton release];
-    
-    [super dealloc];
 }
 
 - (id)initWithAlarm:(VBAlarm *)alarm;
@@ -149,8 +122,8 @@
                                                      name:VBNoteWillHideNotification
                                                    object:nil];
         
-        CTFontRef font = CTFontCreateWithName((CFStringRef)[UIFont boldSystemFontOfSize:12].fontName, 12, NULL);
-        self.radiusLabelBoldFont = (id)font;
+        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)[UIFont boldSystemFontOfSize:12].fontName, 12, NULL);
+        self.radiusLabelBoldFont = (__bridge id)font;
         CFRelease(font);
         
     }
@@ -175,24 +148,24 @@
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.light.png"]];
     
-    UIImageView *titleView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav.title.png"]] autorelease];
+    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav.title.png"]];
     titleView.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = titleView;
     
-    self.cancelBarButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+    self.cancelBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                           target:self
-                                                                          action:@selector(cancelAction)] autorelease];
+                                                                          action:@selector(cancelAction)];
     
-    self.saveBarButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+    self.saveBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                                                           target:self
-                                                                          action:@selector(saveAction)] autorelease];
+                                                                          action:@selector(saveAction)];
     
-    self.doneBarButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+    self.doneBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                           target:self
-                                                                          action:@selector(doneAction)] autorelease];
+                                                                          action:@selector(doneAction)];
     
     
-    self.emptyBarButton = [[[UIBarButtonItem alloc] initWithCustomView:[[[UIView alloc] init] autorelease]] autorelease];
+    self.emptyBarButton = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]];
     
     self.navigationItem.leftBarButtonItem = self.cancelBarButton;
     self.navigationItem.rightBarButtonItem = self.saveBarButton;
@@ -233,23 +206,7 @@
 - (void)viewDidUnload
 {
     [_soundsButton removeObserver:self forKeyPath:@"highlighted"];
-    
-    [self setScrollView:nil];
-    [self setAddressLabel:nil];
-    [self setContentView:nil];
-    [self setNamePanel:nil];
-    [self setNameTextField:nil];
-    [self setInOutSwitch:nil];
     [self setSoundsButton:nil];
-    [self setCommentsPanel:nil];
-    [self setCommentsTextView:nil];
-    [self setCommentsPlacehodler:nil];
-    [self setRadiusSlider:nil];
-    [self setRadiusLabel:nil];
-    [self setTapGesture:nil];
-    [self setSoundName:nil];
-    
-    [self setAlarmTypeLabel:nil];
     [super viewDidUnload];
 }
 
@@ -302,8 +259,8 @@
     [self.soundsButton addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew context:nil];
     [self.soundsButton setTitle:NSLocalizedString(@"SelectSound", @"") forState:UIControlStateNormal];
     
-    self.soundsButtonArrow = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.dark.png"]
-                                                highlightedImage:[UIImage imageNamed:@"arrow.white.png"]] autorelease];
+    self.soundsButtonArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.dark.png"]
+                                                highlightedImage:[UIImage imageNamed:@"arrow.white.png"]];
     self.soundsButtonArrow.center = CGPointMake(298, 20);
     [self.soundsButton addSubview:self.soundsButtonArrow];
     
@@ -376,9 +333,10 @@
     
     NSString *text = [NSString stringWithFormat:@"%@ %@", number, unit];
     
+    id __weak radiusLabelBoldFont = self.radiusLabelBoldFont;
     [self.radiusLabel setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
         [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName
-                                        value:self.radiusLabelBoldFont
+                                        value:radiusLabelBoldFont
                                         range:NSMakeRange(0, [number length])];
         return mutableAttributedString;
     }];
@@ -405,7 +363,7 @@
     }
     
     for (int i = 0; i < 6; i++) {
-        VBRuleView *rule = [[[VBRuleView alloc] init] autorelease];
+        VBRuleView *rule = [[VBRuleView alloc] init];
         rule.label = titles[i];
         rule.frame = CGRectMake(0, 0, 60, 60);
         rule.center = CGPointMake(20 + i * 55, self.radiusSlider.frame.origin.y + 54);
@@ -550,10 +508,11 @@
 
 - (IBAction)soundsAction
 {
-    __block VBSoundsViewController *sounds = [[[VBSoundsViewController alloc] init] autorelease];
+    VBSoundsViewController *sounds = [[VBSoundsViewController alloc] init];
     sounds.sound = self.sound;
+    __weak VBSoundsViewController *vc = sounds;
     sounds.onBack = ^(){
-        self.sound = sounds.sound;
+        self.sound = vc.sound;
         self.soundName.text = [[VBApp sharedApp].soundsManager soundName:self.sound];
         [self.navigationController popViewControllerAnimated:YES];
     };

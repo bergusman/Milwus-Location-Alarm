@@ -14,7 +14,7 @@
 
 @interface VBDonateDialogView : UIView
 
-@property (nonatomic, assign) id<VBDonnateDialogViewDelegate> delegate;
+@property (nonatomic, weak) id<VBDonnateDialogViewDelegate> delegate;
 @property (nonatomic, copy) NSArray *prices;
 
 - (void)show;

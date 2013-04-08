@@ -33,15 +33,6 @@
 
 @dynamic onImage, offImage;
 
-- (void)dealloc
-{
-    [_thumbImageView release];
-    [_trackView release];
-    [_trackContainerView release];
-    [_onImageView release];
-    [_offImageView release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -95,7 +86,7 @@
     _offCenter = CGPointMake(21, 13);
     
     // Cover
-    UIImageView *cover = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"switch.overlay.png"]] autorelease];
+    UIImageView *cover = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"switch.overlay.png"]];
     cover.frame = CGRectMake(0, 0, 68, 31);
     [self addSubview:cover];
     
@@ -108,12 +99,12 @@
     _rightThumbCenter = CGPointMake(52, 15);
     
     // Pan Gesture
-    UIPanGestureRecognizer *pan = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)] autorelease];
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     pan.cancelsTouchesInView = NO;
     [self addGestureRecognizer:pan];
     
     // Tap Gesture
-    UITapGestureRecognizer *tap = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)] autorelease];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
     tap.cancelsTouchesInView = NO;
     [self addGestureRecognizer:tap];
     

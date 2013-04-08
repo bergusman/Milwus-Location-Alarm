@@ -14,11 +14,6 @@
     UIButton *_onButton;
 }
 
-- (void)dealloc
-{
-    [_onButton release];
-    [super dealloc];
-}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -27,11 +22,11 @@
         
         self.imageView.image = [UIImage imageNamed:@"alarm.cell.icon.progress.bg.png"];
         
-        _progressImageView = [[[UIImageView alloc] init] autorelease];
+        _progressImageView = [[UIImageView alloc] init];
         _progressImageView.frame = CGRectMake(4, 4, 35, 35);
         [self.contentView addSubview:_progressImageView];
         
-        _onButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+        _onButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _onButton.frame = CGRectMake(4, 4, 35, 35);
         _onButton.pointInsideInsets = UIEdgeInsetsMake(4, 4, 4, 4);
         [_onButton setImage:[UIImage imageNamed:@"alarm.cell.icon.on.2.png"] forState:UIControlStateNormal];

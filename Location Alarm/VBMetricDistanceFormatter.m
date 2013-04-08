@@ -18,14 +18,6 @@
     NSNumberFormatter *_formatter4;
 }
 
-- (void)dealloc
-{
-    [_formatter1 release];
-    [_formatter2 release];
-    [_formatter3 release];
-    [_formatter4 release];
-    [super dealloc];
-}
 
 - (id)init
 {

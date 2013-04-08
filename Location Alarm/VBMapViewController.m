@@ -44,40 +44,40 @@
     VBMapControllerDelegate
 >
 
-@property (nonatomic, retain) id<VBMapController> mapController;
+@property (nonatomic, strong) id<VBMapController> mapController;
 
-@property (retain, nonatomic) IBOutlet UITapGestureRecognizer *mapViewTap;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *mapViewTap;
 
-@property (retain, nonatomic) UIBarButtonItem *addAlarmBarButton;
-@property (retain, nonatomic) UIBarButtonItem *addAlarmSelectedBarButton;
+@property (strong, nonatomic) UIBarButtonItem *addAlarmBarButton;
+@property (strong, nonatomic) UIBarButtonItem *addAlarmSelectedBarButton;
 
-@property (retain, nonatomic) IBOutlet UIButton *toUserLocationButton;
+@property (weak, nonatomic) IBOutlet UIButton *toUserLocationButton;
 
 @property (nonatomic, assign) BOOL settingsShown;
 @property (nonatomic, assign) CGPoint lastPanTranslation;
 
-@property (retain, nonatomic) IBOutlet UIButton *settingsEpxanderButton;
-@property (retain, nonatomic) IBOutlet UIView *settingsPanel;
-@property (retain, nonatomic) IBOutlet UIImageView *settingsPanelImageView;
+@property (weak, nonatomic) IBOutlet UIButton *settingsEpxanderButton;
+@property (weak, nonatomic) IBOutlet UIView *settingsPanel;
+@property (weak, nonatomic) IBOutlet UIImageView *settingsPanelImageView;
 
-@property (retain, nonatomic) IBOutlet UIButton *metricSystemButton;
-@property (retain, nonatomic) IBOutlet UIButton *imperialSystemButton;
-@property (retain, nonatomic) IBOutlet UILabel *metricSystemLabel;
-@property (retain, nonatomic) IBOutlet UILabel *imperialSystemLabel;
+@property (weak, nonatomic) IBOutlet UIButton *metricSystemButton;
+@property (weak, nonatomic) IBOutlet UIButton *imperialSystemButton;
+@property (weak, nonatomic) IBOutlet UILabel *metricSystemLabel;
+@property (weak, nonatomic) IBOutlet UILabel *imperialSystemLabel;
 
-@property (retain, nonatomic) IBOutlet UISegmentedControl *mapProviderSegmentedControl;
-@property (retain, nonatomic) IBOutlet UISegmentedControl *mapTypeSegmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mapProviderSegmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mapTypeSegmentedControl;
 
-@property (nonatomic, retain) NSMutableSet *alarmsForUpdating;
+@property (nonatomic, strong) NSMutableSet *alarmsForUpdating;
 
-@property (nonatomic, retain) VBAlarm *addingAlarm;
+@property (nonatomic, strong) VBAlarm *addingAlarm;
 @property (nonatomic, copy) NSManagedObjectID *addingAlarmObjectID;
 
 @property (nonatomic, assign) MKCoordinateRegion region;
 
-@property (nonatomic, retain) NSArray *mapProviders;
+@property (nonatomic, strong) NSArray *mapProviders;
 
-@property (nonatomic, retain) NSTimer *timer;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -87,28 +87,10 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    [_mapController release];
-    [_addAlarmBarButton release];
-    [_addAlarmSelectedBarButton release];
-    [_mapViewTap release];
-    [_toUserLocationButton release];
-    [_settingsEpxanderButton release];
-    [_settingsPanel release];
-    [_settingsPanelImageView release];
-    [_metricSystemButton release];
-    [_imperialSystemButton release];
-    [_metricSystemLabel release];
-    [_imperialSystemLabel release];
-    [_mapProviderSegmentedControl release];
-    [_mapTypeSegmentedControl release];
 
-    [_alarmsForUpdating release];
-    [_addingAlarm release];
 
     [_timer invalidate];
-    [_timer release];
     
-    [super dealloc];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -168,22 +150,22 @@
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.light.png"]];
     
-    self.navigationItem.titleView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav.title.png"]] autorelease];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav.title.png"]];
     
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.menu.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.menu.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(leftAction)] autorelease];
+                                                                             action:@selector(leftAction)];
     
-    self.addAlarmBarButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.add.png"]
+    self.addAlarmBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.add.png"]
                                                                style:UIBarButtonItemStyleBordered
                                                               target:self
-                                                              action:@selector(addAction)] autorelease];
+                                                              action:@selector(addAction)];
     
-    self.addAlarmSelectedBarButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.add.png"]
+    self.addAlarmSelectedBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.add.png"]
                                                                        style:UIBarButtonItemStyleBordered
                                                                       target:self
-                                                                      action:@selector(addAction)] autorelease];
+                                                                      action:@selector(addAction)];
     
     
     [self.addAlarmSelectedBarButton setBackgroundImage:[UIImage imageNamed:@"nav.button.bg.h.png"]
@@ -225,18 +207,7 @@
 
 - (void)viewDidUnload
 {
-    [self setMapViewTap:nil];
-    [self setToUserLocationButton:nil];
-    [self setSettingsEpxanderButton:nil];
-    [self setSettingsPanel:nil];
-    [self setSettingsPanelImageView:nil];
-    [self setMetricSystemButton:nil];
-    [self setImperialSystemButton:nil];
-    [self setMetricSystemLabel:nil];
-    [self setImperialSystemLabel:nil];
-    [self setMapTypeSegmentedControl:nil];
-    [self setMapProviderSegmentedControl:nil];
-    
+    [self setMapViewTap:nil];    
     [super viewDidUnload];
 }
 
@@ -364,7 +335,7 @@
 
 - (void)updateAlarmQueue
 {
-    for (VBAlarm *alarm in [[self.alarmsForUpdating copy] autorelease]) {
+    for (VBAlarm *alarm in [self.alarmsForUpdating copy]) {
         [self updateAlarm:alarm];
     }
     [self.alarmsForUpdating removeAllObjects];
@@ -553,7 +524,7 @@
 - (void)setupMapProvider:(VBMapProvider)mapProvider
 {
     Class mapProviderClass = [self mapProviderClass:mapProvider];
-    self.mapController = (id<VBMapController>)[[[mapProviderClass alloc] init] autorelease];
+    self.mapController = (id<VBMapController>)[[mapProviderClass alloc] init];
     
     UIViewController *vc = (UIViewController *)self.mapController;
     vc.view.frame = self.view.bounds;
@@ -634,7 +605,7 @@
     self.addingAlarmObjectID = alarm.objectID;
     [self.mapController addAlarm:self.addingAlarm];
    
-    VBAlarmEditorViewController *editor = [[[VBAlarmEditorViewController alloc] initWithAlarm:alarm] autorelease];
+    VBAlarmEditorViewController *editor = [[VBAlarmEditorViewController alloc] initWithAlarm:alarm];
     editor.pushWithKeyboard = YES;
     editor.delegate = self;
     [self.navigationController pushViewController:editor animated:YES];
@@ -651,11 +622,11 @@
         errorTitle = NSLocalizedString(@"Dialog_UserLocationOffTitle", @"");
         errorMessage = NSLocalizedString(@"Dialog_UserLocationOffMessage", @"");
         
-        [[[[UIAlertView alloc] initWithTitle:errorTitle
+        [[[UIAlertView alloc] initWithTitle:errorTitle
                                      message:errorMessage
                                     delegate:nil
                            cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-                           otherButtonTitles:nil] autorelease] show];
+                           otherButtonTitles:nil] show];
     }
     
     //NSLog(@"Location services enabled: %d", [CLLocationManager locationServicesEnabled]);
@@ -861,7 +832,7 @@
 
 - (void)mapController:(id<VBMapController>)mapController didChooseAlarm:(VBAlarm *)alarm
 {
-    VBAlarmDetailsViewController *details = [[[VBAlarmDetailsViewController alloc] initWithAlarm:alarm] autorelease];
+    VBAlarmDetailsViewController *details = [[VBAlarmDetailsViewController alloc] initWithAlarm:alarm];
     details.onBack = ^{
         [self.navigationController popViewControllerAnimated:YES];
     };

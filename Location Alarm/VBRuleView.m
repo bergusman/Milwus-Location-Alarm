@@ -17,12 +17,6 @@
 @dynamic label;
 @dynamic highlighted;
 
-- (void)dealloc
-{
-    [_spot release];
-    [_label release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {

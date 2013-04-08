@@ -27,7 +27,7 @@ NSString *const VBDonateProductIDKey = @"VBDonateProductIDKey";
     VBDonnateDialogViewDelegate
 >
 
-@property (nonatomic, retain) VBDonateDialogView *donateDialog;
+@property (nonatomic, strong) VBDonateDialogView *donateDialog;
 
 @property (nonatomic, assign) NSUInteger alarmFireCount;
 
@@ -94,7 +94,7 @@ NSString *const VBDonateProductIDKey = @"VBDonateProductIDKey";
 {
     if (self.donateDialog) return;
     
-    VBDonateDialogView *dialog = [[[VBDonateDialogView alloc] init] autorelease];
+    VBDonateDialogView *dialog = [[VBDonateDialogView alloc] init];
     dialog.delegate = self;
     dialog.prices = self.dialogPrices;
     [dialog show];
@@ -108,7 +108,7 @@ NSString *const VBDonateProductIDKey = @"VBDonateProductIDKey";
 {
     if (!productID) return;
     
-    SKMutablePayment *payment = [[[SKMutablePayment alloc] init] autorelease];
+    SKMutablePayment *payment = [[SKMutablePayment alloc] init];
     payment.productIdentifier = productID;
     payment.quantity = 1;
     [[SKPaymentQueue defaultQueue] addPayment:payment];
@@ -281,10 +281,5 @@ static VBDonateManager *_sharedManager;
     });
     return _sharedManager;
 }
-
-- (id)retain { return self; }
-- (NSUInteger)retainCount { return NSUIntegerMax; }
-- (oneway void)release { }
-- (id)autorelease { return self; }
 
 @end

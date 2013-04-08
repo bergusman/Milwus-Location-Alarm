@@ -14,21 +14,21 @@
 - (void)vbSetupSearchResultCell
 {
     // Selected Background View
-    UIView *sbv = [[[UIView alloc] init] autorelease];
+    UIView *sbv = [[UIView alloc] init];
     sbv.backgroundColor = VB_RGB(54, 66, 83);
     self.selectedBackgroundView = sbv;
 
     CGSize size = self.frame.size;
     
     // Top Line
-    UIView *topLine = [[[UIView alloc] init] autorelease];
+    UIView *topLine = [[UIView alloc] init];
     topLine.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     topLine.frame = CGRectMake(0, 0, size.width, 1);
     topLine.backgroundColor = VB_WHITE(252, 1.0);
     [self addSubview:topLine];
     
     // Bottom Line
-    UIView *bottomLine = [[[UIView alloc] init] autorelease];
+    UIView *bottomLine = [[UIView alloc] init];
     bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     bottomLine.frame = CGRectMake(0, size.height - 1, size.width, 1);
     bottomLine.backgroundColor = VB_RGB(184, 193, 202);
@@ -50,21 +50,21 @@
 - (void)vbSetupLeftCell
 {
     // Selected Background View
-    UIView *sbv = [[[UIView alloc] init] autorelease];
+    UIView *sbv = [[UIView alloc] init];
     sbv.backgroundColor = VB_RGB(23, 28, 36);
     self.selectedBackgroundView = sbv;
     
     CGSize size = self.frame.size;
     
     // Top Line
-    UIView *topLine = [[[UIView alloc] init] autorelease];
+    UIView *topLine = [[UIView alloc] init];
     topLine.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     topLine.frame = CGRectMake(0, 0, size.width, 0.5);
     topLine.backgroundColor = VB_RGB(48, 60, 76);
     [self addSubview:topLine];
     
     // Bottom Line
-    UIView *bottomLine = [[[UIView alloc] init] autorelease];
+    UIView *bottomLine = [[UIView alloc] init];
     bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     bottomLine.frame = CGRectMake(0, size.height - 1, size.width, 1);
     bottomLine.backgroundColor = VB_RGB(26, 31, 40);

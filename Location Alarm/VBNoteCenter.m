@@ -31,9 +31,9 @@ static const char *noteCenterKey = "VBNoteCenter";
 
 @interface VBNoteCenter ()
 
-@property (nonatomic, retain) UINavigationController *navigationController;
-@property (nonatomic, retain) UIView *notePanel;
-@property (nonatomic, retain) VBNoteView *currentNoteView;
+@property (nonatomic, strong) UINavigationController *navigationController;
+@property (nonatomic, strong) UIView *notePanel;
+@property (nonatomic, strong) VBNoteView *currentNoteView;
 
 @end
 
@@ -46,21 +46,17 @@ static const char *noteCenterKey = "VBNoteCenter";
 - (void)dealloc
 {
     objc_setAssociatedObject(_navigationController, noteCenterKey, nil, OBJC_ASSOCIATION_ASSIGN);
-    [_navigationController release];
-    [_notePanel release];
-    [_currentNoteView release];
-    [super dealloc];
 }
 
 - (id)initWithNavigationController:(UINavigationController *)navigationController
 {
     if (!navigationController) return nil;
-    if (navigationController.noteCenter) return [navigationController.noteCenter retain];
+    if (navigationController.noteCenter) return navigationController.noteCenter;
     
     self = [super init];
     if (self) {
      
-        _navigationController = [navigationController retain];
+        _navigationController = navigationController;
         objc_setAssociatedObject(_navigationController, noteCenterKey, self, OBJC_ASSOCIATION_ASSIGN);
         
         CGRect rect = _navigationController.navigationBar.frame;
@@ -80,7 +76,7 @@ static const char *noteCenterKey = "VBNoteCenter";
                    image:(UIImage *)image
                 closable:(BOOL)closable
 {
-    NSAttributedString *attributedText = [[[NSAttributedString alloc] initWithString:text] autorelease];
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text];
     [self showNoteWithAttributedText:attributedText
                                image:image
                             closable:closable];
@@ -90,7 +86,7 @@ static const char *noteCenterKey = "VBNoteCenter";
                              image:(UIImage *)image
                           closable:(BOOL)closable
 {
-    VBNoteView *noteView = [[[VBNoteView alloc] init] autorelease];
+    VBNoteView *noteView = [[VBNoteView alloc] init];
     noteView.imageView.image = image;
     noteView.pointInsideInsets = UIEdgeInsetsMake(8, 0, 0, 0);
     [noteView layoutSubviews];
@@ -107,7 +103,7 @@ static const char *noteCenterKey = "VBNoteCenter";
     
      
     if (closable) {
-        UIButton *button = [[[UIButton alloc] init] autorelease];
+        UIButton *button = [[UIButton alloc] init];
         [button setImage:[UIImage imageNamed:@"note.close.button.png"] forState:UIControlStateNormal];
         button.frame = CGRectMake(320 - 28, 1, 26, 26);
         button.pointInsideInsets = UIEdgeInsetsMake(9, 10, 9, 2);

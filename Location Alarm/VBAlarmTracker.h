@@ -22,7 +22,7 @@ typedef enum {
 
 @interface VBAlarmTracker : NSObject
 
-@property (nonatomic, retain, readonly) NSDictionary *alarmDistances;
+@property (nonatomic, strong, readonly) NSDictionary *alarmDistances;
 
 @property (nonatomic, assign, readonly) VBGPSAccuracy accuracy;
 

@@ -23,11 +23,6 @@
 @dynamic sound;
 @dynamic on;
 
-- (void)dealloc
-{
-    [_location release];
-    [super dealloc];
-}
 
 - (CLLocation *)location
 {

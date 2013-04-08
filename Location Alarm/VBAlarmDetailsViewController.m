@@ -32,34 +32,33 @@
     VBAlarmEditorViewControllerDelegate
 >
 
-@property (nonatomic, retain) VBAlarm *alarm;
+@property (nonatomic, strong) VBAlarm *alarm;
 
-@property (retain, nonatomic) IBOutlet UIView *actionSheet;
-@property (nonatomic, retain) UIView *actionSheetDim;
+@property (strong, nonatomic) IBOutlet UIView *actionSheet;
+@property (nonatomic, strong) UIView *actionSheetDim;
 
-@property (retain, nonatomic) IBOutlet UIButton *actionSheetDelete;
-@property (retain, nonatomic) IBOutlet UIButton *actionSheetEdit;
-@property (retain, nonatomic) IBOutlet UIButton *actionSheetCancel;
+@property (weak, nonatomic) IBOutlet UIButton *actionSheetDelete;
+@property (weak, nonatomic) IBOutlet UIButton *actionSheetEdit;
+@property (weak, nonatomic) IBOutlet UIButton *actionSheetCancel;
 
-@property (retain, nonatomic) IBOutlet UIView *featurePanel;
-@property (retain, nonatomic) IBOutlet UIImageView *progressCircle;
-@property (retain, nonatomic) IBOutlet UIButton *onOffButton;
-@property (retain, nonatomic) IBOutlet TTTAttributedLabel *distanceLabel;
-@property (retain, nonatomic) IBOutlet VBSwitch *inOutSwitch;
+@property (weak, nonatomic) IBOutlet UIView *featurePanel;
+@property (weak, nonatomic) IBOutlet UIImageView *progressCircle;
+@property (weak, nonatomic) IBOutlet UIButton *onOffButton;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet VBSwitch *inOutSwitch;
 
-@property (retain, nonatomic) IBOutlet UIView *miscPanel;
+@property (weak, nonatomic) IBOutlet UIView *miscPanel;
 
-@property (retain, nonatomic) IBOutlet UIImageView *sliderPanel;
-@property (retain, nonatomic) IBOutlet VBSlider *radiusSlider;
-@property (retain, nonatomic) IBOutlet TTTAttributedLabel *radiusLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *sliderPanel;
+@property (weak, nonatomic) IBOutlet VBSlider *radiusSlider;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *radiusLabel;
 
-@property (retain, nonatomic) IBOutlet UIView *commentsPanel;
-@property (retain, nonatomic) IBOutlet UIImageView *commentsBackground;
-@property (retain, nonatomic) IBOutlet UITextView *commentsTextView;
-@property (retain, nonatomic) IBOutlet UILabel *commentsTitle;
+@property (weak, nonatomic) IBOutlet UIView *commentsPanel;
+@property (weak, nonatomic) IBOutlet UIImageView *commentsBackground;
+@property (weak, nonatomic) IBOutlet UITextView *commentsTextView;
+@property (weak, nonatomic) IBOutlet UILabel *commentsTitle;
 
-
-@property (nonatomic, retain) id radiusLabelBoldFont;
+@property (nonatomic, strong) id radiusLabelBoldFont;
 
 @end
 
@@ -69,29 +68,6 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    [_onBack release];
-    [_alarm release];
-    [_actionSheet release];
-    [_actionSheetDim release];
-    [_featurePanel release];
-    [_progressCircle release];
-    [_onOffButton release];
-    [_commentsPanel release];
-    [_commentsBackground release];
-    [_distanceLabel release];
-    [_inOutSwitch release];
-    [_commentsTextView release];
-    [_radiusSlider release];
-    [_radiusLabel release];
-    [_sliderPanel release];
-    [_miscPanel release];
-    [_radiusLabelBoldFont release];
-    [_actionSheetDelete release];
-    [_actionSheetEdit release];
-    [_actionSheetCancel release];
-    [_commentsTitle release];
-    [super dealloc];
 }
 
 - (id)initWithAlarm:(VBAlarm *)alarm
@@ -110,9 +86,9 @@
                                                    object:[VBAlarmManager sharedManager].managedObjectContext];
         
         self.alarm = alarm;
-        CTFontRef font = CTFontCreateWithName((CFStringRef)[UIFont boldSystemFontOfSize:12].fontName, 12, NULL);
-        self.radiusLabelBoldFont = (id)font;
-        CFRelease(font);
+        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)[UIFont boldSystemFontOfSize:12].fontName, 12, NULL);
+        self.radiusLabelBoldFont = (__bridge id)font;
+        //CFRelease(font);
         
     }
     return self;
@@ -134,15 +110,15 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.back.png"]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
-                                                                             action:@selector(backAction)] autorelease];
+                                                                             action:@selector(backAction)];
     
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.action.png"]
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav.button.action.png"]
                                                                                style:UIBarButtonItemStyleBordered
                                                                               target:self
-                                                                              action:@selector(actionsAction)] autorelease];
+                                                                              action:@selector(actionsAction)];
     
     self.inOutSwitch.onImage = [UIImage imageNamed:@"switch.in.png"];
     self.inOutSwitch.offImage = [UIImage imageNamed:@"switch.out.png"];
@@ -171,22 +147,6 @@
 - (void)viewDidUnload
 {
     [self setActionSheet:nil];
-    [self setProgressCircle:nil];
-    [self setOnOffButton:nil];
-    [self setFeaturePanel:nil];
-    [self setCommentsPanel:nil];
-    [self setCommentsBackground:nil];
-    [self setDistanceLabel:nil];
-    [self setInOutSwitch:nil];
-    [self setCommentsTextView:nil];
-    [self setRadiusSlider:nil];
-    [self setRadiusLabel:nil];
-    [self setSliderPanel:nil];
-    [self setMiscPanel:nil];
-    [self setActionSheetDelete:nil];
-    [self setActionSheetEdit:nil];
-    [self setActionSheetCancel:nil];
-    [self setCommentsTitle:nil];
     [super viewDidUnload];
 }
 
@@ -282,7 +242,7 @@
     }
     
     for (int i = 0; i < 6; i++) {
-        VBRuleView *rule = [[[VBRuleView alloc] init] autorelease];
+        VBRuleView *rule = [[VBRuleView alloc] init];
         rule.label = titles[i];
         rule.frame = CGRectMake(0, 0, 60, 60);
         rule.center = CGPointMake(20 + i * 55, 67);
@@ -354,9 +314,10 @@
     
     NSString *text = [NSString stringWithFormat:@"%@ %@", number, unit];
     
+    id __weak radiusLabelBoldFont = self.radiusLabelBoldFont;
     [self.radiusLabel setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
         [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName
-                                        value:self.radiusLabelBoldFont
+                                        value:radiusLabelBoldFont
                                         range:NSMakeRange(0, [number length])];
         return mutableAttributedString;
     }];
@@ -451,7 +412,7 @@
 {
     CGSize size = self.navigationController.view.frame.size;
     
-    self.actionSheetDim = [[[UIView alloc] init] autorelease];
+    self.actionSheetDim = [[UIView alloc] init];
     self.actionSheetDim.backgroundColor = [UIColor blackColor];
     self.actionSheetDim.alpha = 0;
     self.actionSheetDim.frame = self.navigationController.view.bounds;
@@ -495,7 +456,7 @@
 - (IBAction)editAction
 {
     [self hideActionSheet];
-    VBAlarmEditorViewController *editor = [[[VBAlarmEditorViewController alloc] initWithAlarm:self.alarm] autorelease];
+    VBAlarmEditorViewController *editor = [[VBAlarmEditorViewController alloc] initWithAlarm:self.alarm];
     editor.delegate = self;
     [self.navigationController pushViewController:editor animated:YES];
 }

@@ -19,7 +19,7 @@ NSString *const VBAlarmTrackerAlarmUserInfoKey = @"VBAlarmTrackerAlarmUserInfoKe
 @interface VBAlarmTracker ()
 
 @property (nonatomic, assign) VBGPSAccuracy accuracy;
-@property (nonatomic, retain) NSMutableDictionary *into;
+@property (nonatomic, strong) NSMutableDictionary *into;
 
 @end
 
@@ -183,10 +183,5 @@ static VBAlarmTracker *_sharedTracker;
     });
     return _sharedTracker;
 }
-
-- (id)retain { return self; }
-- (NSUInteger)retainCount { return NSUIntegerMax; }
-- (oneway void)release { }
-- (id)autorelease { return self; }
 
 @end

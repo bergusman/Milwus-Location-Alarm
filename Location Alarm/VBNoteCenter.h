@@ -21,8 +21,8 @@ extern NSString *const VBNoteDidReplaceNotification;
 @interface VBNoteCenter : NSObject
 
 @property (nonatomic, assign, readonly) BOOL haveNote;
-@property (nonatomic, retain, readonly) VBNoteView *noteView;
-@property (nonatomic, retain, readonly) UINavigationController *navigationController;
+@property (nonatomic, strong, readonly) VBNoteView *noteView;
+@property (nonatomic, strong, readonly) UINavigationController *navigationController;
 
 - (id)initWithNavigationController:(UINavigationController *)navigationController;
 

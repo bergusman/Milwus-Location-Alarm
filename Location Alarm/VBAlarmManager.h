@@ -11,10 +11,10 @@
 
 @interface VBAlarmManager : NSObject
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, retain, readonly) NSArray *alarms;
-@property (nonatomic, retain, readonly) NSArray *sortedAlarms;
+@property (nonatomic, strong, readonly) NSArray *alarms;
+@property (nonatomic, strong, readonly) NSArray *sortedAlarms;
 
 + (VBAlarmManager *)sharedManager;
 

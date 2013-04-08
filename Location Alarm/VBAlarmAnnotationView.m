@@ -14,24 +14,18 @@
     UIImageView *_segment;
 }
 
-- (void)dealloc
-{
-    [_cover release];
-    [_segment release];
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         
-        UIImageView *shadow = [[[UIImageView alloc] init] autorelease];
+        UIImageView *shadow = [[UIImageView alloc] init];
         shadow.image = [UIImage imageNamed:@"alarm.marker.shadow.png"];
         shadow.frame = CGRectMake(0, 0, 50, 70);
         [self addSubview:shadow];
         
-        UIImageView *progress = [[[UIImageView alloc] init] autorelease];
+        UIImageView *progress = [[UIImageView alloc] init];
         progress.image = [UIImage imageNamed:@"alarm.marker.progress.png"];
         progress.frame = CGRectMake(0, 0, 36, 46);
         [self addSubview:progress];

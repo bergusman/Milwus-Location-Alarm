@@ -35,7 +35,7 @@
     
     self.image = [UIImage imageNamed:@"alarm.marker.on.cover.png"];
     
-    UIImageView *cover = [[[UIImageView alloc] init] autorelease];
+    UIImageView *cover = [[UIImageView alloc] init];
     cover.image = [UIImage imageNamed:@"alarm.marker.on.cover.png"];
     cover.frame = CGRectMake(0, 0, 30, 40);
     [self addSubview:cover];

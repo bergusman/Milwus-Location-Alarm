@@ -25,12 +25,12 @@
 @property (nonatomic, assign) double metricDefaultRadius;
 @property (nonatomic, assign) double imperialDefaultRadius;
 
-@property (nonatomic, retain) NSDictionary *metricRadiusFunction;
-@property (nonatomic, retain) NSDictionary *imperialRadiusFunction;
-@property (nonatomic, retain) NSDictionary *distanceProgressFunction;
+@property (nonatomic, strong) NSDictionary *metricRadiusFunction;
+@property (nonatomic, strong) NSDictionary *imperialRadiusFunction;
+@property (nonatomic, strong) NSDictionary *distanceProgressFunction;
 
-@property (nonatomic, retain) NSArray *metricRadiusRules;
-@property (nonatomic, retain) NSArray *imperialRadiusRules;
+@property (nonatomic, strong) NSArray *metricRadiusRules;
+@property (nonatomic, strong) NSArray *imperialRadiusRules;
 
 @property (nonatomic, assign) BOOL useAnalytics;
 @property (nonatomic, copy) NSString *analyticsTrackingID;
@@ -42,10 +42,10 @@
 
 @property (nonatomic, assign) BOOL useDevTools;
 
-@property (nonatomic, retain) NSArray *dialogDonatePrices;
-@property (nonatomic, retain) NSArray *dialogDonateIDs;
-@property (nonatomic, retain) NSArray *aboutDonatePrices;
-@property (nonatomic, retain) NSArray *aboutDonateIDs;
+@property (nonatomic, strong) NSArray *dialogDonatePrices;
+@property (nonatomic, strong) NSArray *dialogDonateIDs;
+@property (nonatomic, strong) NSArray *aboutDonatePrices;
+@property (nonatomic, strong) NSArray *aboutDonateIDs;
 
 @property (nonatomic, copy) NSString *googlePlusClientID;
 
@@ -131,10 +131,5 @@ static VBConfig *_sharedConfig;
     });
     return _sharedConfig;
 }
-
-- (id)retain { return self; }
-- (NSUInteger)retainCount { return NSUIntegerMax; }
-- (oneway void)release { }
-- (id)autorelease { return self; }
 
 @end

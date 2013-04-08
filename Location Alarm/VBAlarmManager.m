@@ -58,7 +58,7 @@
 {
     [self clear];
     
-    NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Alarm"
                                               inManagedObjectContext:self.managedObjectContext];
 	[request setEntity:entity];
@@ -86,9 +86,7 @@
 
 - (void)clear
 {
-    [_alarms release];
     _alarms = nil;
-    [_sortedAlarms release];
     _sortedAlarms = nil;
 }
 
@@ -120,10 +118,5 @@ static VBAlarmManager *_sharedManager;
     });
     return _sharedManager;
 }
-
-- (id)retain { return self; }
-- (NSUInteger)retainCount { return NSUIntegerMax; }
-- (oneway void)release {}
-- (id)autorelease { return self; }
 
 @end

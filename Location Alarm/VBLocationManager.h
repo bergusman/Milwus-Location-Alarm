@@ -21,7 +21,7 @@ extern NSString *const VBLocationManagerOldLocationUserInfoKey;
 @property(nonatomic, assign) CLLocationDistance distanceFilter;
 @property(nonatomic, assign) CLLocationAccuracy desiredAccuracy;
 
-@property (nonatomic, readonly) CLLocation *location;
+@property (weak, nonatomic, readonly) CLLocation *location;
 
 + (VBLocationManager *)sharedManager;
 

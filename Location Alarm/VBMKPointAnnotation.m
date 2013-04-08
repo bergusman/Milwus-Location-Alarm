@@ -10,10 +10,5 @@
 
 @implementation VBMKPointAnnotation
 
-- (void)dealloc
-{
-    [_userData release];
-    [super dealloc];
-}
 
 @end

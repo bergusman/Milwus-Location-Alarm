@@ -19,13 +19,13 @@
 @interface VBAppleMapViewController ()
 <MKMapViewDelegate>
 
-@property (nonatomic, retain) MKMapView *mapView;
+@property (nonatomic, strong) MKMapView *mapView;
 
-@property (nonatomic, retain) MKPointAnnotation *placemarkAnnotation;
+@property (nonatomic, strong) MKPointAnnotation *placemarkAnnotation;
 @property (nonatomic, assign) BOOL animatesPlacemarkDropping;
 
-@property (nonatomic, retain) NSMutableDictionary *alarmAnnotations;
-@property (nonatomic, retain) NSMutableDictionary *alarmCircleOverlays;
+@property (nonatomic, strong) NSMutableDictionary *alarmAnnotations;
+@property (nonatomic, strong) NSMutableDictionary *alarmCircleOverlays;
 
 @end
 
@@ -38,11 +38,6 @@
 - (void)dealloc
 {
     _mapView.delegate = nil;
-    [_mapView release];
-    [_placemarkAnnotation release];
-    [_alarmAnnotations release];
-    [_alarmCircleOverlays release];
-    [super dealloc];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -58,7 +53,7 @@
 
 - (void)loadView
 {
-    self.mapView = [[[MKMapView alloc] init] autorelease];
+    self.mapView = [[MKMapView alloc] init];
     self.mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.mapView.delegate = self;
     self.view = self.mapView;
@@ -138,7 +133,7 @@
 {
     [self removePlacemark];
     
-    self.placemarkAnnotation = [[[MKPointAnnotation alloc] init] autorelease];
+    self.placemarkAnnotation = [[MKPointAnnotation alloc] init];
     self.placemarkAnnotation.coordinate = placemark.coordinate;
     self.placemarkAnnotation.title = placemark.name;
     self.placemarkAnnotation.subtitle = placemark.formattedAddress;
@@ -234,7 +229,7 @@
 
 - (void)addAlarm:(VBAlarm *)alarm
 {
-    VBMKPointAnnotation *annotation = [[[VBMKPointAnnotation alloc] init] autorelease];
+    VBMKPointAnnotation *annotation = [[VBMKPointAnnotation alloc] init];
     annotation.coordinate = CLLocationCoordinate2DMake(alarm.latitude, alarm.longitude);
     annotation.title = alarm.title;
     annotation.userData = alarm;
@@ -395,7 +390,7 @@
         static NSString *pinID = @"placemarkPinID";
         MKPinAnnotationView *pin = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinID];
         if (!pin) {
-            pin = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinID] autorelease];
+            pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinID];
             pin.animatesDrop = self.animatesPlacemarkDropping;
             pin.canShowCallout = YES;
         } else {
@@ -409,7 +404,7 @@
         static NSString *annotationViewID = @"alarmAnnotationID";
         VBAlarmAnnotationView *annotationView = (VBAlarmAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:annotationViewID];
         if (!annotationView) {
-            annotationView = [[[VBAlarmAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationViewID] autorelease];
+            annotationView = [[VBAlarmAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationViewID];
             annotationView.canShowCallout = YES;
         } else {
             annotationView.annotation = annotation;
@@ -445,7 +440,7 @@
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
     if ([overlay isKindOfClass:[MKCircle class]]) {
-        MKCircleView *circleView = [[[MKCircleView alloc] initWithCircle:overlay] autorelease];
+        MKCircleView *circleView = [[MKCircleView alloc] initWithCircle:overlay];
         circleView.strokeColor = VB_RGB(0, 134, 255);
         circleView.fillColor = [circleView.strokeColor colorWithAlphaComponent:0.18];
         circleView.lineWidth = 2;
