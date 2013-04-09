@@ -246,6 +246,9 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     [GAI sharedInstance].dispatchInterval = [VBConfig sharedConfig].analyticsDispatchInterval;
     [[GAI sharedInstance] trackerWithTrackingId:[VBConfig sharedConfig].analyticsTrackingID];
     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    
     // TestFlight
     if ([VBConfig sharedConfig].useTestFlight) {
         if ([VBConfig sharedConfig].enableUDID) {
@@ -253,6 +256,8 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
         }
         [TestFlight takeOff:[VBConfig sharedConfig].appToken];
     }
+    
+#pragma clang diagnostic pop
     
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
@@ -438,9 +443,6 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
      }];
     
     [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:3 forBarMetrics:UIBarMetricsDefault];
-    
-    
-    
 }
 
 
