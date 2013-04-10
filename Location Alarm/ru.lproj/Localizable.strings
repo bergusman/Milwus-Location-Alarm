@@ -103,7 +103,7 @@
 "Help_System_Config" = "Нажмите эту кнопку, чтобы настроить единицы измерения и тип карты";
 
 // Twitter
-"TwitterSharingText" = "Я использую LocationAlarm, оно есть тут";
+"TwitterSharingText" = "Я использую LocationAlarm, он есть тут";
 "TwitterSharingFailureTitle" = "Ошибка";
 "TwitterSharingFailureMessage" = "Извините, необходимо настроить вашу учетную запись Twitter";
 
