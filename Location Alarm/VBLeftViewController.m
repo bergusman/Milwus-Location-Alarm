@@ -82,9 +82,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptrn.dark.png"]];
-    
     [self.searchDisplayController.searchBar vbSetupStyle];
-    
     self.searchDisplayController.searchBar.placeholder = NSLocalizedString(@"SearchAddressPlaceholder", @"");
 }
 
@@ -265,10 +263,10 @@
             
             if (indexPath.row == 0) {
                 cell.imageView.image = [UIImage imageNamed:@"info.icon.png"];
-                cell.textLabel.text = NSLocalizedString(@"About", @"");
+                cell.textLabel.text = NSLocalizedString(@"AboutCell", @"");
             } else if (indexPath.row == 1) {
                 cell.imageView.image = [UIImage imageNamed:@"help.icon.png"];
-                cell.textLabel.text = NSLocalizedString(@"Help", @"");
+                cell.textLabel.text = NSLocalizedString(@"HelpCell", @"");
             } else if (indexPath.row == 2) {
                 cell.imageView.image = [UIImage imageNamed:@"dev.icon.png"];
                 cell.textLabel.text = NSLocalizedString(@"Dev Tools", @"");

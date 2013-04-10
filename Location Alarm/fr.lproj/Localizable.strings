@@ -36,8 +36,12 @@
 "MapTypePeoples" = "People\'s";
 "MapTypeSchema" = "Schéma";
 
-"About" = "À propos de la";
-"Help" = "Aide";
+"AboutCell" = "À propos de la";
+"HelpCell" = "Aide";
+
+"AboutTitle" = "À propos de la";
+"HelpTitle" = "Aide";
+"SoundTitle" = "Sonnerie d\'alarme";
 
 "Left" = "En train de sortir";
 "Reached" = "En train d\'entrer";

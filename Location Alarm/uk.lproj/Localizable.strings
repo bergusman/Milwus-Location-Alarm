@@ -36,8 +36,12 @@
 "MapTypePeoples" = "People's";
 "MapTypeSchema" = "Схема";
 
-"About" = "Про додаток";
-"Help" = "Допомога";
+"AboutCell" = "Про додаток";
+"HelpCell" = "Допомога";
+
+"AboutTitle" = "Про додаток";
+"HelpTitle" = "Допомога";
+"SoundTitle" = "Мелодія маркера";
 
 "Left" = "Залишаєте";
 "Reached" = "Входите";

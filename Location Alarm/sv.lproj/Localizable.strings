@@ -37,8 +37,12 @@
 "MapTypePeoples" = "People's";
 "MapTypeSchema" = "Schema";
 
-"About" = "Om";
-"Help" = "Hjälp";
+"AboutCell" = "Om";
+"HelpCell" = "Hjälp";
+
+"AboutTitle" = "Om";
+"HelpTitle" = "Hjälp";
+"SoundTitle" = "Larmsignal";
 
 "Left" = "Lämnar";
 "Reached" = "Anländer till";

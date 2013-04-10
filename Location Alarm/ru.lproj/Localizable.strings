@@ -36,8 +36,12 @@
 "MapTypePeoples" = "People's";
 "MapTypeSchema" = "Схема";
 
-"About" = "О приложении";
-"Help" = "Помощь";
+"AboutCell" = "О приложении";
+"HelpCell" = "Помощь";
+
+"AboutTitle" = "О приложении";
+"HelpTitle" = "Помощь";
+"SoundTitle" = "Сигнал будильника";
 
 "Left" = "Покидаете";
 "Reached" = "Входите в";

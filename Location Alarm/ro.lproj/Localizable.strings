@@ -1,4 +1,4 @@
-﻿/*
+/*
  Localizable.strings
  Location Alarm
  
@@ -36,8 +36,12 @@
 "MapTypePeoples" = "People's";
 "MapTypeSchema" = "Schema";
 
-"About" = "Despre";
-"Help" = "Ajutor";
+"AboutCell" = "Despre";
+"HelpCell" = "Ajutor";
+
+"AboutTitle" = "Despre";
+"HelpTitle" = "Ajutor";
+"SoundTitle" = "Ton alarma";
 
 "Left" = "Iesire";
 "Reached" = "Intrare";

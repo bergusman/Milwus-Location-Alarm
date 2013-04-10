@@ -1,4 +1,4 @@
-﻿/*
+/*
  Localizable.strings
  Location Alarm
  
@@ -36,8 +36,12 @@
 "MapTypePeoples" = "Leute";
 "MapTypeSchema" = "Schema";
 
-"About" = "Über";
-"Help" = "Hilfe";
+"AboutCell" = "Über";
+"HelpCell" = "Hilfe";
+
+"AboutTitle" = "Über";
+"HelpTitle" = "Hilfe";
+"SoundTitle" = "Alarmton";
 
 "Left" = "Verlassen";
 "Reached" = "Erreichen";
