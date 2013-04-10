@@ -34,6 +34,8 @@
 #import "TestFlight.h"
 #import "VBAlarmDetailsViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <BugSense-iOS/BugSenseController.h>
+#import "Flurry.h"
 
 
 NSString *const VBDeckWillOpenLeftSideNotification = @"VBDeckWillOpenLeftSideNotification";
@@ -239,10 +241,13 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BugSenseController sharedControllerWithBugSenseAPIKey:@"b019a03f"];
+    [Flurry startSession:@"VBCXDH9RZPM64KD6ZD97"];
+    
     [[VBConfig sharedConfig] loadConfigFromFile:[[NSBundle mainBundle] infoDictionary][@"VBConfigName"]];
     
     // Google Analytics
-    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].trackUncaughtExceptions = NO;
     [GAI sharedInstance].dispatchInterval = [VBConfig sharedConfig].analyticsDispatchInterval;
     [[GAI sharedInstance] trackerWithTrackingId:[VBConfig sharedConfig].analyticsTrackingID];
     

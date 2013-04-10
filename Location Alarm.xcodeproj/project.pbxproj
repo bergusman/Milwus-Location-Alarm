@@ -453,6 +453,10 @@
 		AD8F7D1916DE2C3200B7D768 /* arrow.dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8F7D1716DE2C3200B7D768 /* arrow.dark@2x.png */; };
 		AD8F7D1A16DE2C3200B7D768 /* arrow.white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8F7D1816DE2C3200B7D768 /* arrow.white@2x.png */; };
 		AD93289416F5C2B600FE610E /* VBGoogleMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93289316F5C2B600FE610E /* VBGoogleMapViewController.m */; };
+		AD97415C17159C120070083B /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97415B17159C120070083B /* BugSense-iOS.framework */; };
+		AD97415D17159C180070083B /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97415B17159C120070083B /* BugSense-iOS.framework */; };
+		AD9741611715A2270070083B /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9741601715A2270070083B /* libFlurry.a */; };
+		AD9741621715A2270070083B /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9741601715A2270070083B /* libFlurry.a */; };
 		AD97ED1716F9B57100EACC15 /* donate.dialog.bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD97ED1616F9B57100EACC15 /* donate.dialog.bg@2x.png */; };
 		AD97ED1816F9B57100EACC15 /* donate.dialog.bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD97ED1616F9B57100EACC15 /* donate.dialog.bg@2x.png */; };
 		AD97ED1A16F9B8C100EACC15 /* donate.dialog.close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD97ED1916F9B8C100EACC15 /* donate.dialog.close@2x.png */; };
@@ -894,6 +898,9 @@
 		AD8F7D1816DE2C3200B7D768 /* arrow.white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow.white@2x.png"; path = "Location Alarm/Images/arrow.white@2x.png"; sourceTree = "<group>"; };
 		AD93289216F5C2B600FE610E /* VBGoogleMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBGoogleMapViewController.h; sourceTree = "<group>"; };
 		AD93289316F5C2B600FE610E /* VBGoogleMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBGoogleMapViewController.m; sourceTree = "<group>"; };
+		AD97415B17159C120070083B /* BugSense-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "BugSense-iOS.framework"; path = "Location Alarm/Vendors/BugSense/BugSense-iOS.framework"; sourceTree = "<group>"; };
+		AD97415F1715A2270070083B /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		AD9741601715A2270070083B /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		AD97ED1616F9B57100EACC15 /* donate.dialog.bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "donate.dialog.bg@2x.png"; path = "Location Alarm/Images/donate.dialog.bg@2x.png"; sourceTree = "<group>"; };
 		AD97ED1916F9B8C100EACC15 /* donate.dialog.close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "donate.dialog.close@2x.png"; path = "Location Alarm/Images/donate.dialog.close@2x.png"; sourceTree = "<group>"; };
 		AD98120A16E067E400A65AC3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1139,6 +1146,8 @@
 				ADFB8401170738F40045E9EB /* GoogleMaps.framework in Frameworks */,
 				ADF24F2317094E8600AA0C98 /* MediaPlayer.framework in Frameworks */,
 				AD3B58D717128D9900386D78 /* libc++.dylib in Frameworks */,
+				AD97415D17159C180070083B /* BugSense-iOS.framework in Frameworks */,
+				AD9741621715A2270070083B /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,6 +1186,8 @@
 				AD27BF8A16F03EBF00D293F2 /* libTestFlight.a in Frameworks */,
 				AD5B0CB516FB437100150896 /* libGooglePlusUniversal.a in Frameworks */,
 				ADFB8400170738F40045E9EB /* GoogleMaps.framework in Frameworks */,
+				AD97415C17159C120070083B /* BugSense-iOS.framework in Frameworks */,
+				AD9741611715A2270070083B /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1593,6 +1604,16 @@
 			name = Donate;
 			sourceTree = "<group>";
 		};
+		AD97415E1715A2270070083B /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				AD97415F1715A2270070083B /* Flurry.h */,
+				AD9741601715A2270070083B /* libFlurry.a */,
+			);
+			name = Flurry;
+			path = Vendors/Flurry;
+			sourceTree = "<group>";
+		};
 		AD98120C16E0734500A65AC3 /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -1914,6 +1935,7 @@
 		ADF7277716DA377700104B41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD97415B17159C120070083B /* BugSense-iOS.framework */,
 				ADF24F2117094E8100AA0C98 /* MediaPlayer.framework */,
 				ADFB83FF170738F40045E9EB /* GoogleMaps.framework */,
 				ADD252D116FA1E7F00B412A4 /* Social.framework */,
@@ -1993,6 +2015,7 @@
 				AD27BF8516F03EBF00D293F2 /* TestFlightSDK1.2.1 */,
 				AD7E958D16F1EDD1008375C1 /* SVGeocoder */,
 				AD5B0C5116FB437100150896 /* GooglePlus */,
+				AD97415E1715A2270070083B /* Flurry */,
 			);
 			name = Vendors;
 			sourceTree = "<group>";
@@ -3030,6 +3053,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Location Alarm/Vendors\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/BugSense\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Location Alarm/Location Alarm-Prefix.pch";
@@ -3039,6 +3063,7 @@
 					"\"$(SRCROOT)/Location Alarm/Vendors/GoogleAnalytics\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/TestFlightSDK1.2.1\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/GooglePlus/lib\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/Flurry\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -3059,6 +3084,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Location Alarm/Vendors\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/BugSense\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Location Alarm/Location Alarm-Prefix.pch";
@@ -3068,6 +3094,7 @@
 					"\"$(SRCROOT)/Location Alarm/Vendors/GoogleAnalytics\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/TestFlightSDK1.2.1\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/GooglePlus/lib\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/Flurry\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -3135,6 +3162,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Location Alarm/Vendors\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/BugSense\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Location Alarm/Location Alarm-Prefix.pch";
@@ -3144,6 +3173,7 @@
 					"\"$(SRCROOT)/Location Alarm/Vendors/GoogleAnalytics\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/TestFlightSDK1.2.1\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/GooglePlus/lib\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/Flurry\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -3168,6 +3198,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Location Alarm/Vendors\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/BugSense\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Location Alarm/Location Alarm-Prefix.pch";
@@ -3177,6 +3209,7 @@
 					"\"$(SRCROOT)/Location Alarm/Vendors/GoogleAnalytics\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/TestFlightSDK1.2.1\"",
 					"\"$(SRCROOT)/Location Alarm/Vendors/GooglePlus/lib\"",
+					"\"$(SRCROOT)/Location Alarm/Vendors/Flurry\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",

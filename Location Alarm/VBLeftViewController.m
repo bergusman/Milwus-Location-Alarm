@@ -212,7 +212,7 @@
         if (section == 0) {
             return [[VBAlarmManager sharedManager].sortedAlarms count];
         } else {
-            return 2;
+            return [VBConfig sharedConfig].useDevTools ? 3 : 2;
         }
     } else {
         return [self.placemarks count];
