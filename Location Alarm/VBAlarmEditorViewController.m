@@ -123,9 +123,7 @@
                                                    object:nil];
         
         CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)[UIFont boldSystemFontOfSize:12].fontName, 12, NULL);
-        self.radiusLabelBoldFont = (__bridge id)font;
-        CFRelease(font);
-        
+        self.radiusLabelBoldFont = (__bridge_transfer id)font;
     }
     return self;
 }
