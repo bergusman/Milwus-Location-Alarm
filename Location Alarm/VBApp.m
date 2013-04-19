@@ -554,7 +554,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     }
     
     [Appirater userDidSignificantEvent:YES];
-    [[VBDonateManager sharedManager] retainAlarmTrigeredCount];
+    //[[VBDonateManager sharedManager] retainAlarmTrigeredCount];
     
     if (alarm.type == VBAlarmTypeIn) {
         [VBAnalytics fireInAlarm];

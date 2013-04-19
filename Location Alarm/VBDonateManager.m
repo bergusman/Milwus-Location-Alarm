@@ -92,6 +92,7 @@ NSString *const VBDonateProductIDKey = @"VBDonateProductIDKey";
 
 - (void)showDonateDialog
 {
+    //return;
     if (self.donateDialog) return;
     
     VBDonateDialogView *dialog = [[VBDonateDialogView alloc] init];
