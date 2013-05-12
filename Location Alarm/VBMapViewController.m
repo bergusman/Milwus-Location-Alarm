@@ -571,8 +571,8 @@
 - (void)addAction
 {
     if ([[VBAlarmManager sharedManager].alarms count] >= 20) {
-        [self.navigationController.noteCenter showNoteWithText:NSLocalizedString(@"Note_TapOnMap", @"")
-                                                         image:[UIImage imageNamed:@"note.icon.warning.png"]
+        [self.navigationController.noteCenter showNoteWithText:NSLocalizedString(@"Note_AlarmLimit", @"")
+                                                         image:[UIImage imageNamed:@"note.icon.error.png"]
                                                       closable:YES];
         return;
     }
