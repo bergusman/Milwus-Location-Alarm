@@ -86,12 +86,10 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     NSPersistentStoreCoordinator *_persistentStoreCoordinator;
 }
 
-
 - (id)init
 {
     self = [super init];
     if (self) {
-        _sharedApp = self;
         _noteQueue = [NSMutableArray array];
     }
     return self;
@@ -699,11 +697,9 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 
 #pragma mark - Singleton
 
-static VBApp *_sharedApp;
-
 + (VBApp *)sharedApp
 {
-    return _sharedApp;
+    return (VBApp *)[UIApplication sharedApplication].delegate;
 }
 
 @end
