@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44D6BE38173FF860002C2D03 /* VBRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6BE37173FF860002C2D03 /* VBRegionManager.m */; };
 		AD06FDA716DD4F29003F243B /* inzone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD06FDA616DD4F29003F243B /* inzone@2x.png */; };
 		AD06FDAB16DDBBFB003F243B /* VBAlarmAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD06FDAA16DDBBFA003F243B /* VBAlarmAnnotationView.m */; };
 		AD06FDB016DDC8CB003F243B /* alarm.marker.off.cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD06FDAF16DDC8CB003F243B /* alarm.marker.off.cover@2x.png */; };
@@ -632,6 +633,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44D6BE36173FF860002C2D03 /* VBRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBRegionManager.h; sourceTree = "<group>"; };
+		44D6BE37173FF860002C2D03 /* VBRegionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBRegionManager.m; sourceTree = "<group>"; };
 		AD06FDA616DD4F29003F243B /* inzone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inzone@2x.png"; path = "Location Alarm/Images/inzone@2x.png"; sourceTree = "<group>"; };
 		AD06FDA916DDBBFA003F243B /* VBAlarmAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAlarmAnnotationView.h; sourceTree = "<group>"; };
 		AD06FDAA16DDBBFA003F243B /* VBAlarmAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAlarmAnnotationView.m; sourceTree = "<group>"; };
@@ -2262,6 +2265,8 @@
 				AD0B69F216FBE2C600923C79 /* VBAnalytics.m */,
 				ADB6866216FD567900571F81 /* VBSoundsManager.h */,
 				ADB6866316FD567900571F81 /* VBSoundsManager.m */,
+				44D6BE36173FF860002C2D03 /* VBRegionManager.h */,
+				44D6BE37173FF860002C2D03 /* VBRegionManager.m */,
 			);
 			name = "Managers & Singletons";
 			sourceTree = "<group>";
@@ -2960,6 +2965,7 @@
 				AD3B58A51711C44E00386D78 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				AD3B58A61711C44E00386D78 /* GTMObjC2Runtime.m in Sources */,
 				AD3B58A71711C44E00386D78 /* OpenInChromeController.m in Sources */,
+				44D6BE38173FF860002C2D03 /* VBRegionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

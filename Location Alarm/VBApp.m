@@ -36,6 +36,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <BugSense-iOS/BugSenseController.h>
 #import "Flurry.h"
+#import "VBRegionManager.h"
 
 
 NSString *const VBDeckWillOpenLeftSideNotification = @"VBDeckWillOpenLeftSideNotification";
@@ -273,6 +274,8 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     [[VBAlarmManager sharedManager] load];
     
     [VBAlarmTracker sharedTracker];
+    
+    [VBRegionManager sharedManager];
     
     self.soundsManager = [[VBSoundsManager alloc] initWithNames:@"SoundNames.plist"
                                                          shorts:@"SoundShorts.plist"
