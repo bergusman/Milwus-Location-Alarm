@@ -1,4 +1,4 @@
-﻿/*
+/*
  Localizable.strings
  Location Alarm
  
@@ -83,6 +83,7 @@
 "Note_TapOnMap" = "Appuyez sur la carte pour ajouter un marqueur";
 "Note_NetworkOff" = "Pas de connexion Internet";
 "Note_AlarmOffAfterTriggering" = "Le marqueur sera désactivé lors du déclenchement de l\'alarme";
+"Note_AlarmLimit" = "Alarmes de limite dépensées";
 
 "Dialog_GPSOffTitle" = "Service de localisation est désactivé";
 "Dialog_GPSOffMessage" = "Service de localisation est désactivé";

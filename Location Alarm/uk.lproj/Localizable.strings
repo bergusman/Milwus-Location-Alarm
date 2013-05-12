@@ -1,4 +1,4 @@
-﻿/*
+/*
  Localizable.strings
  Location Alarm
  
@@ -83,6 +83,7 @@
 "Note_TapOnMap" = "Тапніть по карті, щоб створити маркер";
 "Note_NetworkOff" = "Відсутнє підключення до мережі Інтернет";
 "Note_AlarmOffAfterTriggering" = "Маркер автоматично вимкнеться відразу після спрацювання";
+"Note_AlarmLimit" = "Витрачений ліміт будильників";
 
 "Dialog_GPSOffTitle" = "Функція геолокації вимкнена";
 "Dialog_GPSOffMessage" = "Функція геолокації вимкнена";

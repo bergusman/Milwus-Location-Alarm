@@ -83,6 +83,7 @@
 "Note_TapOnMap" = "Tap on map to add alarm marker";
 "Note_NetworkOff" = "No Internet connection";
 "Note_AlarmOffAfterTriggering" = "Marker will be deactivated after alarm triggered";
+"Note_AlarmLimit" = "Expended limit alarms";
 
 "Dialog_GPSOffTitle" = "Location Service is disabled";
 "Dialog_GPSOffMessage" = "Location Service is disabled";

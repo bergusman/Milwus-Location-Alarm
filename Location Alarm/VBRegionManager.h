@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VBAlarm.h"
 
 @interface VBRegionManager : NSObject
 
 + (VBRegionManager *)sharedManager;
+
+- (void)startMonitoringAlarm:(VBAlarm *)alarm;
+- (void)stopMonitoringAlarm:(VBAlarm *)alarm;
 
 @end

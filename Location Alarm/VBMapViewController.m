@@ -570,6 +570,13 @@
 
 - (void)addAction
 {
+    if ([[VBAlarmManager sharedManager].alarms count] >= 20) {
+        [self.navigationController.noteCenter showNoteWithText:NSLocalizedString(@"Note_TapOnMap", @"")
+                                                         image:[UIImage imageNamed:@"note.icon.warning.png"]
+                                                      closable:YES];
+        return;
+    }
+    
     [self saveMapRegion:self.mapController.region];
     if (self.navigationItem.rightBarButtonItem == self.addAlarmBarButton) {
         self.navigationItem.rightBarButtonItem = self.addAlarmSelectedBarButton;

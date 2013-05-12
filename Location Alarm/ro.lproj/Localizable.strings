@@ -83,6 +83,7 @@
 "Note_TapOnMap" = "Apasati pe harta pentru a adauga un marcaj";
 "Note_NetworkOff" = "Nu aveti conexiune la internet";
 "Note_AlarmOffAfterTriggering" = "Marcajul va fi dezactivat dupa declansarea alarmei";
+"Note_AlarmLimit" = "Alarme limită cheltuite";
 
 "Dialog_GPSOffTitle" = "Serviciul de localizare este dezactivat";
 "Dialog_GPSOffMessage" = "Serviciul de localizare este dezactivat";

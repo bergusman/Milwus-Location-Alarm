@@ -83,6 +83,7 @@
 "Note_TapOnMap" = "Для добавления будильника тапните по карте";
 "Note_NetworkOff" = "Отсутствует подключение к Интернет";
 "Note_AlarmOffAfterTriggering" = "После ";
+"Note_AlarmLimit" = "Израсходован лимит будильников";
 
 // Geolocation turn off for our application
 "Dialog_GPSOffTitle" = "Геолокация не работает";

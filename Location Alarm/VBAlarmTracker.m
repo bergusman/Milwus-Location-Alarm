@@ -129,6 +129,8 @@ NSString *const VBAlarmTrackerAlarmUserInfoKey = @"VBAlarmTrackerAlarmUserInfoKe
     
     if (accuracy == VBGPSAccuracyBad) return;
     
+    return;
+    
     CLLocationDistance minDistance = 40000000;
     
     for (VBAlarm *alarm in [VBAlarmManager sharedManager].alarms) {

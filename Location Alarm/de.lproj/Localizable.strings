@@ -83,6 +83,7 @@
 "Note_TapOnMap" = "Klicken Sie auf die Karte um einen Alarm hinzuzufügen";
 "Note_NetworkOff" = "Keine Internetverbindung";
 "Note_AlarmOffAfterTriggering" = "Der Alarm wird deaktiviert nachdem er ausgelöst wurde";
+"Note_AlarmLimit" = "Verbrauchte Grenzwertalarmen";
 
 "Dialog_GPSOffTitle" = "GPS ist ausgeschaltet";
 "Dialog_GPSOffMessage" = "GPS ist ausgeschaltet";

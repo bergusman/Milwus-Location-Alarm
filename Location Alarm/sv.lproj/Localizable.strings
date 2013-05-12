@@ -84,6 +84,7 @@
 "Note_TapOnMap" = "Klicka på kartan för at skapa ett larm";
 "Note_NetworkOff" = "Ingen datauppkoppling";
 "Note_AlarmOffAfterTriggering" = "Markeringen kommer att stängas av efter att larmet utlöst";
+"Note_AlarmLimit" = "Förbrukade limit larm";
 
 "Dialog_GPSOffTitle" = "Location Service är avstängd";
 "Dialog_GPSOffMessage" = "Location Service är avstängd";
