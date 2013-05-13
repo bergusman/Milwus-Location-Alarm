@@ -19,7 +19,7 @@
 	<key>Turn Off Alarm After Firing</key>
 	<true/>
 	<key>Metric Default Radius</key>
-	<integer>150</integer>
+	<integer>200</integer>
 	<key>Imperial Default Radius</key>
 	<integer>150</integer>
 	<key>Metric Radius Function</key>
@@ -35,8 +35,8 @@
 		</array>
 		<key>y</key>
 		<array>
-			<integer>50</integer>
 			<integer>200</integer>
+			<integer>400</integer>
 			<integer>800</integer>
 			<integer>2000</integer>
 			<integer>6000</integer>
@@ -56,7 +56,7 @@
 		</array>
 		<key>y</key>
 		<array>
-			<integer>50</integer>
+			<integer>220</integer>
 			<integer>400</integer>
 			<integer>1408</integer>
 			<integer>3520</integer>
@@ -91,8 +91,8 @@
 	</dict>
 	<key>Metric Radius Slider Rules</key>
 	<array>
-		<integer>50</integer>
 		<integer>200</integer>
+		<integer>400</integer>
 		<integer>800</integer>
 		<integer>2000</integer>
 		<integer>6000</integer>
@@ -100,7 +100,7 @@
 	</array>
 	<key>Imperial Radius Slider Rules</key>
 	<array>
-		<integer>50</integer>
+		<integer>220</integer>
 		<integer>400</integer>
 		<integer>1408</integer>
 		<integer>3520</integer>

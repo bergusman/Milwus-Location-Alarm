@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44D6BE38173FF860002C2D03 /* VBRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6BE37173FF860002C2D03 /* VBRegionManager.m */; };
+		44D6BE631740CFC3002C2D03 /* VBRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6BE37173FF860002C2D03 /* VBRegionManager.m */; };
 		AD06FDA716DD4F29003F243B /* inzone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD06FDA616DD4F29003F243B /* inzone@2x.png */; };
 		AD06FDAB16DDBBFB003F243B /* VBAlarmAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD06FDAA16DDBBFA003F243B /* VBAlarmAnnotationView.m */; };
 		AD06FDB016DDC8CB003F243B /* alarm.marker.off.cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD06FDAF16DDC8CB003F243B /* alarm.marker.off.cover@2x.png */; };
@@ -2856,6 +2857,7 @@
 				AD3B58981711C44D00386D78 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				AD3B58991711C44D00386D78 /* GTMObjC2Runtime.m in Sources */,
 				AD3B589A1711C44D00386D78 /* OpenInChromeController.m in Sources */,
+				44D6BE631740CFC3002C2D03 /* VBRegionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
