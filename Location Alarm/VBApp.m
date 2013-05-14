@@ -256,7 +256,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
     // TestFlight
     if ([VBConfig sharedConfig].useTestFlight) {
         if ([VBConfig sharedConfig].enableUDID) {
-            [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+            //[TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
         }
         [TestFlight takeOff:[VBConfig sharedConfig].appToken];
     }
