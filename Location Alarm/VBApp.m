@@ -240,7 +240,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [BugSenseController sharedControllerWithBugSenseAPIKey:@"b019a03f"];
+    //[BugSenseController sharedControllerWithBugSenseAPIKey:@"b019a03f"];
     [Flurry startSession:@"VBCXDH9RZPM64KD6ZD97"];
     
     [[VBConfig sharedConfig] loadConfigFromFile:[[NSBundle mainBundle] infoDictionary][@"VBConfigName"]];
@@ -253,6 +253,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     
+    /*
     // TestFlight
     if ([VBConfig sharedConfig].useTestFlight) {
         if ([VBConfig sharedConfig].enableUDID) {
@@ -260,6 +261,7 @@ NSString *const VBDeckWillCloseLeftSideNotification = @"VBDeckWillCloseLeftSideN
         }
         [TestFlight takeOff:[VBConfig sharedConfig].appToken];
     }
+     */
     
 #pragma clang diagnostic pop
     

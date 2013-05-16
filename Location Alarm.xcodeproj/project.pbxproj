@@ -51,7 +51,6 @@
 		AD1EBAF816E24CA800E91E56 /* VBImperialDistanceFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1EBAF716E24CA800E91E56 /* VBImperialDistanceFormatter.m */; };
 		AD25524816F22A2A00AC057F /* VBDonateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25524716F22A2A00AC057F /* VBDonateManager.m */; };
 		AD27BF8416EF718E00D293F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD27BF8316EF718C00D293F2 /* AVFoundation.framework */; };
-		AD27BF8A16F03EBF00D293F2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD27BF8616F03EBF00D293F2 /* libTestFlight.a */; };
 		AD27BF8B16F03EBF00D293F2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD27BF8716F03EBF00D293F2 /* README.md */; };
 		AD27BF8C16F03EBF00D293F2 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = AD27BF8816F03EBF00D293F2 /* release_notes.md */; };
 		AD27BF8E16F03F1400D293F2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD27BF8D16F03F1200D293F2 /* libz.dylib */; };
@@ -243,7 +242,6 @@
 		AD43802816F8EA8B0011AF7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF7277A16DA377700104B41 /* Foundation.framework */; };
 		AD43802916F8EA8B0011AF7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF7277C16DA377700104B41 /* CoreGraphics.framework */; };
 		AD43802A16F8EA8B0011AF7B /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD98121216E0735B00A65AC3 /* libGoogleAnalytics.a */; };
-		AD43802B16F8EA8B0011AF7B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD27BF8616F03EBF00D293F2 /* libTestFlight.a */; };
 		AD43802F16F8EA8B0011AF7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF7278116DA377800104B41 /* InfoPlist.strings */; };
 		AD43803016F8EA8B0011AF7B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7278A16DA377800104B41 /* Default.png */; };
 		AD43803116F8EA8B0011AF7B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7278C16DA377800104B41 /* Default@2x.png */; };
@@ -455,8 +453,6 @@
 		AD8F7D1916DE2C3200B7D768 /* arrow.dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8F7D1716DE2C3200B7D768 /* arrow.dark@2x.png */; };
 		AD8F7D1A16DE2C3200B7D768 /* arrow.white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8F7D1816DE2C3200B7D768 /* arrow.white@2x.png */; };
 		AD93289416F5C2B600FE610E /* VBGoogleMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93289316F5C2B600FE610E /* VBGoogleMapViewController.m */; };
-		AD97415C17159C120070083B /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97415B17159C120070083B /* BugSense-iOS.framework */; };
-		AD97415D17159C180070083B /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97415B17159C120070083B /* BugSense-iOS.framework */; };
 		AD9741611715A2270070083B /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9741601715A2270070083B /* libFlurry.a */; };
 		AD9741621715A2270070083B /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9741601715A2270070083B /* libFlurry.a */; };
 		AD97ED1716F9B57100EACC15 /* donate.dialog.bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD97ED1616F9B57100EACC15 /* donate.dialog.bg@2x.png */; };
@@ -1144,13 +1140,11 @@
 				AD43802816F8EA8B0011AF7B /* Foundation.framework in Frameworks */,
 				AD43802916F8EA8B0011AF7B /* CoreGraphics.framework in Frameworks */,
 				AD43802A16F8EA8B0011AF7B /* libGoogleAnalytics.a in Frameworks */,
-				AD43802B16F8EA8B0011AF7B /* libTestFlight.a in Frameworks */,
 				ADD252D316FA1E8300B412A4 /* Social.framework in Frameworks */,
 				AD5B0CB616FB437100150896 /* libGooglePlusUniversal.a in Frameworks */,
 				ADFB8401170738F40045E9EB /* GoogleMaps.framework in Frameworks */,
 				ADF24F2317094E8600AA0C98 /* MediaPlayer.framework in Frameworks */,
 				AD3B58D717128D9900386D78 /* libc++.dylib in Frameworks */,
-				AD97415D17159C180070083B /* BugSense-iOS.framework in Frameworks */,
 				AD9741621715A2270070083B /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1187,10 +1181,8 @@
 				ADF7277B16DA377700104B41 /* Foundation.framework in Frameworks */,
 				ADF7277D16DA377700104B41 /* CoreGraphics.framework in Frameworks */,
 				AD1EBAF116E24B2D00E91E56 /* libGoogleAnalytics.a in Frameworks */,
-				AD27BF8A16F03EBF00D293F2 /* libTestFlight.a in Frameworks */,
 				AD5B0CB516FB437100150896 /* libGooglePlusUniversal.a in Frameworks */,
 				ADFB8400170738F40045E9EB /* GoogleMaps.framework in Frameworks */,
-				AD97415C17159C120070083B /* BugSense-iOS.framework in Frameworks */,
 				AD9741611715A2270070083B /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
